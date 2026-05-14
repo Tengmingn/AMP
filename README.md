@@ -1,9 +1,35 @@
-# AMP(Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping)
+
+# AMP: Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping
+
+### **Accepted by IEEE TGRS 2026**
+
+---
+
+## 🌟 Method Overview
+This repository contains the official PyTorch implementation of **AMP**, a framework designed for high-accuracy urban tree canopy mapping using weakly supervised sparse point annotations. By integrating wavelet-enhanced adaptation with foundation models (DINOv2), our method effectively captures fine-grained spatial details in complex urban environments.
+
+![Method Overview](./figures/architecture.png)
+*Figure 1: The overall architecture of the proposed AMP framework.*
+
+---
+## 📷 Result Display
+---
+
+## 🛠️ Installation & Training & Inference
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Tengmingn/AMP.git
+cd AMP
+conda create -n amp python=3.10
+conda activate amp
+pip install -r requirement
+```
 ## Acknowledgement
 
 We sincerely acknowledge the following works for their valuable contributions and inspiration to this project:
 
-- **SparseFormer: A Credible Dual-CNN Expert-Guided Transformer for Remote Sensing Image Segmentation With Sparse Point Annotation (TGRS 2024)** — for providing the implementation of the multi-branch pseudo-label generation strategy.(https://github.com/Yujia73/SparseFormer)
+- **SparseFormer: A Credible Dual-CNN Expert-Guided Transformer for Remote Sensing Image Segmentation With Sparse Point Annotation (TGRS 2025)** — for providing the implementation of the multi-branch pseudo-label generation strategy.(https://github.com/Yujia73/SparseFormer)
 
 - **Sparsely Annotated Semantic Segmentation with Adaptive Gaussian Mixtures** — for providing the foundational network structure implementation.(https://github.com/Luffy03/AGMM-SASS)
 
