@@ -3,6 +3,7 @@ from itertools import cycle
 import logging
 import os
 import pprint
+import warnings
 import torch
 import numpy as np
 import matplotlib.cm as cm
@@ -14,6 +15,7 @@ from torch.optim import SGD
 from torch.utils.data import DataLoader
 import yaml
 import wandb
+warnings.filterwarnings("ignore", message="xFormers is not available")
 
 from dataset.sass import *
 from model.semseg.AMP import AMP
@@ -23,6 +25,7 @@ from util.PAR import PAR
 from util.dist_helper import setup_distributed
 from util.visualization_tools import get_pca_map, get_robust_pca
 from util.mytool import *
+from datetime import datetime
 
 os.environ['CUDA_VISIBLE_DEVICES'] = "0, 1"
 os.environ['MASTER_ADDR'] = '127.0.0.1'
@@ -47,6 +50,7 @@ def choose_vis_channels(raw_features):
 
 
 def main():
+    now = datetime.now().strftime("%Y%m%d_%H%M%S")
     args = parser.parse_args()
     cfg = yaml.load(open(args.config, "r"), Loader=yaml.Loader)     
     logger = init_log('global', logging.INFO)
@@ -91,7 +95,7 @@ def main():
     global_step = 0
 
     # hyperparameters
-    beta1 = 0.5
+    beta1 = 1/3
     beta2 = 1/3
 
     # (Initialize logging)
@@ -126,7 +130,7 @@ def main():
 
 
             # Pseudo label part loss #
-            if (epoch + 1)<=10:
+            if (epoch + 1)<=150:
                 loss_ce1 = loss_calc(outputs1,mask,ignore_index=cfg['nclass'], multi=False,
                                  class_weight=use_weight, ohem=ohem)
                 loss_ce2 = loss_calc(outputs2,mask,ignore_index=cfg['nclass'], multi=False,
@@ -161,12 +165,20 @@ def main():
                 loss_seg = loss_ce3 * beta1 + cls_loss
 
              # total loss
-            loss = loss_seg + gmm_loss + loss_kl + loss_pl
-            # for ablation
+            # loss = loss_seg + gmm_loss + loss_kl + loss_pl
+            ########################
+            # for loss ablation
             # loss = loss_seg
             # loss = loss_seg + loss_pl
             # loss = loss_seg + loss_pl+ gmm_loss
             # loss = loss_seg + loss_pl+ loss_kl
+            #########################
+            # for full supervised
+            loss_seg = loss_calc(pred, mask,
+                                 ignore_index=cfg['nclass'], multi=False,
+                                 class_weight=use_weight, ohem=ohem)    
+            loss = loss_seg + cls_loss
+            ########################
 
             optimizer.zero_grad()
             loss.backward()
@@ -199,12 +211,10 @@ def main():
             'step': global_step,
             'epoch': epoch
         })
-        if cfg['dataset'] == 'cityscapes':
-            eval_mode = 'center_crop' if epoch < cfg['epochs'] - 20 else 'sliding_window'
-        elif cfg['dataset'] == 'treecanopy':
+        if cfg['dataset'] == 'treecanopy':
             eval_mode = 'center_crop'
         elif cfg['dataset'] == 'vaihingen':
-            eval_mode = 'center_crop'
+            eval_mode = 'sliding_window'
         else:
             eval_mode = 'original'
         # print(f'eval mode is {eval_mode}')
@@ -237,10 +247,10 @@ def main():
 
         if mIOU > previous_best and rank == 0:
             if previous_best != 0:
-                os.remove(os.path.join(args.save_path, '%s_%.2f.pth' % (cfg['backbone'], previous_best)))
+                os.remove(os.path.join(args.save_path, now +'%s_%.2f.pth' % (cfg['backbone'], previous_best)))
             previous_best = mIOU
             torch.save(model.module.state_dict(),
-                       os.path.join(args.save_path, '%s_%.2f.pth' % (cfg['backbone'], mIOU)))
+                       os.path.join(args.save_path, now +'%s_%.2f.pth' % (cfg['backbone'], mIOU)))
 
 
 if __name__ == '__main__':

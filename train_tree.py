@@ -13,7 +13,9 @@ from torch.optim import SGD
 from torch.utils.data import DataLoader
 import yaml
 import wandb
-
+import warnings
+warnings.filterwarnings("ignore", message="xFormers is not available")
+# for backbone forzen use
 from dataset.sass import *
 from model.semseg.AMP import AMP
 from util.ohem import ProbOhemCrossEntropy2d
@@ -22,6 +24,7 @@ from util.PAR import PAR
 from util.dist_helper import setup_distributed
 from util.visualization_tools import get_pca_map, get_robust_pca
 from util.mytool import *
+from datetime import datetime
 
 os.environ['CUDA_VISIBLE_DEVICES'] = "0, 1"
 os.environ['MASTER_ADDR'] = '127.0.0.1'
@@ -47,6 +50,7 @@ def choose_vis_channels(raw_features):
 
 
 def main():
+    now = datetime.now().strftime("%Y%m%d_%H%M%S")
     args = parser.parse_args()
     cfg = yaml.load(open(args.config, "r"), Loader=yaml.Loader)      
     logger = init_log('global', logging.INFO)
@@ -147,7 +151,7 @@ def main():
                 outputs1_par = par(img,outputs1)
                 outputs2_par = par(img,outputs2)
                 res_par = par(img,res)
-                merged_labels = select_3_confident_region(outputs1_par.detach(),outputs2_par.detach(),res_par.detach(),mask,thed=0.5)        
+                merged_labels = select_3_confident_region(outputs1_par.detach(),outputs2_par.detach(),res_par.detach(),mask,thed=0.4)        
 
                 loss_kl1 = joint_optimization(outputs1, outputs2.detach(), pred.detach(),10)
                 loss_kl2 = joint_optimization(outputs2, outputs1.detach(), pred.detach(),10)
@@ -226,10 +230,10 @@ def main():
             'step': global_step,
             'epoch': epoch
         })
-        if cfg['dataset'] == 'cityscapes':
-            eval_mode = 'center_crop' if epoch < cfg['epochs'] - 20 else 'sliding_window'
-        elif cfg['dataset'] == 'treecanopy':
+        if cfg['dataset'] == 'treecanopy':
             eval_mode = 'center_crop'
+        elif cfg['dataset'] == 'vaihingen':
+            eval_mode = 'sliding_window'
         else:
             eval_mode = 'original'
         # print(f'eval mode is {eval_mode}')
@@ -262,10 +266,10 @@ def main():
 
         if mIOU > previous_best and rank == 0:
             if previous_best != 0:
-                os.remove(os.path.join(args.save_path, '%s_%.2f.pth' % (cfg['backbone'], previous_best)))
+                os.remove(os.path.join(args.save_path, now +'%s_%.2f.pth' % (cfg['backbone'], previous_best)))
             previous_best = mIOU
             torch.save(model.module.state_dict(),
-                       os.path.join(args.save_path, '%s_%.2f.pth' % (cfg['backbone'], mIOU)))
+                       os.path.join(args.save_path, now +'%s_%.2f.pth' % (cfg['backbone'], mIOU)))
 
 
 if __name__ == '__main__':

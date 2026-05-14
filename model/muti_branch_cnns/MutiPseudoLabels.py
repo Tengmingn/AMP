@@ -127,7 +127,7 @@ class Decoder(nn.Module):
 
 class Decoder_Attention(nn.Module):
     def __init__(self, num_classes, low_level_inplanes, norm_fn, kernel_size=3, padding=1, attention_mode='CBAM'):
-        super().__init__()# 输出通道数，输入底层特征图的通道数，归一化函数...
+        super().__init__()
         
         self.kernel_size = kernel_size
         self.padding = padding

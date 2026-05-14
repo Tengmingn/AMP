@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-import model.backbone.dinov2 as dinov2
+import model.backbone.foundation_models as backbone_model
 import logging
 from model.wavelet.WT import WT
 from model.muti_branch_cnns import ASPP, Decoder, CBAM, SpatialAttention, ChannelAttention, Decoder_Attention
@@ -19,7 +19,7 @@ class AMP(nn.Module):
     def __init__(self, cfg, aux=True):
         super(AMP, self).__init__()
         self.backbone_name, self.backbone  =  \
-             dinov2.__dict__[cfg['backbone']]()
+             backbone_model.__dict__[cfg['backbone']]()
         backbone_channels = {
             'DINOV2s': 384,
             'DINOV3_vits16': 384,
@@ -31,7 +31,8 @@ class AMP(nn.Module):
             'DINOV3_vitl16plus': 1024,
             'DINOV3_vith16plus': 1280,
             'DINOV2g': 1536,
-            'DINOV3_vit7b16': 4096
+            'DINOV3_vit7b16': 4096,
+            'SAM3': 256
         }
 
         if self.backbone_name in backbone_channels:
@@ -110,8 +111,8 @@ class AMP(nn.Module):
         self.aspp = ASPP(output_stride=16, norm_fn=norm_fn_for_extra_modules,inplanes=256)
         self.attn1 = cfg['attn1']
         self.attn2 = cfg['attn2']
-        self.decoder1 = Decoder_Attention(cfg['nclass'], 576, norm_fn_for_extra_modules, attention_mode=self.attn1)
-        self.decoder2 = Decoder_Attention(cfg['nclass'], 576, norm_fn_for_extra_modules, attention_mode=self.attn2)
+        self.decoder1 = Decoder_Attention(cfg['nclass'],3 * self.channels //4, norm_fn_for_extra_modules, attention_mode=self.attn1)
+        self.decoder2 = Decoder_Attention(cfg['nclass'],3 * self.channels //4, norm_fn_for_extra_modules, attention_mode=self.attn2)
 
         # wavelet part 
         self.wavelet_H = WT(3, self.channels)

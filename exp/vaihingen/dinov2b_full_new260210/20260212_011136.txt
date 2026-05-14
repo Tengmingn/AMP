@@ -1,0 +1,1824 @@
+/home/lab532/anaconda3/envs/dvt/lib/python3.10/site-packages/torch/distributed/launch.py:208: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  main()
+W0212 01:11:38.812000 1901459 site-packages/torch/distributed/run.py:793] 
+W0212 01:11:38.812000 1901459 site-packages/torch/distributed/run.py:793] *****************************************
+W0212 01:11:38.812000 1901459 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0212 01:11:38.812000 1901459 site-packages/torch/distributed/run.py:793] *****************************************
+[2026-02-12 01:11:44,710][    INFO] {'attn1': 'CA',
+ 'attn2': 'CBAM',
+ 'aug': True,
+ 'aux': False,
+ 'backbone': 'DINOV2b',
+ 'batch_size': 1,
+ 'conf_thresh': 0.95,
+ 'criterion': {'kwargs': {'ignore_index': 5}, 'name': 'CELoss'},
+ 'crop_size': 448,
+ 'data_root': '/media/llog/Mydata/publicdata/Vaihingen/',
+ 'dataset': 'vaihingen',
+ 'epochs': 80,
+ 'lr': 0.001,
+ 'lr_multi': 10.0,
+ 'mode': 'full',
+ 'nclass': 5,
+ 'sup_id': 'an11'}
+
+[2026-02-12 01:11:47,369][    INFO] Total params: 119.4M
+
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id aubskt4s.
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id k67akpwp.
+wandb: Tracking run with wandb version 0.19.1
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.1
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+[2026-02-12 01:11:48,675][    INFO] ===========> Epoch: 0, LR: 0.0010, Previous best: 0.00
+/home/lab532/anaconda3/envs/dvt/lib/python3.10/site-packages/torch/nn/functional.py:3369: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+/home/lab532/anaconda3/envs/dvt/lib/python3.10/site-packages/torch/nn/functional.py:3369: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+[2026-02-12 01:12:06,779][    INFO] Iters:0, loss:1.608, seg_loss:1.608, gmm_loss:2.312,k1_loss:0.008
+[2026-02-12 01:12:08,007][    INFO] Iters:2, loss:1.312, seg_loss:1.312, gmm_loss:2.306,k1_loss:0.008
+[2026-02-12 01:12:09,222][    INFO] Iters:4, loss:1.068, seg_loss:1.068, gmm_loss:2.335,k1_loss:0.008
+[2026-02-12 01:12:10,482][    INFO] Iters:6, loss:1.046, seg_loss:1.046, gmm_loss:2.341,k1_loss:0.007
+[2026-02-12 01:12:11,682][    INFO] Iters:8, loss:0.947, seg_loss:0.947, gmm_loss:2.345,k1_loss:0.008
+[2026-02-12 01:12:12,887][    INFO] Iters:10, loss:0.887, seg_loss:0.887, gmm_loss:2.364,k1_loss:0.008
+[2026-02-12 01:12:14,090][    INFO] Iters:12, loss:0.850, seg_loss:0.850, gmm_loss:2.359,k1_loss:0.008
+[2026-02-12 01:12:15,298][    INFO] Iters:14, loss:0.836, seg_loss:0.836, gmm_loss:2.413,k1_loss:0.008
+[2026-02-12 01:12:16,504][    INFO] Iters:16, loss:0.841, seg_loss:0.841, gmm_loss:2.443,k1_loss:0.008
+[2026-02-12 01:12:17,706][    INFO] Iters:18, loss:0.799, seg_loss:0.799, gmm_loss:2.466,k1_loss:0.008
+[2026-02-12 01:12:18,913][    INFO] Iters:20, loss:0.772, seg_loss:0.772, gmm_loss:2.468,k1_loss:0.008
+/media/llog/llog-AMP-TGRS/AMP-TGRS/util/utils.py:86: RuntimeWarning: invalid value encountered in divide
+  classAcc = np.diag(self.hist) / self.hist.sum(axis=0)
+/media/llog/llog-AMP-TGRS/AMP-TGRS/util/utils.py:86: RuntimeWarning: invalid value encountered in divide
+  classAcc = np.diag(self.hist) / self.hist.sum(axis=0)
+[2026-02-12 01:15:46,252][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 52.17
+[2026-02-12 01:15:46,253][    INFO] ************************* ***** >>>> OA: 77.89
+[2026-02-12 01:15:46,253][    INFO] ************************* ***** >>>> PA: [0.69468207 0.90901845 0.88550221 0.64727683 0.        ]
+[2026-02-12 01:15:46,254][    INFO] ************************* ***** >>>> MPA: 62.73
+[2026-02-12 01:15:46,254][    INFO] ************************* ***** >>>> UA: [0.90667847 0.89497731 0.58260026 0.88437395        nan]
+[2026-02-12 01:15:46,254][    INFO] ************************* ***** >>>> MUA: 81.72
+[2026-02-12 01:15:46,255][    INFO] ************************* ***** >>>> F1 score: [78.66, 90.19, 70.28, 74.75, nan]
+[2026-02-12 01:15:46,255][    INFO] ************************* ***** >>>> mean F1: nan
+[2026-02-12 01:15:46,255][    INFO] ************************* ***** >>>> Kappa: 0.750
+
+[2026-02-12 01:15:46,952][    INFO] ===========> Epoch: 1, LR: 0.0010, Previous best: 52.17
+/home/lab532/anaconda3/envs/dvt/lib/python3.10/site-packages/torch/nn/functional.py:3369: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+/home/lab532/anaconda3/envs/dvt/lib/python3.10/site-packages/torch/nn/functional.py:3369: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn(
+[2026-02-12 01:15:47,906][    INFO] Iters:0, loss:0.613, seg_loss:0.613, gmm_loss:2.750,k1_loss:0.008
+[2026-02-12 01:15:49,111][    INFO] Iters:2, loss:0.549, seg_loss:0.549, gmm_loss:2.511,k1_loss:0.007
+[2026-02-12 01:15:50,309][    INFO] Iters:4, loss:0.498, seg_loss:0.498, gmm_loss:2.505,k1_loss:0.007
+[2026-02-12 01:15:51,507][    INFO] Iters:6, loss:0.512, seg_loss:0.512, gmm_loss:2.582,k1_loss:0.007
+[2026-02-12 01:15:52,704][    INFO] Iters:8, loss:0.551, seg_loss:0.551, gmm_loss:2.582,k1_loss:0.007
+[2026-02-12 01:15:53,905][    INFO] Iters:10, loss:0.695, seg_loss:0.695, gmm_loss:2.527,k1_loss:0.007
+[2026-02-12 01:15:55,103][    INFO] Iters:12, loss:0.693, seg_loss:0.693, gmm_loss:2.488,k1_loss:0.007
+[2026-02-12 01:15:56,301][    INFO] Iters:14, loss:0.659, seg_loss:0.659, gmm_loss:2.515,k1_loss:0.007
+[2026-02-12 01:15:57,496][    INFO] Iters:16, loss:0.676, seg_loss:0.676, gmm_loss:2.516,k1_loss:0.007
+[2026-02-12 01:15:58,691][    INFO] Iters:18, loss:0.673, seg_loss:0.673, gmm_loss:2.523,k1_loss:0.007
+[2026-02-12 01:15:59,880][    INFO] Iters:20, loss:0.647, seg_loss:0.647, gmm_loss:2.525,k1_loss:0.007
+[2026-02-12 01:19:25,986][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 53.24
+[2026-02-12 01:19:25,987][    INFO] ************************* ***** >>>> OA: 78.06
+[2026-02-12 01:19:25,987][    INFO] ************************* ***** >>>> PA: [0.81473392 0.81547229 0.90850095 0.61562986 0.03901703]
+[2026-02-12 01:19:25,988][    INFO] ************************* ***** >>>> MPA: 63.87
+[2026-02-12 01:19:25,988][    INFO] ************************* ***** >>>> UA: [0.84856727 0.94735856 0.5855759  0.90552121 0.95300777]
+[2026-02-12 01:19:25,988][    INFO] ************************* ***** >>>> MUA: 84.80
+[2026-02-12 01:19:25,988][    INFO] ************************* ***** >>>> F1 score: [83.13, 87.65, 71.21, 73.3, 7.5]
+[2026-02-12 01:19:25,988][    INFO] ************************* ***** >>>> mean F1: 64.56
+[2026-02-12 01:19:25,988][    INFO] ************************* ***** >>>> Kappa: 0.752
+
+[2026-02-12 01:19:26,771][    INFO] ===========> Epoch: 2, LR: 0.0010, Previous best: 53.24
+[2026-02-12 01:19:27,732][    INFO] Iters:0, loss:0.346, seg_loss:0.346, gmm_loss:2.797,k1_loss:0.010
+[2026-02-12 01:19:28,933][    INFO] Iters:2, loss:0.597, seg_loss:0.597, gmm_loss:2.098,k1_loss:0.009
+[2026-02-12 01:19:30,130][    INFO] Iters:4, loss:0.618, seg_loss:0.618, gmm_loss:2.034,k1_loss:0.009
+[2026-02-12 01:19:31,330][    INFO] Iters:6, loss:0.582, seg_loss:0.582, gmm_loss:2.172,k1_loss:0.009
+[2026-02-12 01:19:32,533][    INFO] Iters:8, loss:0.554, seg_loss:0.554, gmm_loss:2.204,k1_loss:0.009
+[2026-02-12 01:19:33,725][    INFO] Iters:10, loss:0.530, seg_loss:0.530, gmm_loss:2.231,k1_loss:0.008
+[2026-02-12 01:19:34,924][    INFO] Iters:12, loss:0.532, seg_loss:0.532, gmm_loss:2.256,k1_loss:0.008
+[2026-02-12 01:19:36,118][    INFO] Iters:14, loss:0.530, seg_loss:0.530, gmm_loss:2.262,k1_loss:0.009
+[2026-02-12 01:19:37,315][    INFO] Iters:16, loss:0.525, seg_loss:0.525, gmm_loss:2.277,k1_loss:0.009
+[2026-02-12 01:19:38,510][    INFO] Iters:18, loss:0.526, seg_loss:0.526, gmm_loss:2.313,k1_loss:0.008
+[2026-02-12 01:19:39,699][    INFO] Iters:20, loss:0.530, seg_loss:0.530, gmm_loss:2.333,k1_loss:0.008
+[2026-02-12 01:23:06,388][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 68.20
+[2026-02-12 01:23:06,389][    INFO] ************************* ***** >>>> OA: 83.74
+[2026-02-12 01:23:06,389][    INFO] ************************* ***** >>>> PA: [0.85889002 0.93584403 0.70952297 0.84887992 0.61401164]
+[2026-02-12 01:23:06,389][    INFO] ************************* ***** >>>> MPA: 79.34
+[2026-02-12 01:23:06,390][    INFO] ************************* ***** >>>> UA: [0.82825239 0.88763768 0.79533183 0.82872027 0.77697763]
+[2026-02-12 01:23:06,390][    INFO] ************************* ***** >>>> MUA: 82.34
+[2026-02-12 01:23:06,390][    INFO] ************************* ***** >>>> F1 score: [84.33, 91.11, 75.0, 83.87, 68.59]
+[2026-02-12 01:23:06,390][    INFO] ************************* ***** >>>> mean F1: 80.58
+[2026-02-12 01:23:06,390][    INFO] ************************* ***** >>>> Kappa: 0.812
+
+[2026-02-12 01:23:07,138][    INFO] ===========> Epoch: 3, LR: 0.0010, Previous best: 68.20
+[2026-02-12 01:23:08,076][    INFO] Iters:0, loss:0.239, seg_loss:0.239, gmm_loss:2.638,k1_loss:0.008
+[2026-02-12 01:23:09,281][    INFO] Iters:2, loss:0.358, seg_loss:0.358, gmm_loss:2.555,k1_loss:0.008
+[2026-02-12 01:23:10,478][    INFO] Iters:4, loss:0.422, seg_loss:0.422, gmm_loss:2.679,k1_loss:0.007
+[2026-02-12 01:23:11,675][    INFO] Iters:6, loss:0.475, seg_loss:0.475, gmm_loss:2.598,k1_loss:0.007
+[2026-02-12 01:23:12,880][    INFO] Iters:8, loss:0.493, seg_loss:0.493, gmm_loss:2.545,k1_loss:0.007
+[2026-02-12 01:23:14,080][    INFO] Iters:10, loss:0.534, seg_loss:0.534, gmm_loss:2.564,k1_loss:0.007
+[2026-02-12 01:23:15,279][    INFO] Iters:12, loss:0.540, seg_loss:0.540, gmm_loss:2.489,k1_loss:0.007
+[2026-02-12 01:23:16,479][    INFO] Iters:14, loss:0.536, seg_loss:0.536, gmm_loss:2.494,k1_loss:0.007
+[2026-02-12 01:23:17,676][    INFO] Iters:16, loss:0.541, seg_loss:0.541, gmm_loss:2.506,k1_loss:0.007
+[2026-02-12 01:23:18,871][    INFO] Iters:18, loss:0.533, seg_loss:0.533, gmm_loss:2.481,k1_loss:0.007
+[2026-02-12 01:23:20,068][    INFO] Iters:20, loss:0.517, seg_loss:0.517, gmm_loss:2.460,k1_loss:0.007
+[2026-02-12 01:26:47,223][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 68.91
+[2026-02-12 01:26:47,224][    INFO] ************************* ***** >>>> OA: 83.93
+[2026-02-12 01:26:47,224][    INFO] ************************* ***** >>>> PA: [0.87312209 0.89897625 0.76989923 0.82064754 0.64417978]
+[2026-02-12 01:26:47,224][    INFO] ************************* ***** >>>> MPA: 80.14
+[2026-02-12 01:26:47,225][    INFO] ************************* ***** >>>> UA: [0.82621226 0.94022402 0.75127375 0.84121309 0.75617579]
+[2026-02-12 01:26:47,225][    INFO] ************************* ***** >>>> MUA: 82.30
+[2026-02-12 01:26:47,225][    INFO] ************************* ***** >>>> F1 score: [84.9, 91.91, 76.05, 83.08, 69.57]
+[2026-02-12 01:26:47,225][    INFO] ************************* ***** >>>> mean F1: 81.10
+[2026-02-12 01:26:47,226][    INFO] ************************* ***** >>>> Kappa: 0.816
+
+[2026-02-12 01:26:48,000][    INFO] ===========> Epoch: 4, LR: 0.0010, Previous best: 68.91
+[2026-02-12 01:26:48,893][    INFO] Iters:0, loss:0.537, seg_loss:0.537, gmm_loss:2.157,k1_loss:0.006
+[2026-02-12 01:26:50,090][    INFO] Iters:2, loss:0.451, seg_loss:0.451, gmm_loss:2.516,k1_loss:0.007
+[2026-02-12 01:26:51,290][    INFO] Iters:4, loss:0.468, seg_loss:0.468, gmm_loss:2.538,k1_loss:0.008
+[2026-02-12 01:26:52,491][    INFO] Iters:6, loss:0.513, seg_loss:0.513, gmm_loss:2.479,k1_loss:0.009
+[2026-02-12 01:26:53,694][    INFO] Iters:8, loss:0.492, seg_loss:0.492, gmm_loss:2.489,k1_loss:0.008
+[2026-02-12 01:26:54,895][    INFO] Iters:10, loss:0.461, seg_loss:0.461, gmm_loss:2.524,k1_loss:0.009
+[2026-02-12 01:26:56,088][    INFO] Iters:12, loss:0.452, seg_loss:0.452, gmm_loss:2.557,k1_loss:0.009
+[2026-02-12 01:26:57,284][    INFO] Iters:14, loss:0.437, seg_loss:0.437, gmm_loss:2.513,k1_loss:0.008
+[2026-02-12 01:26:58,484][    INFO] Iters:16, loss:0.450, seg_loss:0.450, gmm_loss:2.511,k1_loss:0.008
+[2026-02-12 01:26:59,676][    INFO] Iters:18, loss:0.472, seg_loss:0.472, gmm_loss:2.510,k1_loss:0.008
+[2026-02-12 01:27:00,869][    INFO] Iters:20, loss:0.478, seg_loss:0.478, gmm_loss:2.477,k1_loss:0.008
+[2026-02-12 01:30:28,323][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 68.65
+[2026-02-12 01:30:28,324][    INFO] ************************* ***** >>>> OA: 83.03
+[2026-02-12 01:30:28,324][    INFO] ************************* ***** >>>> PA: [0.71123447 0.94586302 0.82112325 0.82497045 0.87625027]
+[2026-02-12 01:30:28,325][    INFO] ************************* ***** >>>> MPA: 83.59
+[2026-02-12 01:30:28,325][    INFO] ************************* ***** >>>> UA: [0.96582348 0.88526769 0.70314867 0.83292075 0.62980594]
+[2026-02-12 01:30:28,326][    INFO] ************************* ***** >>>> MUA: 80.34
+[2026-02-12 01:30:28,326][    INFO] ************************* ***** >>>> F1 score: [81.92, 91.46, 75.76, 82.89, 73.29]
+[2026-02-12 01:30:28,326][    INFO] ************************* ***** >>>> mean F1: 81.06
+[2026-02-12 01:30:28,326][    INFO] ************************* ***** >>>> Kappa: 0.808
+
+[2026-02-12 01:30:28,327][    INFO] ===========> Epoch: 5, LR: 0.0009, Previous best: 68.91
+[2026-02-12 01:30:29,327][    INFO] Iters:0, loss:0.350, seg_loss:0.350, gmm_loss:2.347,k1_loss:0.009
+[2026-02-12 01:30:30,533][    INFO] Iters:2, loss:0.474, seg_loss:0.474, gmm_loss:2.567,k1_loss:0.006
+[2026-02-12 01:30:31,729][    INFO] Iters:4, loss:0.443, seg_loss:0.443, gmm_loss:2.126,k1_loss:0.006
+[2026-02-12 01:30:32,921][    INFO] Iters:6, loss:0.449, seg_loss:0.449, gmm_loss:2.243,k1_loss:0.006
+[2026-02-12 01:30:34,123][    INFO] Iters:8, loss:0.442, seg_loss:0.442, gmm_loss:2.271,k1_loss:0.006
+[2026-02-12 01:30:35,321][    INFO] Iters:10, loss:0.479, seg_loss:0.479, gmm_loss:2.292,k1_loss:0.006
+[2026-02-12 01:30:36,517][    INFO] Iters:12, loss:0.466, seg_loss:0.466, gmm_loss:2.286,k1_loss:0.007
+[2026-02-12 01:30:37,719][    INFO] Iters:14, loss:0.515, seg_loss:0.515, gmm_loss:2.301,k1_loss:0.007
+[2026-02-12 01:30:38,919][    INFO] Iters:16, loss:0.525, seg_loss:0.525, gmm_loss:2.343,k1_loss:0.007
+[2026-02-12 01:30:40,113][    INFO] Iters:18, loss:0.507, seg_loss:0.507, gmm_loss:2.356,k1_loss:0.007
+[2026-02-12 01:30:41,304][    INFO] Iters:20, loss:0.511, seg_loss:0.511, gmm_loss:2.378,k1_loss:0.007
+[2026-02-12 01:34:08,878][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 67.62
+[2026-02-12 01:34:08,878][    INFO] ************************* ***** >>>> OA: 82.82
+[2026-02-12 01:34:08,879][    INFO] ************************* ***** >>>> PA: [0.85871604 0.95506104 0.58092951 0.91634123 0.69633542]
+[2026-02-12 01:34:08,879][    INFO] ************************* ***** >>>> MPA: 80.15
+[2026-02-12 01:34:08,880][    INFO] ************************* ***** >>>> UA: [0.83418751 0.87892316 0.85932116 0.75725758 0.74947217]
+[2026-02-12 01:34:08,880][    INFO] ************************* ***** >>>> MUA: 81.58
+[2026-02-12 01:34:08,880][    INFO] ************************* ***** >>>> F1 score: [84.63, 91.54, 69.32, 82.92, 72.19]
+[2026-02-12 01:34:08,880][    INFO] ************************* ***** >>>> mean F1: 80.12
+[2026-02-12 01:34:08,880][    INFO] ************************* ***** >>>> Kappa: 0.801
+
+[2026-02-12 01:34:08,881][    INFO] ===========> Epoch: 6, LR: 0.0009, Previous best: 68.91
+[2026-02-12 01:34:09,837][    INFO] Iters:0, loss:0.499, seg_loss:0.499, gmm_loss:2.846,k1_loss:0.008
+[2026-02-12 01:34:11,047][    INFO] Iters:2, loss:0.536, seg_loss:0.536, gmm_loss:2.617,k1_loss:0.008
+[2026-02-12 01:34:12,254][    INFO] Iters:4, loss:0.522, seg_loss:0.522, gmm_loss:2.521,k1_loss:0.007
+[2026-02-12 01:34:13,452][    INFO] Iters:6, loss:0.522, seg_loss:0.522, gmm_loss:2.573,k1_loss:0.007
+[2026-02-12 01:34:14,648][    INFO] Iters:8, loss:0.487, seg_loss:0.487, gmm_loss:2.646,k1_loss:0.007
+[2026-02-12 01:34:15,848][    INFO] Iters:10, loss:0.504, seg_loss:0.504, gmm_loss:2.624,k1_loss:0.007
+[2026-02-12 01:34:17,042][    INFO] Iters:12, loss:0.492, seg_loss:0.492, gmm_loss:2.597,k1_loss:0.007
+[2026-02-12 01:34:18,237][    INFO] Iters:14, loss:0.513, seg_loss:0.513, gmm_loss:2.588,k1_loss:0.007
+[2026-02-12 01:34:19,430][    INFO] Iters:16, loss:0.494, seg_loss:0.494, gmm_loss:2.608,k1_loss:0.007
+[2026-02-12 01:34:20,628][    INFO] Iters:18, loss:0.480, seg_loss:0.480, gmm_loss:2.626,k1_loss:0.008
+[2026-02-12 01:34:21,816][    INFO] Iters:20, loss:0.497, seg_loss:0.497, gmm_loss:2.592,k1_loss:0.008
+[2026-02-12 01:37:48,388][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 70.54
+[2026-02-12 01:37:48,389][    INFO] ************************* ***** >>>> OA: 84.30
+[2026-02-12 01:37:48,389][    INFO] ************************* ***** >>>> PA: [0.82222347 0.92925606 0.71002741 0.90659271 0.77475749]
+[2026-02-12 01:37:48,390][    INFO] ************************* ***** >>>> MPA: 82.86
+[2026-02-12 01:37:48,390][    INFO] ************************* ***** >>>> UA: [0.88635542 0.91500031 0.79264392 0.78290831 0.7336807 ]
+[2026-02-12 01:37:48,390][    INFO] ************************* ***** >>>> MUA: 82.21
+[2026-02-12 01:37:48,390][    INFO] ************************* ***** >>>> F1 score: [85.31, 92.21, 74.91, 84.02, 75.37]
+[2026-02-12 01:37:48,390][    INFO] ************************* ***** >>>> mean F1: 82.36
+[2026-02-12 01:37:48,390][    INFO] ************************* ***** >>>> Kappa: 0.821
+
+[2026-02-12 01:37:49,152][    INFO] ===========> Epoch: 7, LR: 0.0009, Previous best: 70.54
+[2026-02-12 01:37:50,112][    INFO] Iters:0, loss:0.667, seg_loss:0.667, gmm_loss:2.634,k1_loss:0.008
+[2026-02-12 01:37:51,324][    INFO] Iters:2, loss:0.684, seg_loss:0.684, gmm_loss:2.635,k1_loss:0.008
+[2026-02-12 01:37:52,514][    INFO] Iters:4, loss:0.555, seg_loss:0.555, gmm_loss:2.518,k1_loss:0.008
+[2026-02-12 01:37:53,706][    INFO] Iters:6, loss:0.481, seg_loss:0.481, gmm_loss:2.593,k1_loss:0.008
+[2026-02-12 01:37:54,899][    INFO] Iters:8, loss:0.532, seg_loss:0.532, gmm_loss:2.431,k1_loss:0.007
+[2026-02-12 01:37:56,096][    INFO] Iters:10, loss:0.518, seg_loss:0.518, gmm_loss:2.482,k1_loss:0.007
+[2026-02-12 01:37:57,288][    INFO] Iters:12, loss:0.564, seg_loss:0.564, gmm_loss:2.460,k1_loss:0.008
+[2026-02-12 01:37:58,486][    INFO] Iters:14, loss:0.550, seg_loss:0.550, gmm_loss:2.451,k1_loss:0.008
+[2026-02-12 01:37:59,685][    INFO] Iters:16, loss:0.540, seg_loss:0.540, gmm_loss:2.484,k1_loss:0.008
+[2026-02-12 01:38:00,881][    INFO] Iters:18, loss:0.527, seg_loss:0.527, gmm_loss:2.473,k1_loss:0.008
+[2026-02-12 01:38:02,078][    INFO] Iters:20, loss:0.528, seg_loss:0.528, gmm_loss:2.477,k1_loss:0.008
+[2026-02-12 01:41:28,439][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 69.42
+[2026-02-12 01:41:28,440][    INFO] ************************* ***** >>>> OA: 83.13
+[2026-02-12 01:41:28,441][    INFO] ************************* ***** >>>> PA: [0.74102156 0.89212328 0.80191776 0.8805062  0.86319789]
+[2026-02-12 01:41:28,441][    INFO] ************************* ***** >>>> MPA: 83.58
+[2026-02-12 01:41:28,441][    INFO] ************************* ***** >>>> UA: [0.95391678 0.94457464 0.69139119 0.79890958 0.65874432]
+[2026-02-12 01:41:28,441][    INFO] ************************* ***** >>>> MUA: 80.95
+[2026-02-12 01:41:28,442][    INFO] ************************* ***** >>>> F1 score: [83.41, 91.76, 74.26, 83.77, 74.72]
+[2026-02-12 01:41:28,442][    INFO] ************************* ***** >>>> mean F1: 81.58
+[2026-02-12 01:41:28,442][    INFO] ************************* ***** >>>> Kappa: 0.810
+
+[2026-02-12 01:41:28,443][    INFO] ===========> Epoch: 8, LR: 0.0009, Previous best: 70.54
+[2026-02-12 01:41:29,382][    INFO] Iters:0, loss:0.384, seg_loss:0.384, gmm_loss:2.827,k1_loss:0.004
+[2026-02-12 01:41:30,600][    INFO] Iters:2, loss:0.382, seg_loss:0.382, gmm_loss:2.396,k1_loss:0.005
+[2026-02-12 01:41:31,799][    INFO] Iters:4, loss:0.424, seg_loss:0.424, gmm_loss:2.310,k1_loss:0.007
+[2026-02-12 01:41:32,996][    INFO] Iters:6, loss:0.485, seg_loss:0.485, gmm_loss:2.423,k1_loss:0.007
+[2026-02-12 01:41:34,189][    INFO] Iters:8, loss:0.466, seg_loss:0.466, gmm_loss:2.480,k1_loss:0.007
+[2026-02-12 01:41:35,388][    INFO] Iters:10, loss:0.464, seg_loss:0.464, gmm_loss:2.506,k1_loss:0.007
+[2026-02-12 01:41:36,590][    INFO] Iters:12, loss:0.441, seg_loss:0.441, gmm_loss:2.535,k1_loss:0.007
+[2026-02-12 01:41:37,789][    INFO] Iters:14, loss:0.455, seg_loss:0.455, gmm_loss:2.549,k1_loss:0.007
+[2026-02-12 01:41:38,988][    INFO] Iters:16, loss:0.443, seg_loss:0.443, gmm_loss:2.569,k1_loss:0.007
+[2026-02-12 01:41:40,187][    INFO] Iters:18, loss:0.440, seg_loss:0.440, gmm_loss:2.584,k1_loss:0.007
+[2026-02-12 01:41:41,387][    INFO] Iters:20, loss:0.442, seg_loss:0.442, gmm_loss:2.588,k1_loss:0.007
+[2026-02-12 01:45:12,053][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 70.21
+[2026-02-12 01:45:12,054][    INFO] ************************* ***** >>>> OA: 84.36
+[2026-02-12 01:45:12,055][    INFO] ************************* ***** >>>> PA: [0.87124848 0.94525405 0.6704188  0.8865027  0.71781095]
+[2026-02-12 01:45:12,055][    INFO] ************************* ***** >>>> MPA: 81.82
+[2026-02-12 01:45:12,055][    INFO] ************************* ***** >>>> UA: [0.82968627 0.89789039 0.82881728 0.81229699 0.77356463]
+[2026-02-12 01:45:12,056][    INFO] ************************* ***** >>>> MUA: 82.85
+[2026-02-12 01:45:12,056][    INFO] ************************* ***** >>>> F1 score: [85.0, 92.1, 74.13, 84.78, 74.46]
+[2026-02-12 01:45:12,056][    INFO] ************************* ***** >>>> mean F1: 82.09
+[2026-02-12 01:45:12,056][    INFO] ************************* ***** >>>> Kappa: 0.819
+
+[2026-02-12 01:45:12,057][    INFO] ===========> Epoch: 9, LR: 0.0009, Previous best: 70.54
+[2026-02-12 01:45:13,068][    INFO] Iters:0, loss:0.387, seg_loss:0.387, gmm_loss:2.779,k1_loss:0.009
+[2026-02-12 01:45:14,267][    INFO] Iters:2, loss:0.327, seg_loss:0.327, gmm_loss:2.602,k1_loss:0.007
+[2026-02-12 01:45:15,468][    INFO] Iters:4, loss:0.356, seg_loss:0.356, gmm_loss:2.681,k1_loss:0.006
+[2026-02-12 01:45:16,673][    INFO] Iters:6, loss:0.345, seg_loss:0.345, gmm_loss:2.524,k1_loss:0.006
+[2026-02-12 01:45:17,877][    INFO] Iters:8, loss:0.376, seg_loss:0.376, gmm_loss:2.596,k1_loss:0.007
+[2026-02-12 01:45:19,073][    INFO] Iters:10, loss:0.368, seg_loss:0.368, gmm_loss:2.561,k1_loss:0.007
+[2026-02-12 01:45:20,269][    INFO] Iters:12, loss:0.371, seg_loss:0.371, gmm_loss:2.568,k1_loss:0.007
+[2026-02-12 01:45:21,472][    INFO] Iters:14, loss:0.406, seg_loss:0.406, gmm_loss:2.543,k1_loss:0.007
+[2026-02-12 01:45:22,671][    INFO] Iters:16, loss:0.379, seg_loss:0.379, gmm_loss:2.517,k1_loss:0.007
+[2026-02-12 01:45:23,865][    INFO] Iters:18, loss:0.382, seg_loss:0.382, gmm_loss:2.531,k1_loss:0.007
+[2026-02-12 01:45:25,064][    INFO] Iters:20, loss:0.372, seg_loss:0.372, gmm_loss:2.532,k1_loss:0.007
+[2026-02-12 01:48:51,609][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.93
+[2026-02-12 01:48:51,610][    INFO] ************************* ***** >>>> OA: 85.24
+[2026-02-12 01:48:51,610][    INFO] ************************* ***** >>>> PA: [0.850652   0.93638689 0.7680854  0.85222367 0.74038047]
+[2026-02-12 01:48:51,611][    INFO] ************************* ***** >>>> MPA: 82.95
+[2026-02-12 01:48:51,611][    INFO] ************************* ***** >>>> UA: [0.87784615 0.91424001 0.77873207 0.83521768 0.78437138]
+[2026-02-12 01:48:51,611][    INFO] ************************* ***** >>>> MUA: 83.81
+[2026-02-12 01:48:51,611][    INFO] ************************* ***** >>>> F1 score: [86.4, 92.52, 77.34, 84.36, 76.17]
+[2026-02-12 01:48:51,612][    INFO] ************************* ***** >>>> mean F1: 83.36
+[2026-02-12 01:48:51,612][    INFO] ************************* ***** >>>> Kappa: 0.831
+
+[2026-02-12 01:48:52,431][    INFO] ===========> Epoch: 10, LR: 0.0009, Previous best: 71.93
+[2026-02-12 01:48:53,351][    INFO] Iters:0, loss:0.177, seg_loss:0.177, gmm_loss:2.744,k1_loss:0.007
+[2026-02-12 01:48:54,565][    INFO] Iters:2, loss:0.380, seg_loss:0.380, gmm_loss:2.691,k1_loss:0.007
+[2026-02-12 01:48:55,772][    INFO] Iters:4, loss:0.396, seg_loss:0.396, gmm_loss:2.714,k1_loss:0.008
+[2026-02-12 01:48:56,969][    INFO] Iters:6, loss:0.375, seg_loss:0.375, gmm_loss:2.727,k1_loss:0.008
+[2026-02-12 01:48:58,166][    INFO] Iters:8, loss:0.386, seg_loss:0.386, gmm_loss:2.657,k1_loss:0.009
+[2026-02-12 01:48:59,361][    INFO] Iters:10, loss:0.376, seg_loss:0.376, gmm_loss:2.583,k1_loss:0.008
+[2026-02-12 01:49:00,563][    INFO] Iters:12, loss:0.430, seg_loss:0.430, gmm_loss:2.525,k1_loss:0.009
+[2026-02-12 01:49:01,757][    INFO] Iters:14, loss:0.408, seg_loss:0.408, gmm_loss:2.394,k1_loss:0.008
+[2026-02-12 01:49:02,957][    INFO] Iters:16, loss:0.408, seg_loss:0.408, gmm_loss:2.443,k1_loss:0.008
+[2026-02-12 01:49:04,164][    INFO] Iters:18, loss:0.467, seg_loss:0.467, gmm_loss:2.513,k1_loss:0.008
+[2026-02-12 01:49:05,356][    INFO] Iters:20, loss:0.453, seg_loss:0.453, gmm_loss:2.527,k1_loss:0.008
+[2026-02-12 01:52:31,685][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 67.54
+[2026-02-12 01:52:31,686][    INFO] ************************* ***** >>>> OA: 81.66
+[2026-02-12 01:52:31,687][    INFO] ************************* ***** >>>> PA: [0.77897546 0.95922269 0.54572786 0.96836238 0.8765305 ]
+[2026-02-12 01:52:31,687][    INFO] ************************* ***** >>>> MPA: 82.58
+[2026-02-12 01:52:31,688][    INFO] ************************* ***** >>>> UA: [0.9334151  0.87648175 0.85269946 0.68570729 0.68494749]
+[2026-02-12 01:52:31,688][    INFO] ************************* ***** >>>> MUA: 80.67
+[2026-02-12 01:52:31,688][    INFO] ************************* ***** >>>> F1 score: [84.92, 91.6, 66.55, 80.29, 76.9]
+[2026-02-12 01:52:31,688][    INFO] ************************* ***** >>>> mean F1: 80.05
+[2026-02-12 01:52:31,689][    INFO] ************************* ***** >>>> Kappa: 0.790
+
+[2026-02-12 01:52:31,689][    INFO] ===========> Epoch: 11, LR: 0.0009, Previous best: 71.93
+[2026-02-12 01:52:32,581][    INFO] Iters:0, loss:0.177, seg_loss:0.177, gmm_loss:2.213,k1_loss:0.002
+[2026-02-12 01:52:33,782][    INFO] Iters:2, loss:0.293, seg_loss:0.293, gmm_loss:2.586,k1_loss:0.006
+[2026-02-12 01:52:34,976][    INFO] Iters:4, loss:0.395, seg_loss:0.395, gmm_loss:2.675,k1_loss:0.007
+[2026-02-12 01:52:36,170][    INFO] Iters:6, loss:0.371, seg_loss:0.371, gmm_loss:2.711,k1_loss:0.008
+[2026-02-12 01:52:37,371][    INFO] Iters:8, loss:0.401, seg_loss:0.401, gmm_loss:2.631,k1_loss:0.008
+[2026-02-12 01:52:38,569][    INFO] Iters:10, loss:0.394, seg_loss:0.394, gmm_loss:2.593,k1_loss:0.008
+[2026-02-12 01:52:39,768][    INFO] Iters:12, loss:0.418, seg_loss:0.418, gmm_loss:2.549,k1_loss:0.008
+[2026-02-12 01:52:40,965][    INFO] Iters:14, loss:0.446, seg_loss:0.446, gmm_loss:2.542,k1_loss:0.008
+[2026-02-12 01:52:42,160][    INFO] Iters:16, loss:0.452, seg_loss:0.452, gmm_loss:2.503,k1_loss:0.008
+[2026-02-12 01:52:43,355][    INFO] Iters:18, loss:0.469, seg_loss:0.469, gmm_loss:2.505,k1_loss:0.008
+[2026-02-12 01:52:44,547][    INFO] Iters:20, loss:0.458, seg_loss:0.458, gmm_loss:2.498,k1_loss:0.008
+[2026-02-12 01:56:10,874][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 70.69
+[2026-02-12 01:56:10,875][    INFO] ************************* ***** >>>> OA: 84.40
+[2026-02-12 01:56:10,876][    INFO] ************************* ***** >>>> PA: [0.88180511 0.91705101 0.71756699 0.86173051 0.70988898]
+[2026-02-12 01:56:10,876][    INFO] ************************* ***** >>>> MPA: 81.76
+[2026-02-12 01:56:10,877][    INFO] ************************* ***** >>>> UA: [0.81460065 0.93644942 0.8016043  0.81626167 0.80527571]
+[2026-02-12 01:56:10,877][    INFO] ************************* ***** >>>> MUA: 83.48
+[2026-02-12 01:56:10,877][    INFO] ************************* ***** >>>> F1 score: [84.69, 92.66, 75.73, 83.84, 75.46]
+[2026-02-12 01:56:10,877][    INFO] ************************* ***** >>>> mean F1: 82.48
+[2026-02-12 01:56:10,878][    INFO] ************************* ***** >>>> Kappa: 0.821
+
+[2026-02-12 01:56:10,878][    INFO] ===========> Epoch: 12, LR: 0.0009, Previous best: 71.93
+[2026-02-12 01:56:11,850][    INFO] Iters:0, loss:0.494, seg_loss:0.494, gmm_loss:3.007,k1_loss:0.007
+[2026-02-12 01:56:13,062][    INFO] Iters:2, loss:0.447, seg_loss:0.447, gmm_loss:2.813,k1_loss:0.008
+[2026-02-12 01:56:14,276][    INFO] Iters:4, loss:0.435, seg_loss:0.435, gmm_loss:2.721,k1_loss:0.008
+[2026-02-12 01:56:15,471][    INFO] Iters:6, loss:0.429, seg_loss:0.429, gmm_loss:2.715,k1_loss:0.008
+[2026-02-12 01:56:16,670][    INFO] Iters:8, loss:0.418, seg_loss:0.418, gmm_loss:2.710,k1_loss:0.008
+[2026-02-12 01:56:17,873][    INFO] Iters:10, loss:0.403, seg_loss:0.403, gmm_loss:2.776,k1_loss:0.007
+[2026-02-12 01:56:19,072][    INFO] Iters:12, loss:0.429, seg_loss:0.429, gmm_loss:2.721,k1_loss:0.008
+[2026-02-12 01:56:20,277][    INFO] Iters:14, loss:0.420, seg_loss:0.420, gmm_loss:2.758,k1_loss:0.008
+[2026-02-12 01:56:21,481][    INFO] Iters:16, loss:0.401, seg_loss:0.401, gmm_loss:2.742,k1_loss:0.008
+[2026-02-12 01:56:22,681][    INFO] Iters:18, loss:0.403, seg_loss:0.403, gmm_loss:2.737,k1_loss:0.008
+[2026-02-12 01:56:23,878][    INFO] Iters:20, loss:0.405, seg_loss:0.405, gmm_loss:2.726,k1_loss:0.008
+[2026-02-12 01:59:51,077][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.09
+[2026-02-12 01:59:51,077][    INFO] ************************* ***** >>>> OA: 85.14
+[2026-02-12 01:59:51,078][    INFO] ************************* ***** >>>> PA: [0.87733986 0.94265712 0.72151532 0.86186169 0.75732917]
+[2026-02-12 01:59:51,078][    INFO] ************************* ***** >>>> MPA: 83.21
+[2026-02-12 01:59:51,078][    INFO] ************************* ***** >>>> UA: [0.84737007 0.90861702 0.8057741  0.83426926 0.79789922]
+[2026-02-12 01:59:51,079][    INFO] ************************* ***** >>>> MUA: 83.88
+[2026-02-12 01:59:51,079][    INFO] ************************* ***** >>>> F1 score: [86.21, 92.53, 76.13, 84.78, 77.71]
+[2026-02-12 01:59:51,079][    INFO] ************************* ***** >>>> mean F1: 83.47
+[2026-02-12 01:59:51,079][    INFO] ************************* ***** >>>> Kappa: 0.829
+
+[2026-02-12 01:59:51,927][    INFO] ===========> Epoch: 13, LR: 0.0009, Previous best: 72.09
+[2026-02-12 01:59:52,844][    INFO] Iters:0, loss:0.460, seg_loss:0.460, gmm_loss:3.118,k1_loss:0.007
+[2026-02-12 01:59:54,052][    INFO] Iters:2, loss:0.327, seg_loss:0.327, gmm_loss:2.898,k1_loss:0.009
+[2026-02-12 01:59:55,254][    INFO] Iters:4, loss:0.295, seg_loss:0.295, gmm_loss:2.884,k1_loss:0.008
+[2026-02-12 01:59:56,449][    INFO] Iters:6, loss:0.383, seg_loss:0.383, gmm_loss:2.766,k1_loss:0.008
+[2026-02-12 01:59:57,650][    INFO] Iters:8, loss:0.400, seg_loss:0.400, gmm_loss:2.777,k1_loss:0.008
+[2026-02-12 01:59:58,846][    INFO] Iters:10, loss:0.404, seg_loss:0.404, gmm_loss:2.778,k1_loss:0.008
+[2026-02-12 02:00:00,044][    INFO] Iters:12, loss:0.397, seg_loss:0.397, gmm_loss:2.740,k1_loss:0.008
+[2026-02-12 02:00:01,243][    INFO] Iters:14, loss:0.400, seg_loss:0.400, gmm_loss:2.702,k1_loss:0.008
+[2026-02-12 02:00:02,440][    INFO] Iters:16, loss:0.388, seg_loss:0.388, gmm_loss:2.702,k1_loss:0.008
+[2026-02-12 02:00:03,630][    INFO] Iters:18, loss:0.408, seg_loss:0.408, gmm_loss:2.700,k1_loss:0.008
+[2026-02-12 02:00:04,824][    INFO] Iters:20, loss:0.398, seg_loss:0.398, gmm_loss:2.704,k1_loss:0.008
+[2026-02-12 02:03:32,252][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 68.95
+[2026-02-12 02:03:32,252][    INFO] ************************* ***** >>>> OA: 83.44
+[2026-02-12 02:03:32,253][    INFO] ************************* ***** >>>> PA: [0.88942213 0.9259694  0.59023574 0.9374274  0.65749623]
+[2026-02-12 02:03:32,253][    INFO] ************************* ***** >>>> MPA: 80.01
+[2026-02-12 02:03:32,254][    INFO] ************************* ***** >>>> UA: [0.82036564 0.91946253 0.86455908 0.75186745 0.8528538 ]
+[2026-02-12 02:03:32,254][    INFO] ************************* ***** >>>> MUA: 84.18
+[2026-02-12 02:03:32,254][    INFO] ************************* ***** >>>> F1 score: [85.35, 92.27, 70.15, 83.45, 74.25]
+[2026-02-12 02:03:32,254][    INFO] ************************* ***** >>>> mean F1: 81.09
+[2026-02-12 02:03:32,254][    INFO] ************************* ***** >>>> Kappa: 0.809
+
+[2026-02-12 02:03:32,255][    INFO] ===========> Epoch: 14, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:03:33,237][    INFO] Iters:0, loss:0.200, seg_loss:0.200, gmm_loss:2.476,k1_loss:0.007
+[2026-02-12 02:03:34,446][    INFO] Iters:2, loss:0.313, seg_loss:0.313, gmm_loss:2.649,k1_loss:0.009
+[2026-02-12 02:03:35,639][    INFO] Iters:4, loss:0.346, seg_loss:0.346, gmm_loss:2.530,k1_loss:0.008
+[2026-02-12 02:03:36,834][    INFO] Iters:6, loss:0.321, seg_loss:0.321, gmm_loss:2.568,k1_loss:0.009
+[2026-02-12 02:03:38,032][    INFO] Iters:8, loss:0.325, seg_loss:0.325, gmm_loss:2.614,k1_loss:0.008
+[2026-02-12 02:03:39,228][    INFO] Iters:10, loss:0.320, seg_loss:0.320, gmm_loss:2.652,k1_loss:0.008
+[2026-02-12 02:03:40,421][    INFO] Iters:12, loss:0.309, seg_loss:0.309, gmm_loss:2.692,k1_loss:0.008
+[2026-02-12 02:03:41,621][    INFO] Iters:14, loss:0.323, seg_loss:0.323, gmm_loss:2.720,k1_loss:0.008
+[2026-02-12 02:03:42,816][    INFO] Iters:16, loss:0.335, seg_loss:0.335, gmm_loss:2.667,k1_loss:0.008
+[2026-02-12 02:03:44,013][    INFO] Iters:18, loss:0.344, seg_loss:0.344, gmm_loss:2.695,k1_loss:0.008
+[2026-02-12 02:03:45,206][    INFO] Iters:20, loss:0.339, seg_loss:0.339, gmm_loss:2.691,k1_loss:0.008
+[2026-02-12 02:07:11,272][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.04
+[2026-02-12 02:07:11,273][    INFO] ************************* ***** >>>> OA: 84.88
+[2026-02-12 02:07:11,274][    INFO] ************************* ***** >>>> PA: [0.88316136 0.9200906  0.75643853 0.83894243 0.67153481]
+[2026-02-12 02:07:11,274][    INFO] ************************* ***** >>>> MPA: 81.40
+[2026-02-12 02:07:11,275][    INFO] ************************* ***** >>>> UA: [0.83217535 0.91779471 0.78478161 0.85246251 0.83575343]
+[2026-02-12 02:07:11,275][    INFO] ************************* ***** >>>> MUA: 84.46
+[2026-02-12 02:07:11,275][    INFO] ************************* ***** >>>> F1 score: [85.69, 91.89, 77.03, 84.56, 74.47]
+[2026-02-12 02:07:11,276][    INFO] ************************* ***** >>>> mean F1: 82.73
+[2026-02-12 02:07:11,276][    INFO] ************************* ***** >>>> Kappa: 0.826
+
+[2026-02-12 02:07:11,277][    INFO] ===========> Epoch: 15, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:07:12,214][    INFO] Iters:0, loss:0.569, seg_loss:0.569, gmm_loss:2.641,k1_loss:0.012
+[2026-02-12 02:07:13,424][    INFO] Iters:2, loss:0.405, seg_loss:0.405, gmm_loss:2.771,k1_loss:0.010
+[2026-02-12 02:07:14,624][    INFO] Iters:4, loss:0.366, seg_loss:0.366, gmm_loss:2.826,k1_loss:0.009
+[2026-02-12 02:07:15,824][    INFO] Iters:6, loss:0.392, seg_loss:0.392, gmm_loss:2.825,k1_loss:0.008
+[2026-02-12 02:07:17,024][    INFO] Iters:8, loss:0.395, seg_loss:0.395, gmm_loss:2.785,k1_loss:0.008
+[2026-02-12 02:07:18,217][    INFO] Iters:10, loss:0.412, seg_loss:0.412, gmm_loss:2.784,k1_loss:0.008
+[2026-02-12 02:07:19,414][    INFO] Iters:12, loss:0.448, seg_loss:0.448, gmm_loss:2.740,k1_loss:0.008
+[2026-02-12 02:07:20,608][    INFO] Iters:14, loss:0.437, seg_loss:0.437, gmm_loss:2.759,k1_loss:0.008
+[2026-02-12 02:07:21,802][    INFO] Iters:16, loss:0.433, seg_loss:0.433, gmm_loss:2.757,k1_loss:0.008
+[2026-02-12 02:07:22,990][    INFO] Iters:18, loss:0.438, seg_loss:0.438, gmm_loss:2.733,k1_loss:0.008
+[2026-02-12 02:07:24,178][    INFO] Iters:20, loss:0.441, seg_loss:0.441, gmm_loss:2.727,k1_loss:0.008
+[2026-02-12 02:10:50,603][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.49
+[2026-02-12 02:10:50,604][    INFO] ************************* ***** >>>> OA: 84.83
+[2026-02-12 02:10:50,605][    INFO] ************************* ***** >>>> PA: [0.81622597 0.90160346 0.81235457 0.86424754 0.70936624]
+[2026-02-12 02:10:50,605][    INFO] ************************* ***** >>>> MPA: 82.08
+[2026-02-12 02:10:50,606][    INFO] ************************* ***** >>>> UA: [0.90612689 0.93761271 0.73699784 0.82895551 0.80995102]
+[2026-02-12 02:10:50,606][    INFO] ************************* ***** >>>> MUA: 84.39
+[2026-02-12 02:10:50,606][    INFO] ************************* ***** >>>> F1 score: [85.88, 91.93, 77.28, 84.62, 75.63]
+[2026-02-12 02:10:50,606][    INFO] ************************* ***** >>>> mean F1: 83.07
+[2026-02-12 02:10:50,606][    INFO] ************************* ***** >>>> Kappa: 0.828
+
+[2026-02-12 02:10:50,607][    INFO] ===========> Epoch: 16, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:10:51,581][    INFO] Iters:0, loss:0.383, seg_loss:0.383, gmm_loss:3.034,k1_loss:0.009
+[2026-02-12 02:10:52,782][    INFO] Iters:2, loss:0.362, seg_loss:0.362, gmm_loss:2.664,k1_loss:0.007
+[2026-02-12 02:10:53,980][    INFO] Iters:4, loss:0.441, seg_loss:0.441, gmm_loss:2.703,k1_loss:0.008
+[2026-02-12 02:10:55,176][    INFO] Iters:6, loss:0.383, seg_loss:0.383, gmm_loss:2.662,k1_loss:0.006
+[2026-02-12 02:10:56,376][    INFO] Iters:8, loss:0.391, seg_loss:0.391, gmm_loss:2.742,k1_loss:0.007
+[2026-02-12 02:10:57,579][    INFO] Iters:10, loss:0.386, seg_loss:0.386, gmm_loss:2.744,k1_loss:0.008
+[2026-02-12 02:10:58,768][    INFO] Iters:12, loss:0.412, seg_loss:0.412, gmm_loss:2.738,k1_loss:0.008
+[2026-02-12 02:10:59,962][    INFO] Iters:14, loss:0.409, seg_loss:0.409, gmm_loss:2.764,k1_loss:0.007
+[2026-02-12 02:11:01,154][    INFO] Iters:16, loss:0.403, seg_loss:0.403, gmm_loss:2.735,k1_loss:0.008
+[2026-02-12 02:11:02,350][    INFO] Iters:18, loss:0.415, seg_loss:0.415, gmm_loss:2.704,k1_loss:0.008
+[2026-02-12 02:11:03,543][    INFO] Iters:20, loss:0.405, seg_loss:0.405, gmm_loss:2.698,k1_loss:0.008
+[2026-02-12 02:14:30,917][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 70.78
+[2026-02-12 02:14:30,918][    INFO] ************************* ***** >>>> OA: 84.36
+[2026-02-12 02:14:30,918][    INFO] ************************* ***** >>>> PA: [0.83263138 0.958857   0.65010343 0.9307957  0.71073507]
+[2026-02-12 02:14:30,919][    INFO] ************************* ***** >>>> MPA: 81.66
+[2026-02-12 02:14:30,919][    INFO] ************************* ***** >>>> UA: [0.89162672 0.88478916 0.84118904 0.76762734 0.83862599]
+[2026-02-12 02:14:30,920][    INFO] ************************* ***** >>>> MUA: 84.48
+[2026-02-12 02:14:30,920][    INFO] ************************* ***** >>>> F1 score: [86.11, 92.03, 73.34, 84.14, 76.94]
+[2026-02-12 02:14:30,920][    INFO] ************************* ***** >>>> mean F1: 82.51
+[2026-02-12 02:14:30,920][    INFO] ************************* ***** >>>> Kappa: 0.820
+
+[2026-02-12 02:14:30,921][    INFO] ===========> Epoch: 17, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:14:31,973][    INFO] Iters:0, loss:0.424, seg_loss:0.424, gmm_loss:2.603,k1_loss:0.011
+[2026-02-12 02:14:33,195][    INFO] Iters:2, loss:0.417, seg_loss:0.417, gmm_loss:2.783,k1_loss:0.010
+[2026-02-12 02:14:34,406][    INFO] Iters:4, loss:0.453, seg_loss:0.453, gmm_loss:2.699,k1_loss:0.009
+[2026-02-12 02:14:35,614][    INFO] Iters:6, loss:0.471, seg_loss:0.471, gmm_loss:2.768,k1_loss:0.009
+[2026-02-12 02:14:36,827][    INFO] Iters:8, loss:0.445, seg_loss:0.445, gmm_loss:2.766,k1_loss:0.008
+[2026-02-12 02:14:38,028][    INFO] Iters:10, loss:0.409, seg_loss:0.409, gmm_loss:2.697,k1_loss:0.009
+[2026-02-12 02:14:39,235][    INFO] Iters:12, loss:0.407, seg_loss:0.407, gmm_loss:2.735,k1_loss:0.008
+[2026-02-12 02:14:40,453][    INFO] Iters:14, loss:0.403, seg_loss:0.403, gmm_loss:2.759,k1_loss:0.008
+[2026-02-12 02:14:41,663][    INFO] Iters:16, loss:0.450, seg_loss:0.450, gmm_loss:2.718,k1_loss:0.008
+[2026-02-12 02:14:42,866][    INFO] Iters:18, loss:0.435, seg_loss:0.435, gmm_loss:2.707,k1_loss:0.008
+[2026-02-12 02:14:44,065][    INFO] Iters:20, loss:0.432, seg_loss:0.432, gmm_loss:2.702,k1_loss:0.008
+[2026-02-12 02:18:13,332][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 69.57
+[2026-02-12 02:18:13,333][    INFO] ************************* ***** >>>> OA: 82.99
+[2026-02-12 02:18:13,333][    INFO] ************************* ***** >>>> PA: [0.80518702 0.92916193 0.6305977  0.9481647  0.8162535 ]
+[2026-02-12 02:18:13,333][    INFO] ************************* ***** >>>> MPA: 82.59
+[2026-02-12 02:18:13,334][    INFO] ************************* ***** >>>> UA: [0.90636399 0.88646165 0.83142955 0.72952205 0.753511  ]
+[2026-02-12 02:18:13,334][    INFO] ************************* ***** >>>> MUA: 82.15
+[2026-02-12 02:18:13,334][    INFO] ************************* ***** >>>> F1 score: [85.28, 90.73, 71.72, 82.46, 78.36]
+[2026-02-12 02:18:13,334][    INFO] ************************* ***** >>>> mean F1: 81.71
+[2026-02-12 02:18:13,334][    INFO] ************************* ***** >>>> Kappa: 0.806
+
+[2026-02-12 02:18:13,335][    INFO] ===========> Epoch: 18, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:18:14,295][    INFO] Iters:0, loss:0.423, seg_loss:0.423, gmm_loss:2.622,k1_loss:0.010
+[2026-02-12 02:18:15,498][    INFO] Iters:2, loss:0.319, seg_loss:0.319, gmm_loss:2.721,k1_loss:0.009
+[2026-02-12 02:18:16,696][    INFO] Iters:4, loss:0.681, seg_loss:0.681, gmm_loss:2.697,k1_loss:0.008
+[2026-02-12 02:18:17,897][    INFO] Iters:6, loss:0.632, seg_loss:0.632, gmm_loss:2.637,k1_loss:0.009
+[2026-02-12 02:18:19,097][    INFO] Iters:8, loss:0.560, seg_loss:0.560, gmm_loss:2.657,k1_loss:0.009
+[2026-02-12 02:18:20,295][    INFO] Iters:10, loss:0.527, seg_loss:0.527, gmm_loss:2.713,k1_loss:0.009
+[2026-02-12 02:18:21,497][    INFO] Iters:12, loss:0.505, seg_loss:0.505, gmm_loss:2.749,k1_loss:0.009
+[2026-02-12 02:18:22,694][    INFO] Iters:14, loss:0.494, seg_loss:0.494, gmm_loss:2.728,k1_loss:0.009
+[2026-02-12 02:18:23,900][    INFO] Iters:16, loss:0.496, seg_loss:0.496, gmm_loss:2.700,k1_loss:0.009
+[2026-02-12 02:18:25,093][    INFO] Iters:18, loss:0.489, seg_loss:0.489, gmm_loss:2.680,k1_loss:0.009
+[2026-02-12 02:18:26,284][    INFO] Iters:20, loss:0.488, seg_loss:0.488, gmm_loss:2.701,k1_loss:0.009
+[2026-02-12 02:21:52,521][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.35
+[2026-02-12 02:21:52,522][    INFO] ************************* ***** >>>> OA: 85.13
+[2026-02-12 02:21:52,522][    INFO] ************************* ***** >>>> PA: [0.8857797  0.92778372 0.70791057 0.8883678  0.66833908]
+[2026-02-12 02:21:52,523][    INFO] ************************* ***** >>>> MPA: 81.56
+[2026-02-12 02:21:52,523][    INFO] ************************* ***** >>>> UA: [0.84100859 0.9251307  0.81848718 0.81194281 0.84872811]
+[2026-02-12 02:21:52,523][    INFO] ************************* ***** >>>> MUA: 84.91
+[2026-02-12 02:21:52,524][    INFO] ************************* ***** >>>> F1 score: [86.28, 92.65, 75.92, 84.84, 74.78]
+[2026-02-12 02:21:52,524][    INFO] ************************* ***** >>>> mean F1: 82.89
+[2026-02-12 02:21:52,524][    INFO] ************************* ***** >>>> Kappa: 0.829
+
+[2026-02-12 02:21:52,525][    INFO] ===========> Epoch: 19, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:21:53,425][    INFO] Iters:0, loss:0.438, seg_loss:0.438, gmm_loss:2.224,k1_loss:0.008
+[2026-02-12 02:21:54,631][    INFO] Iters:2, loss:0.417, seg_loss:0.417, gmm_loss:2.725,k1_loss:0.008
+[2026-02-12 02:21:55,833][    INFO] Iters:4, loss:0.370, seg_loss:0.370, gmm_loss:2.604,k1_loss:0.008
+[2026-02-12 02:21:57,034][    INFO] Iters:6, loss:0.402, seg_loss:0.402, gmm_loss:2.530,k1_loss:0.007
+[2026-02-12 02:21:58,232][    INFO] Iters:8, loss:0.418, seg_loss:0.418, gmm_loss:2.474,k1_loss:0.007
+[2026-02-12 02:21:59,435][    INFO] Iters:10, loss:0.407, seg_loss:0.407, gmm_loss:2.501,k1_loss:0.008
+[2026-02-12 02:22:00,637][    INFO] Iters:12, loss:0.380, seg_loss:0.380, gmm_loss:2.556,k1_loss:0.007
+[2026-02-12 02:22:01,836][    INFO] Iters:14, loss:0.388, seg_loss:0.388, gmm_loss:2.636,k1_loss:0.007
+[2026-02-12 02:22:03,029][    INFO] Iters:16, loss:0.397, seg_loss:0.397, gmm_loss:2.641,k1_loss:0.007
+[2026-02-12 02:22:04,226][    INFO] Iters:18, loss:0.399, seg_loss:0.399, gmm_loss:2.666,k1_loss:0.007
+[2026-02-12 02:22:05,421][    INFO] Iters:20, loss:0.391, seg_loss:0.391, gmm_loss:2.657,k1_loss:0.007
+[2026-02-12 02:25:31,662][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 70.52
+[2026-02-12 02:25:31,662][    INFO] ************************* ***** >>>> OA: 83.71
+[2026-02-12 02:25:31,663][    INFO] ************************* ***** >>>> PA: [0.9040702  0.91708432 0.6593931  0.86837326 0.7495042 ]
+[2026-02-12 02:25:31,663][    INFO] ************************* ***** >>>> MPA: 81.97
+[2026-02-12 02:25:31,664][    INFO] ************************* ***** >>>> UA: [0.77999754 0.91298458 0.82078119 0.83116249 0.82667903]
+[2026-02-12 02:25:31,664][    INFO] ************************* ***** >>>> MUA: 83.43
+[2026-02-12 02:25:31,664][    INFO] ************************* ***** >>>> F1 score: [83.75, 91.5, 73.13, 84.94, 78.62]
+[2026-02-12 02:25:31,665][    INFO] ************************* ***** >>>> mean F1: 82.39
+[2026-02-12 02:25:31,665][    INFO] ************************* ***** >>>> Kappa: 0.811
+
+[2026-02-12 02:25:31,665][    INFO] ===========> Epoch: 20, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:25:32,636][    INFO] Iters:0, loss:0.439, seg_loss:0.439, gmm_loss:2.828,k1_loss:0.008
+[2026-02-12 02:25:33,840][    INFO] Iters:2, loss:0.390, seg_loss:0.390, gmm_loss:2.446,k1_loss:0.009
+[2026-02-12 02:25:35,044][    INFO] Iters:4, loss:0.334, seg_loss:0.334, gmm_loss:2.498,k1_loss:0.008
+[2026-02-12 02:25:36,244][    INFO] Iters:6, loss:0.367, seg_loss:0.367, gmm_loss:2.544,k1_loss:0.008
+[2026-02-12 02:25:37,449][    INFO] Iters:8, loss:0.398, seg_loss:0.398, gmm_loss:2.606,k1_loss:0.008
+[2026-02-12 02:25:38,643][    INFO] Iters:10, loss:0.389, seg_loss:0.389, gmm_loss:2.661,k1_loss:0.008
+[2026-02-12 02:25:39,846][    INFO] Iters:12, loss:0.388, seg_loss:0.388, gmm_loss:2.661,k1_loss:0.008
+[2026-02-12 02:25:41,040][    INFO] Iters:14, loss:0.375, seg_loss:0.375, gmm_loss:2.710,k1_loss:0.008
+[2026-02-12 02:25:42,240][    INFO] Iters:16, loss:0.386, seg_loss:0.386, gmm_loss:2.694,k1_loss:0.008
+[2026-02-12 02:25:43,430][    INFO] Iters:18, loss:0.362, seg_loss:0.362, gmm_loss:2.658,k1_loss:0.007
+[2026-02-12 02:25:44,623][    INFO] Iters:20, loss:0.365, seg_loss:0.365, gmm_loss:2.659,k1_loss:0.007
+[2026-02-12 02:29:12,305][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 68.54
+[2026-02-12 02:29:12,306][    INFO] ************************* ***** >>>> OA: 83.30
+[2026-02-12 02:29:12,306][    INFO] ************************* ***** >>>> PA: [0.83212838 0.94424606 0.60840751 0.95084889 0.61585471]
+[2026-02-12 02:29:12,307][    INFO] ************************* ***** >>>> MPA: 79.03
+[2026-02-12 02:29:12,307][    INFO] ************************* ***** >>>> UA: [0.89911351 0.89149787 0.83184189 0.73196208 0.88940601]
+[2026-02-12 02:29:12,307][    INFO] ************************* ***** >>>> MUA: 84.88
+[2026-02-12 02:29:12,307][    INFO] ************************* ***** >>>> F1 score: [86.43, 91.71, 70.28, 82.72, 72.78]
+[2026-02-12 02:29:12,307][    INFO] ************************* ***** >>>> mean F1: 80.78
+[2026-02-12 02:29:12,308][    INFO] ************************* ***** >>>> Kappa: 0.809
+
+[2026-02-12 02:29:12,308][    INFO] ===========> Epoch: 21, LR: 0.0008, Previous best: 72.09
+[2026-02-12 02:29:13,322][    INFO] Iters:0, loss:0.534, seg_loss:0.534, gmm_loss:2.445,k1_loss:0.008
+[2026-02-12 02:29:14,545][    INFO] Iters:2, loss:0.399, seg_loss:0.399, gmm_loss:2.618,k1_loss:0.008
+[2026-02-12 02:29:15,758][    INFO] Iters:4, loss:0.386, seg_loss:0.386, gmm_loss:2.651,k1_loss:0.008
+[2026-02-12 02:29:16,969][    INFO] Iters:6, loss:0.374, seg_loss:0.374, gmm_loss:2.777,k1_loss:0.008
+[2026-02-12 02:29:18,176][    INFO] Iters:8, loss:0.370, seg_loss:0.370, gmm_loss:2.767,k1_loss:0.009
+[2026-02-12 02:29:19,384][    INFO] Iters:10, loss:0.342, seg_loss:0.342, gmm_loss:2.804,k1_loss:0.009
+[2026-02-12 02:29:20,595][    INFO] Iters:12, loss:0.347, seg_loss:0.347, gmm_loss:2.825,k1_loss:0.009
+[2026-02-12 02:29:21,802][    INFO] Iters:14, loss:0.330, seg_loss:0.330, gmm_loss:2.651,k1_loss:0.008
+[2026-02-12 02:29:23,010][    INFO] Iters:16, loss:0.327, seg_loss:0.327, gmm_loss:2.674,k1_loss:0.008
+[2026-02-12 02:29:24,209][    INFO] Iters:18, loss:0.324, seg_loss:0.324, gmm_loss:2.652,k1_loss:0.008
+[2026-02-12 02:29:25,412][    INFO] Iters:20, loss:0.321, seg_loss:0.321, gmm_loss:2.658,k1_loss:0.008
+[2026-02-12 02:32:54,300][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.63
+[2026-02-12 02:32:54,301][    INFO] ************************* ***** >>>> OA: 84.85
+[2026-02-12 02:32:54,301][    INFO] ************************* ***** >>>> PA: [0.86972484 0.90567172 0.71706972 0.9066015  0.69467019]
+[2026-02-12 02:32:54,302][    INFO] ************************* ***** >>>> MPA: 81.87
+[2026-02-12 02:32:54,302][    INFO] ************************* ***** >>>> UA: [0.85472341 0.93904766 0.8072394  0.79005919 0.8628392 ]
+[2026-02-12 02:32:54,303][    INFO] ************************* ***** >>>> MUA: 85.08
+[2026-02-12 02:32:54,303][    INFO] ************************* ***** >>>> F1 score: [86.22, 92.21, 75.95, 84.43, 76.97]
+[2026-02-12 02:32:54,303][    INFO] ************************* ***** >>>> mean F1: 83.16
+[2026-02-12 02:32:54,303][    INFO] ************************* ***** >>>> Kappa: 0.827
+
+[2026-02-12 02:32:54,304][    INFO] ===========> Epoch: 22, LR: 0.0007, Previous best: 72.09
+[2026-02-12 02:32:55,387][    INFO] Iters:0, loss:0.411, seg_loss:0.411, gmm_loss:2.769,k1_loss:0.006
+[2026-02-12 02:32:56,608][    INFO] Iters:2, loss:0.326, seg_loss:0.326, gmm_loss:2.778,k1_loss:0.006
+[2026-02-12 02:32:57,807][    INFO] Iters:4, loss:0.291, seg_loss:0.291, gmm_loss:2.772,k1_loss:0.006
+[2026-02-12 02:32:59,006][    INFO] Iters:6, loss:0.281, seg_loss:0.281, gmm_loss:2.739,k1_loss:0.007
+[2026-02-12 02:33:00,202][    INFO] Iters:8, loss:0.320, seg_loss:0.320, gmm_loss:2.737,k1_loss:0.008
+[2026-02-12 02:33:01,399][    INFO] Iters:10, loss:0.320, seg_loss:0.320, gmm_loss:2.729,k1_loss:0.008
+[2026-02-12 02:33:02,599][    INFO] Iters:12, loss:0.337, seg_loss:0.337, gmm_loss:2.786,k1_loss:0.008
+[2026-02-12 02:33:03,798][    INFO] Iters:14, loss:0.338, seg_loss:0.338, gmm_loss:2.808,k1_loss:0.008
+[2026-02-12 02:33:04,995][    INFO] Iters:16, loss:0.331, seg_loss:0.331, gmm_loss:2.790,k1_loss:0.008
+[2026-02-12 02:33:06,192][    INFO] Iters:18, loss:0.337, seg_loss:0.337, gmm_loss:2.785,k1_loss:0.008
+[2026-02-12 02:33:07,388][    INFO] Iters:20, loss:0.334, seg_loss:0.334, gmm_loss:2.782,k1_loss:0.008
+[2026-02-12 02:36:33,440][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.89
+[2026-02-12 02:36:33,440][    INFO] ************************* ***** >>>> OA: 84.67
+[2026-02-12 02:36:33,441][    INFO] ************************* ***** >>>> PA: [0.83909053 0.92189962 0.69727342 0.92901305 0.73306208]
+[2026-02-12 02:36:33,441][    INFO] ************************* ***** >>>> MPA: 82.41
+[2026-02-12 02:36:33,441][    INFO] ************************* ***** >>>> UA: [0.89637882 0.92705456 0.80114529 0.76792348 0.85210196]
+[2026-02-12 02:36:33,441][    INFO] ************************* ***** >>>> MUA: 84.89
+[2026-02-12 02:36:33,442][    INFO] ************************* ***** >>>> F1 score: [86.68, 92.45, 74.56, 84.08, 78.81]
+[2026-02-12 02:36:33,442][    INFO] ************************* ***** >>>> mean F1: 83.32
+[2026-02-12 02:36:33,442][    INFO] ************************* ***** >>>> Kappa: 0.825
+
+[2026-02-12 02:36:33,442][    INFO] ===========> Epoch: 23, LR: 0.0007, Previous best: 72.09
+[2026-02-12 02:36:34,376][    INFO] Iters:0, loss:0.211, seg_loss:0.211, gmm_loss:2.655,k1_loss:0.008
+[2026-02-12 02:36:35,592][    INFO] Iters:2, loss:0.287, seg_loss:0.287, gmm_loss:2.770,k1_loss:0.007
+[2026-02-12 02:36:36,794][    INFO] Iters:4, loss:0.304, seg_loss:0.304, gmm_loss:2.850,k1_loss:0.008
+[2026-02-12 02:36:37,988][    INFO] Iters:6, loss:0.270, seg_loss:0.270, gmm_loss:2.797,k1_loss:0.007
+[2026-02-12 02:36:39,189][    INFO] Iters:8, loss:0.276, seg_loss:0.276, gmm_loss:2.785,k1_loss:0.007
+[2026-02-12 02:36:40,392][    INFO] Iters:10, loss:0.301, seg_loss:0.301, gmm_loss:2.773,k1_loss:0.008
+[2026-02-12 02:36:41,592][    INFO] Iters:12, loss:0.284, seg_loss:0.284, gmm_loss:2.787,k1_loss:0.008
+[2026-02-12 02:36:42,787][    INFO] Iters:14, loss:0.279, seg_loss:0.279, gmm_loss:2.754,k1_loss:0.007
+[2026-02-12 02:36:43,976][    INFO] Iters:16, loss:0.289, seg_loss:0.289, gmm_loss:2.774,k1_loss:0.007
+[2026-02-12 02:36:45,164][    INFO] Iters:18, loss:0.280, seg_loss:0.280, gmm_loss:2.776,k1_loss:0.007
+[2026-02-12 02:36:46,353][    INFO] Iters:20, loss:0.281, seg_loss:0.281, gmm_loss:2.766,k1_loss:0.008
+[2026-02-12 02:40:12,255][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.96
+[2026-02-12 02:40:12,255][    INFO] ************************* ***** >>>> OA: 84.71
+[2026-02-12 02:40:12,256][    INFO] ************************* ***** >>>> PA: [0.85704368 0.94217508 0.65647352 0.93025626 0.76744449]
+[2026-02-12 02:40:12,257][    INFO] ************************* ***** >>>> MPA: 83.07
+[2026-02-12 02:40:12,257][    INFO] ************************* ***** >>>> UA: [0.88252375 0.90923861 0.84141072 0.76426082 0.82569142]
+[2026-02-12 02:40:12,257][    INFO] ************************* ***** >>>> MUA: 84.46
+[2026-02-12 02:40:12,257][    INFO] ************************* ***** >>>> F1 score: [86.96, 92.54, 73.75, 83.91, 79.55]
+[2026-02-12 02:40:12,258][    INFO] ************************* ***** >>>> mean F1: 83.34
+[2026-02-12 02:40:12,258][    INFO] ************************* ***** >>>> Kappa: 0.825
+
+[2026-02-12 02:40:12,258][    INFO] ===========> Epoch: 24, LR: 0.0007, Previous best: 72.09
+[2026-02-12 02:40:13,165][    INFO] Iters:0, loss:0.250, seg_loss:0.250, gmm_loss:3.072,k1_loss:0.005
+[2026-02-12 02:40:14,370][    INFO] Iters:2, loss:0.266, seg_loss:0.266, gmm_loss:2.919,k1_loss:0.007
+[2026-02-12 02:40:15,571][    INFO] Iters:4, loss:0.339, seg_loss:0.339, gmm_loss:2.869,k1_loss:0.008
+[2026-02-12 02:40:16,772][    INFO] Iters:6, loss:0.321, seg_loss:0.321, gmm_loss:2.850,k1_loss:0.008
+[2026-02-12 02:40:17,971][    INFO] Iters:8, loss:0.306, seg_loss:0.306, gmm_loss:2.784,k1_loss:0.008
+[2026-02-12 02:40:19,167][    INFO] Iters:10, loss:0.294, seg_loss:0.294, gmm_loss:2.774,k1_loss:0.007
+[2026-02-12 02:40:20,358][    INFO] Iters:12, loss:0.295, seg_loss:0.295, gmm_loss:2.753,k1_loss:0.007
+[2026-02-12 02:40:21,550][    INFO] Iters:14, loss:0.279, seg_loss:0.279, gmm_loss:2.758,k1_loss:0.007
+[2026-02-12 02:40:22,746][    INFO] Iters:16, loss:0.294, seg_loss:0.294, gmm_loss:2.777,k1_loss:0.007
+[2026-02-12 02:40:23,941][    INFO] Iters:18, loss:0.306, seg_loss:0.306, gmm_loss:2.776,k1_loss:0.007
+[2026-02-12 02:40:25,140][    INFO] Iters:20, loss:0.298, seg_loss:0.298, gmm_loss:2.769,k1_loss:0.007
+[2026-02-12 02:43:51,807][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.61
+[2026-02-12 02:43:51,807][    INFO] ************************* ***** >>>> OA: 84.36
+[2026-02-12 02:43:51,808][    INFO] ************************* ***** >>>> PA: [0.87374078 0.93560428 0.62372593 0.93896442 0.79450851]
+[2026-02-12 02:43:51,808][    INFO] ************************* ***** >>>> MPA: 83.33
+[2026-02-12 02:43:51,808][    INFO] ************************* ***** >>>> UA: [0.86788903 0.91695746 0.85672943 0.75091759 0.80484449]
+[2026-02-12 02:43:51,808][    INFO] ************************* ***** >>>> MUA: 83.95
+[2026-02-12 02:43:51,808][    INFO] ************************* ***** >>>> F1 score: [87.08, 92.62, 72.19, 83.45, 79.96]
+[2026-02-12 02:43:51,809][    INFO] ************************* ***** >>>> mean F1: 83.06
+[2026-02-12 02:43:51,809][    INFO] ************************* ***** >>>> Kappa: 0.820
+
+[2026-02-12 02:43:51,809][    INFO] ===========> Epoch: 25, LR: 0.0007, Previous best: 72.09
+[2026-02-12 02:43:52,783][    INFO] Iters:0, loss:0.330, seg_loss:0.330, gmm_loss:2.921,k1_loss:0.007
+[2026-02-12 02:43:53,993][    INFO] Iters:2, loss:0.522, seg_loss:0.522, gmm_loss:2.375,k1_loss:0.009
+[2026-02-12 02:43:55,188][    INFO] Iters:4, loss:0.473, seg_loss:0.473, gmm_loss:2.608,k1_loss:0.008
+[2026-02-12 02:43:56,386][    INFO] Iters:6, loss:0.486, seg_loss:0.486, gmm_loss:2.651,k1_loss:0.008
+[2026-02-12 02:43:57,586][    INFO] Iters:8, loss:0.491, seg_loss:0.491, gmm_loss:2.681,k1_loss:0.008
+[2026-02-12 02:43:58,787][    INFO] Iters:10, loss:0.446, seg_loss:0.446, gmm_loss:2.745,k1_loss:0.008
+[2026-02-12 02:43:59,983][    INFO] Iters:12, loss:0.440, seg_loss:0.440, gmm_loss:2.716,k1_loss:0.008
+[2026-02-12 02:44:01,181][    INFO] Iters:14, loss:0.442, seg_loss:0.442, gmm_loss:2.697,k1_loss:0.008
+[2026-02-12 02:44:02,382][    INFO] Iters:16, loss:0.439, seg_loss:0.439, gmm_loss:2.696,k1_loss:0.008
+[2026-02-12 02:44:03,579][    INFO] Iters:18, loss:0.450, seg_loss:0.450, gmm_loss:2.698,k1_loss:0.008
+[2026-02-12 02:44:04,772][    INFO] Iters:20, loss:0.437, seg_loss:0.437, gmm_loss:2.663,k1_loss:0.008
+[2026-02-12 02:47:32,009][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.64
+[2026-02-12 02:47:32,010][    INFO] ************************* ***** >>>> OA: 84.85
+[2026-02-12 02:47:32,010][    INFO] ************************* ***** >>>> PA: [0.88101013 0.92352238 0.66229833 0.93094416 0.70267838]
+[2026-02-12 02:47:32,011][    INFO] ************************* ***** >>>> MPA: 82.01
+[2026-02-12 02:47:32,011][    INFO] ************************* ***** >>>> UA: [0.86220394 0.93960489 0.83753618 0.76177086 0.85908839]
+[2026-02-12 02:47:32,011][    INFO] ************************* ***** >>>> MUA: 85.20
+[2026-02-12 02:47:32,012][    INFO] ************************* ***** >>>> F1 score: [87.15, 93.15, 73.97, 83.79, 77.31]
+[2026-02-12 02:47:32,012][    INFO] ************************* ***** >>>> mean F1: 83.07
+[2026-02-12 02:47:32,012][    INFO] ************************* ***** >>>> Kappa: 0.826
+
+[2026-02-12 02:47:32,013][    INFO] ===========> Epoch: 26, LR: 0.0007, Previous best: 72.09
+[2026-02-12 02:47:32,983][    INFO] Iters:0, loss:0.416, seg_loss:0.416, gmm_loss:2.484,k1_loss:0.009
+[2026-02-12 02:47:34,196][    INFO] Iters:2, loss:0.338, seg_loss:0.338, gmm_loss:2.730,k1_loss:0.009
+[2026-02-12 02:47:35,397][    INFO] Iters:4, loss:0.309, seg_loss:0.309, gmm_loss:2.582,k1_loss:0.009
+[2026-02-12 02:47:36,602][    INFO] Iters:6, loss:0.302, seg_loss:0.302, gmm_loss:2.650,k1_loss:0.009
+[2026-02-12 02:47:37,795][    INFO] Iters:8, loss:0.315, seg_loss:0.315, gmm_loss:2.650,k1_loss:0.009
+[2026-02-12 02:47:38,996][    INFO] Iters:10, loss:0.345, seg_loss:0.345, gmm_loss:2.701,k1_loss:0.009
+[2026-02-12 02:47:40,194][    INFO] Iters:12, loss:0.353, seg_loss:0.353, gmm_loss:2.694,k1_loss:0.009
+[2026-02-12 02:47:41,393][    INFO] Iters:14, loss:0.334, seg_loss:0.334, gmm_loss:2.697,k1_loss:0.008
+[2026-02-12 02:47:42,593][    INFO] Iters:16, loss:0.338, seg_loss:0.338, gmm_loss:2.703,k1_loss:0.008
+[2026-02-12 02:47:43,790][    INFO] Iters:18, loss:0.323, seg_loss:0.323, gmm_loss:2.708,k1_loss:0.009
+[2026-02-12 02:47:44,985][    INFO] Iters:20, loss:0.322, seg_loss:0.322, gmm_loss:2.728,k1_loss:0.009
+[2026-02-12 02:51:12,417][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.62
+[2026-02-12 02:51:12,417][    INFO] ************************* ***** >>>> OA: 85.39
+[2026-02-12 02:51:12,418][    INFO] ************************* ***** >>>> PA: [0.87705793 0.90674532 0.75009603 0.88567681 0.71044945]
+[2026-02-12 02:51:12,418][    INFO] ************************* ***** >>>> MPA: 82.60
+[2026-02-12 02:51:12,418][    INFO] ************************* ***** >>>> UA: [0.85904185 0.94826722 0.79429158 0.80884116 0.86528263]
+[2026-02-12 02:51:12,418][    INFO] ************************* ***** >>>> MUA: 85.51
+[2026-02-12 02:51:12,419][    INFO] ************************* ***** >>>> F1 score: [86.8, 92.7, 77.16, 84.55, 78.03]
+[2026-02-12 02:51:12,419][    INFO] ************************* ***** >>>> mean F1: 83.85
+[2026-02-12 02:51:12,419][    INFO] ************************* ***** >>>> Kappa: 0.833
+
+[2026-02-12 02:51:13,215][    INFO] ===========> Epoch: 27, LR: 0.0007, Previous best: 72.62
+[2026-02-12 02:51:14,281][    INFO] Iters:0, loss:0.510, seg_loss:0.510, gmm_loss:2.739,k1_loss:0.009
+[2026-02-12 02:51:15,483][    INFO] Iters:2, loss:0.372, seg_loss:0.372, gmm_loss:2.857,k1_loss:0.008
+[2026-02-12 02:51:16,680][    INFO] Iters:4, loss:0.339, seg_loss:0.339, gmm_loss:2.859,k1_loss:0.008
+[2026-02-12 02:51:17,892][    INFO] Iters:6, loss:0.321, seg_loss:0.321, gmm_loss:2.852,k1_loss:0.009
+[2026-02-12 02:51:19,086][    INFO] Iters:8, loss:0.516, seg_loss:0.516, gmm_loss:2.860,k1_loss:0.008
+[2026-02-12 02:51:20,287][    INFO] Iters:10, loss:0.517, seg_loss:0.517, gmm_loss:2.860,k1_loss:0.008
+[2026-02-12 02:51:21,486][    INFO] Iters:12, loss:0.493, seg_loss:0.493, gmm_loss:2.902,k1_loss:0.007
+[2026-02-12 02:51:22,683][    INFO] Iters:14, loss:0.474, seg_loss:0.474, gmm_loss:2.878,k1_loss:0.008
+[2026-02-12 02:51:23,879][    INFO] Iters:16, loss:0.459, seg_loss:0.459, gmm_loss:2.905,k1_loss:0.008
+[2026-02-12 02:51:25,073][    INFO] Iters:18, loss:0.499, seg_loss:0.499, gmm_loss:2.885,k1_loss:0.007
+[2026-02-12 02:51:26,265][    INFO] Iters:20, loss:0.484, seg_loss:0.484, gmm_loss:2.854,k1_loss:0.008
+[2026-02-12 02:54:52,595][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 66.38
+[2026-02-12 02:54:52,595][    INFO] ************************* ***** >>>> OA: 81.96
+[2026-02-12 02:54:52,596][    INFO] ************************* ***** >>>> PA: [0.7734735  0.87974233 0.90009984 0.73020747 0.5280125 ]
+[2026-02-12 02:54:52,596][    INFO] ************************* ***** >>>> MPA: 76.23
+[2026-02-12 02:54:52,597][    INFO] ************************* ***** >>>> UA: [0.89433114 0.95493266 0.63630485 0.89268294 0.90445683]
+[2026-02-12 02:54:52,597][    INFO] ************************* ***** >>>> MUA: 85.65
+[2026-02-12 02:54:52,598][    INFO] ************************* ***** >>>> F1 score: [82.95, 91.58, 74.56, 80.33, 66.68]
+[2026-02-12 02:54:52,598][    INFO] ************************* ***** >>>> mean F1: 79.22
+[2026-02-12 02:54:52,598][    INFO] ************************* ***** >>>> Kappa: 0.796
+
+[2026-02-12 02:54:52,599][    INFO] ===========> Epoch: 28, LR: 0.0007, Previous best: 72.62
+[2026-02-12 02:54:53,506][    INFO] Iters:0, loss:1.710, seg_loss:1.710, gmm_loss:2.477,k1_loss:0.005
+[2026-02-12 02:54:54,714][    INFO] Iters:2, loss:0.816, seg_loss:0.816, gmm_loss:2.793,k1_loss:0.008
+[2026-02-12 02:54:55,905][    INFO] Iters:4, loss:0.612, seg_loss:0.612, gmm_loss:2.743,k1_loss:0.007
+[2026-02-12 02:54:57,097][    INFO] Iters:6, loss:0.550, seg_loss:0.550, gmm_loss:2.806,k1_loss:0.008
+[2026-02-12 02:54:58,301][    INFO] Iters:8, loss:0.514, seg_loss:0.514, gmm_loss:2.808,k1_loss:0.007
+[2026-02-12 02:54:59,493][    INFO] Iters:10, loss:0.476, seg_loss:0.476, gmm_loss:2.833,k1_loss:0.008
+[2026-02-12 02:55:00,683][    INFO] Iters:12, loss:0.472, seg_loss:0.472, gmm_loss:2.803,k1_loss:0.008
+[2026-02-12 02:55:01,882][    INFO] Iters:14, loss:0.453, seg_loss:0.453, gmm_loss:2.785,k1_loss:0.008
+[2026-02-12 02:55:03,077][    INFO] Iters:16, loss:0.435, seg_loss:0.435, gmm_loss:2.724,k1_loss:0.008
+[2026-02-12 02:55:04,275][    INFO] Iters:18, loss:0.425, seg_loss:0.425, gmm_loss:2.736,k1_loss:0.008
+[2026-02-12 02:55:05,468][    INFO] Iters:20, loss:0.440, seg_loss:0.440, gmm_loss:2.715,k1_loss:0.008
+[2026-02-12 02:58:31,483][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.08
+[2026-02-12 02:58:31,484][    INFO] ************************* ***** >>>> OA: 83.92
+[2026-02-12 02:58:31,484][    INFO] ************************* ***** >>>> PA: [0.7996796  0.94921127 0.66674338 0.93265542 0.82074801]
+[2026-02-12 02:58:31,484][    INFO] ************************* ***** >>>> MPA: 83.38
+[2026-02-12 02:58:31,485][    INFO] ************************* ***** >>>> UA: [0.9260107  0.87605459 0.81324443 0.7626614  0.77726458]
+[2026-02-12 02:58:31,485][    INFO] ************************* ***** >>>> MUA: 83.10
+[2026-02-12 02:58:31,485][    INFO] ************************* ***** >>>> F1 score: [85.82, 91.12, 73.27, 83.91, 79.84]
+[2026-02-12 02:58:31,485][    INFO] ************************* ***** >>>> mean F1: 82.79
+[2026-02-12 02:58:31,486][    INFO] ************************* ***** >>>> Kappa: 0.816
+
+[2026-02-12 02:58:31,486][    INFO] ===========> Epoch: 29, LR: 0.0007, Previous best: 72.62
+[2026-02-12 02:58:32,526][    INFO] Iters:0, loss:0.321, seg_loss:0.321, gmm_loss:2.848,k1_loss:0.010
+[2026-02-12 02:58:33,737][    INFO] Iters:2, loss:0.240, seg_loss:0.240, gmm_loss:1.998,k1_loss:0.006
+[2026-02-12 02:58:34,935][    INFO] Iters:4, loss:0.250, seg_loss:0.250, gmm_loss:2.307,k1_loss:0.006
+[2026-02-12 02:58:36,136][    INFO] Iters:6, loss:0.292, seg_loss:0.292, gmm_loss:2.500,k1_loss:0.006
+[2026-02-12 02:58:37,333][    INFO] Iters:8, loss:0.318, seg_loss:0.318, gmm_loss:2.614,k1_loss:0.007
+[2026-02-12 02:58:38,534][    INFO] Iters:10, loss:0.319, seg_loss:0.319, gmm_loss:2.671,k1_loss:0.007
+[2026-02-12 02:58:39,732][    INFO] Iters:12, loss:0.315, seg_loss:0.315, gmm_loss:2.694,k1_loss:0.007
+[2026-02-12 02:58:40,937][    INFO] Iters:14, loss:0.312, seg_loss:0.312, gmm_loss:2.715,k1_loss:0.007
+[2026-02-12 02:58:42,135][    INFO] Iters:16, loss:0.297, seg_loss:0.297, gmm_loss:2.727,k1_loss:0.008
+[2026-02-12 02:58:43,332][    INFO] Iters:18, loss:0.301, seg_loss:0.301, gmm_loss:2.745,k1_loss:0.007
+[2026-02-12 02:58:44,523][    INFO] Iters:20, loss:0.301, seg_loss:0.301, gmm_loss:2.764,k1_loss:0.008
+[2026-02-12 03:02:13,875][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 69.24
+[2026-02-12 03:02:13,876][    INFO] ************************* ***** >>>> OA: 83.12
+[2026-02-12 03:02:13,877][    INFO] ************************* ***** >>>> PA: [0.85678644 0.93995117 0.57469022 0.95530014 0.68121362]
+[2026-02-12 03:02:13,877][    INFO] ************************* ***** >>>> MPA: 80.16
+[2026-02-12 03:02:13,878][    INFO] ************************* ***** >>>> UA: [0.87312099 0.89789612 0.8696996  0.72034422 0.88322922]
+[2026-02-12 03:02:13,878][    INFO] ************************* ***** >>>> MUA: 84.89
+[2026-02-12 03:02:13,878][    INFO] ************************* ***** >>>> F1 score: [86.49, 91.84, 69.21, 82.13, 76.92]
+[2026-02-12 03:02:13,879][    INFO] ************************* ***** >>>> mean F1: 81.32
+[2026-02-12 03:02:13,879][    INFO] ************************* ***** >>>> Kappa: 0.806
+
+[2026-02-12 03:02:13,880][    INFO] ===========> Epoch: 30, LR: 0.0007, Previous best: 72.62
+[2026-02-12 03:02:14,858][    INFO] Iters:0, loss:0.342, seg_loss:0.342, gmm_loss:2.705,k1_loss:0.009
+[2026-02-12 03:02:16,093][    INFO] Iters:2, loss:0.332, seg_loss:0.332, gmm_loss:2.694,k1_loss:0.008
+[2026-02-12 03:02:17,304][    INFO] Iters:4, loss:0.289, seg_loss:0.289, gmm_loss:2.667,k1_loss:0.007
+[2026-02-12 03:02:18,516][    INFO] Iters:6, loss:0.310, seg_loss:0.310, gmm_loss:2.687,k1_loss:0.007
+[2026-02-12 03:02:19,729][    INFO] Iters:8, loss:0.293, seg_loss:0.293, gmm_loss:2.656,k1_loss:0.007
+[2026-02-12 03:02:20,949][    INFO] Iters:10, loss:0.288, seg_loss:0.288, gmm_loss:2.664,k1_loss:0.007
+[2026-02-12 03:02:22,164][    INFO] Iters:12, loss:0.301, seg_loss:0.301, gmm_loss:2.699,k1_loss:0.007
+[2026-02-12 03:02:23,375][    INFO] Iters:14, loss:0.307, seg_loss:0.307, gmm_loss:2.731,k1_loss:0.007
+[2026-02-12 03:02:24,584][    INFO] Iters:16, loss:0.320, seg_loss:0.320, gmm_loss:2.706,k1_loss:0.007
+[2026-02-12 03:02:25,789][    INFO] Iters:18, loss:0.310, seg_loss:0.310, gmm_loss:2.712,k1_loss:0.007
+[2026-02-12 03:02:26,994][    INFO] Iters:20, loss:0.307, seg_loss:0.307, gmm_loss:2.724,k1_loss:0.007
+[2026-02-12 03:05:53,822][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 69.94
+[2026-02-12 03:05:53,822][    INFO] ************************* ***** >>>> OA: 83.02
+[2026-02-12 03:05:53,823][    INFO] ************************* ***** >>>> PA: [0.87761174 0.92849112 0.56036578 0.95382008 0.7576094 ]
+[2026-02-12 03:05:53,823][    INFO] ************************* ***** >>>> MPA: 81.56
+[2026-02-12 03:05:53,824][    INFO] ************************* ***** >>>> UA: [0.85526105 0.91941479 0.86751228 0.71599528 0.84654804]
+[2026-02-12 03:05:53,824][    INFO] ************************* ***** >>>> MUA: 84.09
+[2026-02-12 03:05:53,824][    INFO] ************************* ***** >>>> F1 score: [86.63, 92.39, 68.09, 81.8, 79.96]
+[2026-02-12 03:05:53,824][    INFO] ************************* ***** >>>> mean F1: 81.77
+[2026-02-12 03:05:53,825][    INFO] ************************* ***** >>>> Kappa: 0.805
+
+[2026-02-12 03:05:53,825][    INFO] ===========> Epoch: 31, LR: 0.0006, Previous best: 72.62
+[2026-02-12 03:05:54,800][    INFO] Iters:0, loss:0.258, seg_loss:0.258, gmm_loss:2.841,k1_loss:0.012
+[2026-02-12 03:05:56,003][    INFO] Iters:2, loss:0.318, seg_loss:0.318, gmm_loss:2.880,k1_loss:0.010
+[2026-02-12 03:05:57,196][    INFO] Iters:4, loss:0.262, seg_loss:0.262, gmm_loss:2.988,k1_loss:0.009
+[2026-02-12 03:05:58,395][    INFO] Iters:6, loss:0.239, seg_loss:0.239, gmm_loss:2.941,k1_loss:0.009
+[2026-02-12 03:05:59,594][    INFO] Iters:8, loss:0.257, seg_loss:0.257, gmm_loss:2.911,k1_loss:0.009
+[2026-02-12 03:06:00,795][    INFO] Iters:10, loss:0.251, seg_loss:0.251, gmm_loss:2.885,k1_loss:0.008
+[2026-02-12 03:06:01,992][    INFO] Iters:12, loss:0.261, seg_loss:0.261, gmm_loss:2.900,k1_loss:0.008
+[2026-02-12 03:06:03,191][    INFO] Iters:14, loss:0.304, seg_loss:0.304, gmm_loss:2.912,k1_loss:0.008
+[2026-02-12 03:06:04,388][    INFO] Iters:16, loss:0.307, seg_loss:0.307, gmm_loss:2.879,k1_loss:0.008
+[2026-02-12 03:06:05,582][    INFO] Iters:18, loss:0.307, seg_loss:0.307, gmm_loss:2.845,k1_loss:0.008
+[2026-02-12 03:06:06,772][    INFO] Iters:20, loss:0.310, seg_loss:0.310, gmm_loss:2.879,k1_loss:0.008
+[2026-02-12 03:09:32,903][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.06
+[2026-02-12 03:09:32,904][    INFO] ************************* ***** >>>> OA: 85.22
+[2026-02-12 03:09:32,905][    INFO] ************************* ***** >>>> PA: [0.82877707 0.91964087 0.76588991 0.89764486 0.67523712]
+[2026-02-12 03:09:32,905][    INFO] ************************* ***** >>>> MPA: 81.74
+[2026-02-12 03:09:32,906][    INFO] ************************* ***** >>>> UA: [0.88853519 0.9270486  0.78078223 0.81049467 0.88817137]
+[2026-02-12 03:09:32,906][    INFO] ************************* ***** >>>> MUA: 85.90
+[2026-02-12 03:09:32,906][    INFO] ************************* ***** >>>> F1 score: [85.76, 92.33, 77.33, 85.18, 76.72]
+[2026-02-12 03:09:32,906][    INFO] ************************* ***** >>>> mean F1: 83.46
+[2026-02-12 03:09:32,907][    INFO] ************************* ***** >>>> Kappa: 0.831
+
+[2026-02-12 03:09:32,907][    INFO] ===========> Epoch: 32, LR: 0.0006, Previous best: 72.62
+[2026-02-12 03:09:33,872][    INFO] Iters:0, loss:0.445, seg_loss:0.445, gmm_loss:3.277,k1_loss:0.009
+[2026-02-12 03:09:35,081][    INFO] Iters:2, loss:0.406, seg_loss:0.406, gmm_loss:2.865,k1_loss:0.009
+[2026-02-12 03:09:36,278][    INFO] Iters:4, loss:0.322, seg_loss:0.322, gmm_loss:2.891,k1_loss:0.008
+[2026-02-12 03:09:37,471][    INFO] Iters:6, loss:0.270, seg_loss:0.270, gmm_loss:2.643,k1_loss:0.007
+[2026-02-12 03:09:38,672][    INFO] Iters:8, loss:0.283, seg_loss:0.283, gmm_loss:2.710,k1_loss:0.007
+[2026-02-12 03:09:39,872][    INFO] Iters:10, loss:0.280, seg_loss:0.280, gmm_loss:2.710,k1_loss:0.008
+[2026-02-12 03:09:41,074][    INFO] Iters:12, loss:0.304, seg_loss:0.304, gmm_loss:2.722,k1_loss:0.008
+[2026-02-12 03:09:42,277][    INFO] Iters:14, loss:0.305, seg_loss:0.305, gmm_loss:2.729,k1_loss:0.008
+[2026-02-12 03:09:43,477][    INFO] Iters:16, loss:0.309, seg_loss:0.309, gmm_loss:2.700,k1_loss:0.008
+[2026-02-12 03:09:44,668][    INFO] Iters:18, loss:0.324, seg_loss:0.324, gmm_loss:2.738,k1_loss:0.008
+[2026-02-12 03:09:45,862][    INFO] Iters:20, loss:0.318, seg_loss:0.318, gmm_loss:2.740,k1_loss:0.008
+[2026-02-12 03:13:11,994][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.95
+[2026-02-12 03:13:11,995][    INFO] ************************* ***** >>>> OA: 85.30
+[2026-02-12 03:13:11,996][    INFO] ************************* ***** >>>> PA: [0.85377162 0.92281775 0.72611546 0.90893181 0.76500862]
+[2026-02-12 03:13:11,996][    INFO] ************************* ***** >>>> MPA: 83.53
+[2026-02-12 03:13:11,997][    INFO] ************************* ***** >>>> UA: [0.88726914 0.9282928  0.80205364 0.79345678 0.83572257]
+[2026-02-12 03:13:11,997][    INFO] ************************* ***** >>>> MUA: 84.94
+[2026-02-12 03:13:11,997][    INFO] ************************* ***** >>>> F1 score: [87.02, 92.55, 76.22, 84.73, 79.88]
+[2026-02-12 03:13:11,997][    INFO] ************************* ***** >>>> mean F1: 84.08
+[2026-02-12 03:13:11,998][    INFO] ************************* ***** >>>> Kappa: 0.832
+
+[2026-02-12 03:13:12,846][    INFO] ===========> Epoch: 33, LR: 0.0006, Previous best: 72.95
+[2026-02-12 03:13:13,830][    INFO] Iters:0, loss:0.143, seg_loss:0.143, gmm_loss:2.362,k1_loss:0.008
+[2026-02-12 03:13:15,042][    INFO] Iters:2, loss:0.266, seg_loss:0.266, gmm_loss:2.656,k1_loss:0.007
+[2026-02-12 03:13:16,237][    INFO] Iters:4, loss:0.284, seg_loss:0.284, gmm_loss:2.651,k1_loss:0.008
+[2026-02-12 03:13:17,436][    INFO] Iters:6, loss:0.307, seg_loss:0.307, gmm_loss:2.729,k1_loss:0.008
+[2026-02-12 03:13:18,633][    INFO] Iters:8, loss:0.313, seg_loss:0.313, gmm_loss:2.762,k1_loss:0.008
+[2026-02-12 03:13:19,829][    INFO] Iters:10, loss:0.324, seg_loss:0.324, gmm_loss:2.725,k1_loss:0.008
+[2026-02-12 03:13:21,027][    INFO] Iters:12, loss:0.328, seg_loss:0.328, gmm_loss:2.759,k1_loss:0.007
+[2026-02-12 03:13:22,223][    INFO] Iters:14, loss:0.334, seg_loss:0.334, gmm_loss:2.751,k1_loss:0.008
+[2026-02-12 03:13:23,417][    INFO] Iters:16, loss:0.331, seg_loss:0.331, gmm_loss:2.761,k1_loss:0.008
+[2026-02-12 03:13:24,611][    INFO] Iters:18, loss:0.324, seg_loss:0.324, gmm_loss:2.783,k1_loss:0.008
+[2026-02-12 03:13:25,803][    INFO] Iters:20, loss:0.331, seg_loss:0.331, gmm_loss:2.763,k1_loss:0.008
+[2026-02-12 03:16:52,816][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.94
+[2026-02-12 03:16:52,817][    INFO] ************************* ***** >>>> OA: 85.69
+[2026-02-12 03:16:52,817][    INFO] ************************* ***** >>>> PA: [0.83394371 0.95073662 0.7572054  0.88386186 0.7158601 ]
+[2026-02-12 03:16:52,817][    INFO] ************************* ***** >>>> MPA: 82.83
+[2026-02-12 03:16:52,818][    INFO] ************************* ***** >>>> UA: [0.90627909 0.90209784 0.79370553 0.82266482 0.86248093]
+[2026-02-12 03:16:52,818][    INFO] ************************* ***** >>>> MUA: 85.74
+[2026-02-12 03:16:52,818][    INFO] ************************* ***** >>>> F1 score: [86.86, 92.58, 77.5, 85.22, 78.24]
+[2026-02-12 03:16:52,818][    INFO] ************************* ***** >>>> mean F1: 84.08
+[2026-02-12 03:16:52,818][    INFO] ************************* ***** >>>> Kappa: 0.836
+
+[2026-02-12 03:16:52,819][    INFO] ===========> Epoch: 34, LR: 0.0006, Previous best: 72.95
+[2026-02-12 03:16:53,922][    INFO] Iters:0, loss:0.326, seg_loss:0.326, gmm_loss:3.045,k1_loss:0.005
+[2026-02-12 03:16:55,128][    INFO] Iters:2, loss:0.326, seg_loss:0.326, gmm_loss:2.910,k1_loss:0.006
+[2026-02-12 03:16:56,333][    INFO] Iters:4, loss:0.346, seg_loss:0.346, gmm_loss:3.017,k1_loss:0.006
+[2026-02-12 03:16:57,529][    INFO] Iters:6, loss:0.328, seg_loss:0.328, gmm_loss:2.905,k1_loss:0.006
+[2026-02-12 03:16:58,727][    INFO] Iters:8, loss:0.308, seg_loss:0.308, gmm_loss:2.888,k1_loss:0.006
+[2026-02-12 03:16:59,925][    INFO] Iters:10, loss:0.304, seg_loss:0.304, gmm_loss:2.876,k1_loss:0.007
+[2026-02-12 03:17:01,120][    INFO] Iters:12, loss:0.353, seg_loss:0.353, gmm_loss:2.859,k1_loss:0.007
+[2026-02-12 03:17:02,317][    INFO] Iters:14, loss:0.336, seg_loss:0.336, gmm_loss:2.839,k1_loss:0.007
+[2026-02-12 03:17:03,520][    INFO] Iters:16, loss:0.327, seg_loss:0.327, gmm_loss:2.860,k1_loss:0.007
+[2026-02-12 03:17:04,717][    INFO] Iters:18, loss:0.317, seg_loss:0.317, gmm_loss:2.889,k1_loss:0.007
+[2026-02-12 03:17:05,914][    INFO] Iters:20, loss:0.313, seg_loss:0.313, gmm_loss:2.884,k1_loss:0.007
+[2026-02-12 03:20:33,231][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.56
+[2026-02-12 03:20:33,232][    INFO] ************************* ***** >>>> OA: 85.07
+[2026-02-12 03:20:33,232][    INFO] ************************* ***** >>>> PA: [0.85914582 0.94850513 0.66033493 0.93238428 0.76474995]
+[2026-02-12 03:20:33,233][    INFO] ************************* ***** >>>> MPA: 83.30
+[2026-02-12 03:20:33,233][    INFO] ************************* ***** >>>> UA: [0.88671501 0.90554909 0.85074589 0.76918474 0.84424732]
+[2026-02-12 03:20:33,233][    INFO] ************************* ***** >>>> MUA: 85.13
+[2026-02-12 03:20:33,233][    INFO] ************************* ***** >>>> F1 score: [87.27, 92.65, 74.35, 84.3, 80.25]
+[2026-02-12 03:20:33,234][    INFO] ************************* ***** >>>> mean F1: 83.76
+[2026-02-12 03:20:33,234][    INFO] ************************* ***** >>>> Kappa: 0.829
+
+[2026-02-12 03:20:33,234][    INFO] ===========> Epoch: 35, LR: 0.0006, Previous best: 72.95
+[2026-02-12 03:20:34,191][    INFO] Iters:0, loss:0.366, seg_loss:0.366, gmm_loss:3.136,k1_loss:0.008
+[2026-02-12 03:20:35,407][    INFO] Iters:2, loss:0.323, seg_loss:0.323, gmm_loss:2.888,k1_loss:0.008
+[2026-02-12 03:20:36,609][    INFO] Iters:4, loss:0.371, seg_loss:0.371, gmm_loss:2.866,k1_loss:0.009
+[2026-02-12 03:20:37,807][    INFO] Iters:6, loss:0.325, seg_loss:0.325, gmm_loss:2.938,k1_loss:0.009
+[2026-02-12 03:20:39,006][    INFO] Iters:8, loss:0.332, seg_loss:0.332, gmm_loss:2.855,k1_loss:0.008
+[2026-02-12 03:20:40,208][    INFO] Iters:10, loss:0.317, seg_loss:0.317, gmm_loss:2.884,k1_loss:0.008
+[2026-02-12 03:20:41,408][    INFO] Iters:12, loss:0.302, seg_loss:0.302, gmm_loss:2.861,k1_loss:0.008
+[2026-02-12 03:20:42,601][    INFO] Iters:14, loss:0.289, seg_loss:0.289, gmm_loss:2.828,k1_loss:0.008
+[2026-02-12 03:20:43,801][    INFO] Iters:16, loss:0.283, seg_loss:0.283, gmm_loss:2.875,k1_loss:0.008
+[2026-02-12 03:20:45,006][    INFO] Iters:18, loss:0.281, seg_loss:0.281, gmm_loss:2.889,k1_loss:0.008
+[2026-02-12 03:20:46,198][    INFO] Iters:20, loss:0.279, seg_loss:0.279, gmm_loss:2.875,k1_loss:0.008
+[2026-02-12 03:24:12,699][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.22
+[2026-02-12 03:24:12,700][    INFO] ************************* ***** >>>> OA: 85.55
+[2026-02-12 03:24:12,701][    INFO] ************************* ***** >>>> PA: [0.83344903 0.94492142 0.72296904 0.9184956  0.74757491]
+[2026-02-12 03:24:12,701][    INFO] ************************* ***** >>>> MPA: 83.35
+[2026-02-12 03:24:12,702][    INFO] ************************* ***** >>>> UA: [0.91000861 0.91952186 0.80700538 0.78792595 0.85835741]
+[2026-02-12 03:24:12,702][    INFO] ************************* ***** >>>> MUA: 85.66
+[2026-02-12 03:24:12,702][    INFO] ************************* ***** >>>> F1 score: [87.0, 93.2, 76.27, 84.82, 79.91]
+[2026-02-12 03:24:12,702][    INFO] ************************* ***** >>>> mean F1: 84.24
+[2026-02-12 03:24:12,703][    INFO] ************************* ***** >>>> Kappa: 0.835
+
+[2026-02-12 03:24:13,483][    INFO] ===========> Epoch: 36, LR: 0.0006, Previous best: 73.22
+[2026-02-12 03:24:14,425][    INFO] Iters:0, loss:0.281, seg_loss:0.281, gmm_loss:2.855,k1_loss:0.008
+[2026-02-12 03:24:15,628][    INFO] Iters:2, loss:0.250, seg_loss:0.250, gmm_loss:2.816,k1_loss:0.008
+[2026-02-12 03:24:16,834][    INFO] Iters:4, loss:0.246, seg_loss:0.246, gmm_loss:2.734,k1_loss:0.007
+[2026-02-12 03:24:18,028][    INFO] Iters:6, loss:0.238, seg_loss:0.238, gmm_loss:2.699,k1_loss:0.006
+[2026-02-12 03:24:19,230][    INFO] Iters:8, loss:0.281, seg_loss:0.281, gmm_loss:2.724,k1_loss:0.007
+[2026-02-12 03:24:20,430][    INFO] Iters:10, loss:0.289, seg_loss:0.289, gmm_loss:2.723,k1_loss:0.007
+[2026-02-12 03:24:21,627][    INFO] Iters:12, loss:0.297, seg_loss:0.297, gmm_loss:2.753,k1_loss:0.007
+[2026-02-12 03:24:22,828][    INFO] Iters:14, loss:0.287, seg_loss:0.287, gmm_loss:2.777,k1_loss:0.007
+[2026-02-12 03:24:24,023][    INFO] Iters:16, loss:0.303, seg_loss:0.303, gmm_loss:2.844,k1_loss:0.007
+[2026-02-12 03:24:25,217][    INFO] Iters:18, loss:0.291, seg_loss:0.291, gmm_loss:2.865,k1_loss:0.007
+[2026-02-12 03:24:26,406][    INFO] Iters:20, loss:0.292, seg_loss:0.292, gmm_loss:2.874,k1_loss:0.007
+[2026-02-12 03:27:52,268][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 70.14
+[2026-02-12 03:27:52,269][    INFO] ************************* ***** >>>> OA: 84.24
+[2026-02-12 03:27:52,269][    INFO] ************************* ***** >>>> PA: [0.8894339  0.94426853 0.61162346 0.92839541 0.65677409]
+[2026-02-12 03:27:52,269][    INFO] ************************* ***** >>>> MPA: 80.61
+[2026-02-12 03:27:52,270][    INFO] ************************* ***** >>>> UA: [0.84326394 0.90878301 0.87030373 0.76060203 0.87933187]
+[2026-02-12 03:27:52,270][    INFO] ************************* ***** >>>> MUA: 85.25
+[2026-02-12 03:27:52,270][    INFO] ************************* ***** >>>> F1 score: [86.57, 92.62, 71.84, 83.62, 75.19]
+[2026-02-12 03:27:52,270][    INFO] ************************* ***** >>>> mean F1: 81.97
+[2026-02-12 03:27:52,270][    INFO] ************************* ***** >>>> Kappa: 0.818
+
+[2026-02-12 03:27:52,271][    INFO] ===========> Epoch: 37, LR: 0.0006, Previous best: 73.22
+[2026-02-12 03:27:53,236][    INFO] Iters:0, loss:0.243, seg_loss:0.243, gmm_loss:3.250,k1_loss:0.007
+[2026-02-12 03:27:54,435][    INFO] Iters:2, loss:0.320, seg_loss:0.320, gmm_loss:2.634,k1_loss:0.005
+[2026-02-12 03:27:55,637][    INFO] Iters:4, loss:0.313, seg_loss:0.313, gmm_loss:2.781,k1_loss:0.006
+[2026-02-12 03:27:56,830][    INFO] Iters:6, loss:0.301, seg_loss:0.301, gmm_loss:2.786,k1_loss:0.007
+[2026-02-12 03:27:58,027][    INFO] Iters:8, loss:0.338, seg_loss:0.338, gmm_loss:2.779,k1_loss:0.007
+[2026-02-12 03:27:59,219][    INFO] Iters:10, loss:0.321, seg_loss:0.321, gmm_loss:2.799,k1_loss:0.007
+[2026-02-12 03:28:00,420][    INFO] Iters:12, loss:0.305, seg_loss:0.305, gmm_loss:2.814,k1_loss:0.007
+[2026-02-12 03:28:01,617][    INFO] Iters:14, loss:0.283, seg_loss:0.283, gmm_loss:2.793,k1_loss:0.007
+[2026-02-12 03:28:02,813][    INFO] Iters:16, loss:0.294, seg_loss:0.294, gmm_loss:2.814,k1_loss:0.007
+[2026-02-12 03:28:04,008][    INFO] Iters:18, loss:0.299, seg_loss:0.299, gmm_loss:2.795,k1_loss:0.007
+[2026-02-12 03:28:05,203][    INFO] Iters:20, loss:0.297, seg_loss:0.297, gmm_loss:2.827,k1_loss:0.007
+[2026-02-12 03:31:31,487][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.26
+[2026-02-12 03:31:31,488][    INFO] ************************* ***** >>>> OA: 84.94
+[2026-02-12 03:31:31,489][    INFO] ************************* ***** >>>> PA: [0.88527929 0.90332313 0.70599905 0.9069548  0.7296939 ]
+[2026-02-12 03:31:31,489][    INFO] ************************* ***** >>>> MPA: 82.63
+[2026-02-12 03:31:31,489][    INFO] ************************* ***** >>>> UA: [0.83747217 0.94358855 0.81744865 0.79575098 0.86447593]
+[2026-02-12 03:31:31,490][    INFO] ************************* ***** >>>> MUA: 85.17
+[2026-02-12 03:31:31,490][    INFO] ************************* ***** >>>> F1 score: [86.07, 92.3, 75.76, 84.77, 79.14]
+[2026-02-12 03:31:31,490][    INFO] ************************* ***** >>>> mean F1: 83.61
+[2026-02-12 03:31:31,490][    INFO] ************************* ***** >>>> Kappa: 0.827
+
+[2026-02-12 03:31:31,491][    INFO] ===========> Epoch: 38, LR: 0.0006, Previous best: 73.22
+[2026-02-12 03:31:32,483][    INFO] Iters:0, loss:0.165, seg_loss:0.165, gmm_loss:2.918,k1_loss:0.009
+[2026-02-12 03:31:33,702][    INFO] Iters:2, loss:0.164, seg_loss:0.164, gmm_loss:3.080,k1_loss:0.008
+[2026-02-12 03:31:34,898][    INFO] Iters:4, loss:0.201, seg_loss:0.201, gmm_loss:3.094,k1_loss:0.010
+[2026-02-12 03:31:36,101][    INFO] Iters:6, loss:0.201, seg_loss:0.201, gmm_loss:2.915,k1_loss:0.009
+[2026-02-12 03:31:37,300][    INFO] Iters:8, loss:0.208, seg_loss:0.208, gmm_loss:2.864,k1_loss:0.009
+[2026-02-12 03:31:38,501][    INFO] Iters:10, loss:0.207, seg_loss:0.207, gmm_loss:2.833,k1_loss:0.008
+[2026-02-12 03:31:39,699][    INFO] Iters:12, loss:0.243, seg_loss:0.243, gmm_loss:2.845,k1_loss:0.009
+[2026-02-12 03:31:40,904][    INFO] Iters:14, loss:0.258, seg_loss:0.258, gmm_loss:2.886,k1_loss:0.008
+[2026-02-12 03:31:42,101][    INFO] Iters:16, loss:0.250, seg_loss:0.250, gmm_loss:2.907,k1_loss:0.008
+[2026-02-12 03:31:43,298][    INFO] Iters:18, loss:0.261, seg_loss:0.261, gmm_loss:2.900,k1_loss:0.008
+[2026-02-12 03:31:44,498][    INFO] Iters:20, loss:0.258, seg_loss:0.258, gmm_loss:2.898,k1_loss:0.008
+[2026-02-12 03:35:15,034][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.99
+[2026-02-12 03:35:15,035][    INFO] ************************* ***** >>>> OA: 85.76
+[2026-02-12 03:35:15,035][    INFO] ************************* ***** >>>> PA: [0.87250597 0.93390277 0.73863074 0.8874725  0.70027484]
+[2026-02-12 03:35:15,036][    INFO] ************************* ***** >>>> MPA: 82.66
+[2026-02-12 03:35:15,036][    INFO] ************************* ***** >>>> UA: [0.86846251 0.92832026 0.80398385 0.81956212 0.88027721]
+[2026-02-12 03:35:15,037][    INFO] ************************* ***** >>>> MUA: 86.01
+[2026-02-12 03:35:15,037][    INFO] ************************* ***** >>>> F1 score: [87.05, 93.11, 76.99, 85.22, 78.0]
+[2026-02-12 03:35:15,037][    INFO] ************************* ***** >>>> mean F1: 84.07
+[2026-02-12 03:35:15,037][    INFO] ************************* ***** >>>> Kappa: 0.837
+
+[2026-02-12 03:35:15,038][    INFO] ===========> Epoch: 39, LR: 0.0005, Previous best: 73.22
+[2026-02-12 03:35:15,997][    INFO] Iters:0, loss:0.570, seg_loss:0.570, gmm_loss:2.824,k1_loss:0.007
+[2026-02-12 03:35:17,201][    INFO] Iters:2, loss:0.444, seg_loss:0.444, gmm_loss:2.686,k1_loss:0.008
+[2026-02-12 03:35:18,408][    INFO] Iters:4, loss:0.385, seg_loss:0.385, gmm_loss:2.647,k1_loss:0.008
+[2026-02-12 03:35:19,610][    INFO] Iters:6, loss:0.384, seg_loss:0.384, gmm_loss:2.629,k1_loss:0.008
+[2026-02-12 03:35:20,811][    INFO] Iters:8, loss:0.362, seg_loss:0.362, gmm_loss:2.688,k1_loss:0.008
+[2026-02-12 03:35:22,006][    INFO] Iters:10, loss:0.350, seg_loss:0.350, gmm_loss:2.723,k1_loss:0.008
+[2026-02-12 03:35:23,213][    INFO] Iters:12, loss:0.350, seg_loss:0.350, gmm_loss:2.752,k1_loss:0.008
+[2026-02-12 03:35:24,413][    INFO] Iters:14, loss:0.343, seg_loss:0.343, gmm_loss:2.799,k1_loss:0.008
+[2026-02-12 03:35:25,609][    INFO] Iters:16, loss:0.343, seg_loss:0.343, gmm_loss:2.793,k1_loss:0.008
+[2026-02-12 03:35:26,799][    INFO] Iters:18, loss:0.342, seg_loss:0.342, gmm_loss:2.777,k1_loss:0.008
+[2026-02-12 03:35:27,992][    INFO] Iters:20, loss:0.339, seg_loss:0.339, gmm_loss:2.787,k1_loss:0.008
+[2026-02-12 03:38:54,473][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.36
+[2026-02-12 03:38:54,473][    INFO] ************************* ***** >>>> OA: 85.55
+[2026-02-12 03:38:54,474][    INFO] ************************* ***** >>>> PA: [0.87873286 0.92713688 0.71629568 0.89930994 0.77289286]
+[2026-02-12 03:38:54,475][    INFO] ************************* ***** >>>> MPA: 83.89
+[2026-02-12 03:38:54,475][    INFO] ************************* ***** >>>> UA: [0.85891849 0.93292864 0.82134475 0.80310273 0.84132906]
+[2026-02-12 03:38:54,475][    INFO] ************************* ***** >>>> MUA: 85.15
+[2026-02-12 03:38:54,476][    INFO] ************************* ***** >>>> F1 score: [86.87, 93.0, 76.52, 84.85, 80.57]
+[2026-02-12 03:38:54,476][    INFO] ************************* ***** >>>> mean F1: 84.36
+[2026-02-12 03:38:54,476][    INFO] ************************* ***** >>>> Kappa: 0.834
+
+[2026-02-12 03:38:55,293][    INFO] ===========> Epoch: 40, LR: 0.0005, Previous best: 73.36
+[2026-02-12 03:38:56,283][    INFO] Iters:0, loss:0.191, seg_loss:0.191, gmm_loss:3.038,k1_loss:0.009
+[2026-02-12 03:38:57,485][    INFO] Iters:2, loss:0.215, seg_loss:0.215, gmm_loss:2.741,k1_loss:0.008
+[2026-02-12 03:38:58,689][    INFO] Iters:4, loss:0.248, seg_loss:0.248, gmm_loss:2.919,k1_loss:0.007
+[2026-02-12 03:38:59,888][    INFO] Iters:6, loss:0.270, seg_loss:0.270, gmm_loss:2.888,k1_loss:0.007
+[2026-02-12 03:39:01,081][    INFO] Iters:8, loss:0.267, seg_loss:0.267, gmm_loss:2.851,k1_loss:0.007
+[2026-02-12 03:39:02,279][    INFO] Iters:10, loss:0.268, seg_loss:0.268, gmm_loss:2.914,k1_loss:0.007
+[2026-02-12 03:39:03,476][    INFO] Iters:12, loss:0.264, seg_loss:0.264, gmm_loss:2.975,k1_loss:0.007
+[2026-02-12 03:39:04,673][    INFO] Iters:14, loss:0.276, seg_loss:0.276, gmm_loss:2.956,k1_loss:0.007
+[2026-02-12 03:39:05,869][    INFO] Iters:16, loss:0.278, seg_loss:0.278, gmm_loss:2.963,k1_loss:0.007
+[2026-02-12 03:39:07,075][    INFO] Iters:18, loss:0.290, seg_loss:0.290, gmm_loss:2.940,k1_loss:0.008
+[2026-02-12 03:39:08,263][    INFO] Iters:20, loss:0.284, seg_loss:0.284, gmm_loss:2.953,k1_loss:0.008
+[2026-02-12 03:42:34,530][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.49
+[2026-02-12 03:42:34,531][    INFO] ************************* ***** >>>> OA: 85.31
+[2026-02-12 03:42:34,531][    INFO] ************************* ***** >>>> PA: [0.83934117 0.91606827 0.77151328 0.88784875 0.69625997]
+[2026-02-12 03:42:34,532][    INFO] ************************* ***** >>>> MPA: 82.22
+[2026-02-12 03:42:34,532][    INFO] ************************* ***** >>>> UA: [0.88494782 0.93334242 0.77648722 0.81503646 0.88312736]
+[2026-02-12 03:42:34,532][    INFO] ************************* ***** >>>> MUA: 85.86
+[2026-02-12 03:42:34,532][    INFO] ************************* ***** >>>> F1 score: [86.15, 92.46, 77.4, 84.99, 77.86]
+[2026-02-12 03:42:34,532][    INFO] ************************* ***** >>>> mean F1: 83.77
+[2026-02-12 03:42:34,532][    INFO] ************************* ***** >>>> Kappa: 0.832
+
+[2026-02-12 03:42:34,533][    INFO] ===========> Epoch: 41, LR: 0.0005, Previous best: 73.36
+[2026-02-12 03:42:35,603][    INFO] Iters:0, loss:0.402, seg_loss:0.402, gmm_loss:2.240,k1_loss:0.008
+[2026-02-12 03:42:36,818][    INFO] Iters:2, loss:0.308, seg_loss:0.308, gmm_loss:2.569,k1_loss:0.007
+[2026-02-12 03:42:38,015][    INFO] Iters:4, loss:0.238, seg_loss:0.238, gmm_loss:2.758,k1_loss:0.007
+[2026-02-12 03:42:39,216][    INFO] Iters:6, loss:0.240, seg_loss:0.240, gmm_loss:2.834,k1_loss:0.007
+[2026-02-12 03:42:40,411][    INFO] Iters:8, loss:0.261, seg_loss:0.261, gmm_loss:2.771,k1_loss:0.007
+[2026-02-12 03:42:41,604][    INFO] Iters:10, loss:0.259, seg_loss:0.259, gmm_loss:2.815,k1_loss:0.007
+[2026-02-12 03:42:42,799][    INFO] Iters:12, loss:0.256, seg_loss:0.256, gmm_loss:2.830,k1_loss:0.007
+[2026-02-12 03:42:43,999][    INFO] Iters:14, loss:0.267, seg_loss:0.267, gmm_loss:2.810,k1_loss:0.007
+[2026-02-12 03:42:45,194][    INFO] Iters:16, loss:0.261, seg_loss:0.261, gmm_loss:2.826,k1_loss:0.007
+[2026-02-12 03:42:46,388][    INFO] Iters:18, loss:0.283, seg_loss:0.283, gmm_loss:2.829,k1_loss:0.007
+[2026-02-12 03:42:47,578][    INFO] Iters:20, loss:0.275, seg_loss:0.275, gmm_loss:2.861,k1_loss:0.007
+[2026-02-12 03:46:13,996][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.01
+[2026-02-12 03:46:13,997][    INFO] ************************* ***** >>>> OA: 84.48
+[2026-02-12 03:46:13,997][    INFO] ************************* ***** >>>> PA: [0.88826225 0.90785678 0.65789689 0.93149126 0.68120823]
+[2026-02-12 03:46:13,998][    INFO] ************************* ***** >>>> MPA: 81.33
+[2026-02-12 03:46:13,998][    INFO] ************************* ***** >>>> UA: [0.83481169 0.93393883 0.85012461 0.76832681 0.88359267]
+[2026-02-12 03:46:13,998][    INFO] ************************* ***** >>>> MUA: 85.42
+[2026-02-12 03:46:13,998][    INFO] ************************* ***** >>>> F1 score: [86.07, 92.07, 74.18, 84.21, 76.93]
+[2026-02-12 03:46:13,999][    INFO] ************************* ***** >>>> mean F1: 82.69
+[2026-02-12 03:46:13,999][    INFO] ************************* ***** >>>> Kappa: 0.822
+
+[2026-02-12 03:46:13,999][    INFO] ===========> Epoch: 42, LR: 0.0005, Previous best: 73.36
+[2026-02-12 03:46:14,887][    INFO] Iters:0, loss:0.222, seg_loss:0.222, gmm_loss:2.579,k1_loss:0.009
+[2026-02-12 03:46:16,119][    INFO] Iters:2, loss:0.252, seg_loss:0.252, gmm_loss:2.610,k1_loss:0.009
+[2026-02-12 03:46:17,317][    INFO] Iters:4, loss:0.278, seg_loss:0.278, gmm_loss:2.836,k1_loss:0.008
+[2026-02-12 03:46:18,514][    INFO] Iters:6, loss:0.280, seg_loss:0.280, gmm_loss:2.895,k1_loss:0.009
+[2026-02-12 03:46:19,711][    INFO] Iters:8, loss:0.287, seg_loss:0.287, gmm_loss:2.872,k1_loss:0.008
+[2026-02-12 03:46:20,914][    INFO] Iters:10, loss:0.293, seg_loss:0.293, gmm_loss:2.867,k1_loss:0.008
+[2026-02-12 03:46:22,109][    INFO] Iters:12, loss:0.300, seg_loss:0.300, gmm_loss:2.802,k1_loss:0.008
+[2026-02-12 03:46:23,302][    INFO] Iters:14, loss:0.280, seg_loss:0.280, gmm_loss:2.836,k1_loss:0.008
+[2026-02-12 03:46:24,501][    INFO] Iters:16, loss:0.281, seg_loss:0.281, gmm_loss:2.838,k1_loss:0.008
+[2026-02-12 03:46:25,697][    INFO] Iters:18, loss:0.296, seg_loss:0.296, gmm_loss:2.824,k1_loss:0.008
+[2026-02-12 03:46:26,887][    INFO] Iters:20, loss:0.302, seg_loss:0.302, gmm_loss:2.807,k1_loss:0.008
+[2026-02-12 03:49:54,281][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 71.80
+[2026-02-12 03:49:54,282][    INFO] ************************* ***** >>>> OA: 84.61
+[2026-02-12 03:49:54,283][    INFO] ************************* ***** >>>> PA: [0.86078344 0.9324327  0.65032833 0.94201862 0.72634188]
+[2026-02-12 03:49:54,283][    INFO] ************************* ***** >>>> MPA: 82.24
+[2026-02-12 03:49:54,284][    INFO] ************************* ***** >>>> UA: [0.8731617  0.92377031 0.85207601 0.75034833 0.87405966]
+[2026-02-12 03:49:54,284][    INFO] ************************* ***** >>>> MUA: 85.47
+[2026-02-12 03:49:54,285][    INFO] ************************* ***** >>>> F1 score: [86.69, 92.81, 73.77, 83.53, 79.34]
+[2026-02-12 03:49:54,285][    INFO] ************************* ***** >>>> mean F1: 83.23
+[2026-02-12 03:49:54,285][    INFO] ************************* ***** >>>> Kappa: 0.824
+
+[2026-02-12 03:49:54,286][    INFO] ===========> Epoch: 43, LR: 0.0005, Previous best: 73.36
+[2026-02-12 03:49:55,231][    INFO] Iters:0, loss:0.226, seg_loss:0.226, gmm_loss:3.040,k1_loss:0.008
+[2026-02-12 03:49:56,442][    INFO] Iters:2, loss:0.146, seg_loss:0.146, gmm_loss:2.859,k1_loss:0.007
+[2026-02-12 03:49:57,644][    INFO] Iters:4, loss:0.225, seg_loss:0.225, gmm_loss:2.995,k1_loss:0.006
+[2026-02-12 03:49:58,850][    INFO] Iters:6, loss:0.220, seg_loss:0.220, gmm_loss:2.979,k1_loss:0.007
+[2026-02-12 03:50:00,047][    INFO] Iters:8, loss:0.283, seg_loss:0.283, gmm_loss:2.826,k1_loss:0.008
+[2026-02-12 03:50:01,245][    INFO] Iters:10, loss:0.323, seg_loss:0.323, gmm_loss:2.780,k1_loss:0.008
+[2026-02-12 03:50:02,443][    INFO] Iters:12, loss:0.335, seg_loss:0.335, gmm_loss:2.827,k1_loss:0.007
+[2026-02-12 03:50:03,642][    INFO] Iters:14, loss:0.305, seg_loss:0.305, gmm_loss:2.835,k1_loss:0.007
+[2026-02-12 03:50:04,837][    INFO] Iters:16, loss:0.290, seg_loss:0.290, gmm_loss:2.878,k1_loss:0.007
+[2026-02-12 03:50:06,038][    INFO] Iters:18, loss:0.292, seg_loss:0.292, gmm_loss:2.891,k1_loss:0.007
+[2026-02-12 03:50:07,236][    INFO] Iters:20, loss:0.295, seg_loss:0.295, gmm_loss:2.876,k1_loss:0.007
+[2026-02-12 03:53:34,397][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.78
+[2026-02-12 03:53:34,397][    INFO] ************************* ***** >>>> OA: 85.27
+[2026-02-12 03:53:34,398][    INFO] ************************* ***** >>>> PA: [0.85097126 0.92335304 0.7152523  0.92284741 0.72689696]
+[2026-02-12 03:53:34,398][    INFO] ************************* ***** >>>> MPA: 82.79
+[2026-02-12 03:53:34,398][    INFO] ************************* ***** >>>> UA: [0.8934194  0.93390693 0.80566597 0.77968059 0.87363417]
+[2026-02-12 03:53:34,399][    INFO] ************************* ***** >>>> MUA: 85.73
+[2026-02-12 03:53:34,399][    INFO] ************************* ***** >>>> F1 score: [87.17, 92.86, 75.78, 84.52, 79.35]
+[2026-02-12 03:53:34,399][    INFO] ************************* ***** >>>> mean F1: 83.94
+[2026-02-12 03:53:34,399][    INFO] ************************* ***** >>>> Kappa: 0.832
+
+[2026-02-12 03:53:34,400][    INFO] ===========> Epoch: 44, LR: 0.0005, Previous best: 73.36
+[2026-02-12 03:53:35,370][    INFO] Iters:0, loss:0.227, seg_loss:0.227, gmm_loss:3.198,k1_loss:0.007
+[2026-02-12 03:53:36,577][    INFO] Iters:2, loss:0.196, seg_loss:0.196, gmm_loss:2.959,k1_loss:0.007
+[2026-02-12 03:53:37,781][    INFO] Iters:4, loss:0.252, seg_loss:0.252, gmm_loss:3.010,k1_loss:0.007
+[2026-02-12 03:53:38,976][    INFO] Iters:6, loss:0.237, seg_loss:0.237, gmm_loss:2.911,k1_loss:0.007
+[2026-02-12 03:53:40,178][    INFO] Iters:8, loss:0.232, seg_loss:0.232, gmm_loss:2.969,k1_loss:0.008
+[2026-02-12 03:53:41,379][    INFO] Iters:10, loss:0.246, seg_loss:0.246, gmm_loss:2.967,k1_loss:0.008
+[2026-02-12 03:53:42,577][    INFO] Iters:12, loss:0.245, seg_loss:0.245, gmm_loss:2.940,k1_loss:0.008
+[2026-02-12 03:53:43,771][    INFO] Iters:14, loss:0.252, seg_loss:0.252, gmm_loss:2.980,k1_loss:0.007
+[2026-02-12 03:53:44,969][    INFO] Iters:16, loss:0.263, seg_loss:0.263, gmm_loss:3.010,k1_loss:0.007
+[2026-02-12 03:53:46,164][    INFO] Iters:18, loss:0.267, seg_loss:0.267, gmm_loss:3.011,k1_loss:0.007
+[2026-02-12 03:53:47,359][    INFO] Iters:20, loss:0.267, seg_loss:0.267, gmm_loss:3.016,k1_loss:0.007
+[2026-02-12 03:57:14,011][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 74.12
+[2026-02-12 03:57:14,012][    INFO] ************************* ***** >>>> OA: 85.77
+[2026-02-12 03:57:14,013][    INFO] ************************* ***** >>>> PA: [0.83066216 0.93357999 0.76561893 0.89527772 0.82803406]
+[2026-02-12 03:57:14,013][    INFO] ************************* ***** >>>> MPA: 85.06
+[2026-02-12 03:57:14,014][    INFO] ************************* ***** >>>> UA: [0.91547369 0.92985388 0.78472843 0.80604463 0.80922938]
+[2026-02-12 03:57:14,014][    INFO] ************************* ***** >>>> MUA: 84.91
+[2026-02-12 03:57:14,014][    INFO] ************************* ***** >>>> F1 score: [87.1, 93.17, 77.51, 84.83, 81.85]
+[2026-02-12 03:57:14,015][    INFO] ************************* ***** >>>> mean F1: 84.89
+[2026-02-12 03:57:14,015][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 03:57:14,763][    INFO] ===========> Epoch: 45, LR: 0.0005, Previous best: 74.12
+[2026-02-12 03:57:15,733][    INFO] Iters:0, loss:0.295, seg_loss:0.295, gmm_loss:2.939,k1_loss:0.008
+[2026-02-12 03:57:16,949][    INFO] Iters:2, loss:0.265, seg_loss:0.265, gmm_loss:3.070,k1_loss:0.008
+[2026-02-12 03:57:18,146][    INFO] Iters:4, loss:0.265, seg_loss:0.265, gmm_loss:3.118,k1_loss:0.008
+[2026-02-12 03:57:19,343][    INFO] Iters:6, loss:0.298, seg_loss:0.298, gmm_loss:3.128,k1_loss:0.007
+[2026-02-12 03:57:20,540][    INFO] Iters:8, loss:0.279, seg_loss:0.279, gmm_loss:3.084,k1_loss:0.007
+[2026-02-12 03:57:21,746][    INFO] Iters:10, loss:0.260, seg_loss:0.260, gmm_loss:3.059,k1_loss:0.007
+[2026-02-12 03:57:22,941][    INFO] Iters:12, loss:0.301, seg_loss:0.301, gmm_loss:2.975,k1_loss:0.008
+[2026-02-12 03:57:24,137][    INFO] Iters:14, loss:0.283, seg_loss:0.283, gmm_loss:2.952,k1_loss:0.008
+[2026-02-12 03:57:25,337][    INFO] Iters:16, loss:0.297, seg_loss:0.297, gmm_loss:2.951,k1_loss:0.009
+[2026-02-12 03:57:26,527][    INFO] Iters:18, loss:0.299, seg_loss:0.299, gmm_loss:2.933,k1_loss:0.009
+[2026-02-12 03:57:27,717][    INFO] Iters:20, loss:0.305, seg_loss:0.305, gmm_loss:2.918,k1_loss:0.009
+[2026-02-12 04:00:53,764][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.29
+[2026-02-12 04:00:53,764][    INFO] ************************* ***** >>>> OA: 84.93
+[2026-02-12 04:00:53,765][    INFO] ************************* ***** >>>> PA: [0.88132737 0.94315833 0.64781937 0.92377189 0.76385536]
+[2026-02-12 04:00:53,765][    INFO] ************************* ***** >>>> MPA: 83.20
+[2026-02-12 04:00:53,765][    INFO] ************************* ***** >>>> UA: [0.84497505 0.9183118  0.86240867 0.77792565 0.84133768]
+[2026-02-12 04:00:53,765][    INFO] ************************* ***** >>>> MUA: 84.90
+[2026-02-12 04:00:53,765][    INFO] ************************* ***** >>>> F1 score: [86.28, 93.06, 73.99, 84.46, 80.07]
+[2026-02-12 04:00:53,766][    INFO] ************************* ***** >>>> mean F1: 83.57
+[2026-02-12 04:00:53,766][    INFO] ************************* ***** >>>> Kappa: 0.826
+
+[2026-02-12 04:00:53,766][    INFO] ===========> Epoch: 46, LR: 0.0005, Previous best: 74.12
+[2026-02-12 04:00:54,685][    INFO] Iters:0, loss:0.287, seg_loss:0.287, gmm_loss:2.696,k1_loss:0.008
+[2026-02-12 04:00:55,891][    INFO] Iters:2, loss:0.294, seg_loss:0.294, gmm_loss:2.714,k1_loss:0.007
+[2026-02-12 04:00:57,088][    INFO] Iters:4, loss:0.271, seg_loss:0.271, gmm_loss:2.544,k1_loss:0.006
+[2026-02-12 04:00:58,280][    INFO] Iters:6, loss:0.305, seg_loss:0.305, gmm_loss:2.701,k1_loss:0.006
+[2026-02-12 04:00:59,474][    INFO] Iters:8, loss:0.307, seg_loss:0.307, gmm_loss:2.829,k1_loss:0.006
+[2026-02-12 04:01:00,663][    INFO] Iters:10, loss:0.286, seg_loss:0.286, gmm_loss:2.824,k1_loss:0.007
+[2026-02-12 04:01:01,851][    INFO] Iters:12, loss:0.307, seg_loss:0.307, gmm_loss:2.827,k1_loss:0.007
+[2026-02-12 04:01:03,038][    INFO] Iters:14, loss:0.300, seg_loss:0.300, gmm_loss:2.786,k1_loss:0.007
+[2026-02-12 04:01:04,228][    INFO] Iters:16, loss:0.300, seg_loss:0.300, gmm_loss:2.790,k1_loss:0.007
+[2026-02-12 04:01:05,418][    INFO] Iters:18, loss:0.304, seg_loss:0.304, gmm_loss:2.809,k1_loss:0.007
+[2026-02-12 04:01:06,602][    INFO] Iters:20, loss:0.302, seg_loss:0.302, gmm_loss:2.800,k1_loss:0.007
+[2026-02-12 04:04:33,646][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 67.37
+[2026-02-12 04:04:33,647][    INFO] ************************* ***** >>>> OA: 83.83
+[2026-02-12 04:04:33,647][    INFO] ************************* ***** >>>> PA: [0.88041526 0.94276034 0.62893012 0.91191688 0.50558849]
+[2026-02-12 04:04:33,648][    INFO] ************************* ***** >>>> MPA: 77.39
+[2026-02-12 04:04:33,648][    INFO] ************************* ***** >>>> UA: [0.81408666 0.89190773 0.85029365 0.79534501 0.92026171]
+[2026-02-12 04:04:33,649][    INFO] ************************* ***** >>>> MUA: 85.44
+[2026-02-12 04:04:33,649][    INFO] ************************* ***** >>>> F1 score: [84.6, 91.66, 72.3, 84.97, 65.26]
+[2026-02-12 04:04:33,649][    INFO] ************************* ***** >>>> mean F1: 79.76
+[2026-02-12 04:04:33,649][    INFO] ************************* ***** >>>> Kappa: 0.813
+
+[2026-02-12 04:04:33,650][    INFO] ===========> Epoch: 47, LR: 0.0005, Previous best: 74.12
+[2026-02-12 04:04:34,723][    INFO] Iters:0, loss:0.295, seg_loss:0.295, gmm_loss:2.764,k1_loss:0.007
+[2026-02-12 04:04:35,945][    INFO] Iters:2, loss:0.338, seg_loss:0.338, gmm_loss:2.799,k1_loss:0.008
+[2026-02-12 04:04:37,151][    INFO] Iters:4, loss:0.269, seg_loss:0.269, gmm_loss:2.723,k1_loss:0.008
+[2026-02-12 04:04:38,356][    INFO] Iters:6, loss:0.275, seg_loss:0.275, gmm_loss:2.803,k1_loss:0.008
+[2026-02-12 04:04:39,559][    INFO] Iters:8, loss:0.276, seg_loss:0.276, gmm_loss:2.804,k1_loss:0.008
+[2026-02-12 04:04:40,765][    INFO] Iters:10, loss:0.302, seg_loss:0.302, gmm_loss:2.830,k1_loss:0.008
+[2026-02-12 04:04:41,968][    INFO] Iters:12, loss:0.300, seg_loss:0.300, gmm_loss:2.862,k1_loss:0.008
+[2026-02-12 04:04:43,171][    INFO] Iters:14, loss:0.291, seg_loss:0.291, gmm_loss:2.850,k1_loss:0.008
+[2026-02-12 04:04:44,381][    INFO] Iters:16, loss:0.280, seg_loss:0.280, gmm_loss:2.807,k1_loss:0.008
+[2026-02-12 04:04:45,584][    INFO] Iters:18, loss:0.290, seg_loss:0.290, gmm_loss:2.837,k1_loss:0.008
+[2026-02-12 04:04:46,780][    INFO] Iters:20, loss:0.275, seg_loss:0.275, gmm_loss:2.678,k1_loss:0.007
+[2026-02-12 04:08:16,291][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.80
+[2026-02-12 04:08:16,292][    INFO] ************************* ***** >>>> OA: 85.36
+[2026-02-12 04:08:16,292][    INFO] ************************* ***** >>>> PA: [0.86235846 0.92124117 0.72690496 0.90575012 0.72410002]
+[2026-02-12 04:08:16,293][    INFO] ************************* ***** >>>> MPA: 82.81
+[2026-02-12 04:08:16,293][    INFO] ************************* ***** >>>> UA: [0.87623382 0.93642221 0.80228842 0.79513715 0.86998524]
+[2026-02-12 04:08:16,294][    INFO] ************************* ***** >>>> MUA: 85.60
+[2026-02-12 04:08:16,294][    INFO] ************************* ***** >>>> F1 score: [86.92, 92.88, 76.27, 84.68, 79.04]
+[2026-02-12 04:08:16,294][    INFO] ************************* ***** >>>> mean F1: 83.96
+[2026-02-12 04:08:16,294][    INFO] ************************* ***** >>>> Kappa: 0.833
+
+[2026-02-12 04:08:16,295][    INFO] ===========> Epoch: 48, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:08:17,178][    INFO] Iters:0, loss:0.297, seg_loss:0.297, gmm_loss:2.722,k1_loss:0.007
+[2026-02-12 04:08:18,385][    INFO] Iters:2, loss:0.337, seg_loss:0.337, gmm_loss:2.770,k1_loss:0.008
+[2026-02-12 04:08:19,585][    INFO] Iters:4, loss:0.374, seg_loss:0.374, gmm_loss:2.721,k1_loss:0.008
+[2026-02-12 04:08:20,780][    INFO] Iters:6, loss:0.342, seg_loss:0.342, gmm_loss:2.870,k1_loss:0.008
+[2026-02-12 04:08:21,985][    INFO] Iters:8, loss:0.339, seg_loss:0.339, gmm_loss:2.933,k1_loss:0.008
+[2026-02-12 04:08:23,191][    INFO] Iters:10, loss:0.319, seg_loss:0.319, gmm_loss:2.905,k1_loss:0.008
+[2026-02-12 04:08:24,390][    INFO] Iters:12, loss:0.297, seg_loss:0.297, gmm_loss:2.880,k1_loss:0.008
+[2026-02-12 04:08:25,581][    INFO] Iters:14, loss:0.303, seg_loss:0.303, gmm_loss:2.869,k1_loss:0.007
+[2026-02-12 04:08:26,782][    INFO] Iters:16, loss:0.305, seg_loss:0.305, gmm_loss:2.848,k1_loss:0.007
+[2026-02-12 04:08:27,974][    INFO] Iters:18, loss:0.295, seg_loss:0.295, gmm_loss:2.848,k1_loss:0.007
+[2026-02-12 04:08:29,167][    INFO] Iters:20, loss:0.291, seg_loss:0.291, gmm_loss:2.853,k1_loss:0.007
+[2026-02-12 04:11:55,085][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.78
+[2026-02-12 04:11:55,086][    INFO] ************************* ***** >>>> OA: 85.57
+[2026-02-12 04:11:55,086][    INFO] ************************* ***** >>>> PA: [0.85442075 0.93505082 0.7250649  0.91017219 0.69974671]
+[2026-02-12 04:11:55,086][    INFO] ************************* ***** >>>> MPA: 82.49
+[2026-02-12 04:11:55,087][    INFO] ************************* ***** >>>> UA: [0.88350699 0.92652651 0.81083218 0.79715981 0.88506343]
+[2026-02-12 04:11:55,087][    INFO] ************************* ***** >>>> MUA: 86.06
+[2026-02-12 04:11:55,087][    INFO] ************************* ***** >>>> F1 score: [86.87, 93.08, 76.56, 84.99, 78.16]
+[2026-02-12 04:11:55,087][    INFO] ************************* ***** >>>> mean F1: 83.93
+[2026-02-12 04:11:55,088][    INFO] ************************* ***** >>>> Kappa: 0.835
+
+[2026-02-12 04:11:55,088][    INFO] ===========> Epoch: 49, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:11:55,983][    INFO] Iters:0, loss:0.147, seg_loss:0.147, gmm_loss:2.229,k1_loss:0.004
+[2026-02-12 04:11:57,199][    INFO] Iters:2, loss:0.268, seg_loss:0.268, gmm_loss:2.787,k1_loss:0.004
+[2026-02-12 04:11:58,407][    INFO] Iters:4, loss:0.324, seg_loss:0.324, gmm_loss:2.716,k1_loss:0.007
+[2026-02-12 04:11:59,615][    INFO] Iters:6, loss:0.316, seg_loss:0.316, gmm_loss:2.806,k1_loss:0.007
+[2026-02-12 04:12:00,816][    INFO] Iters:8, loss:0.296, seg_loss:0.296, gmm_loss:2.818,k1_loss:0.007
+[2026-02-12 04:12:02,013][    INFO] Iters:10, loss:0.296, seg_loss:0.296, gmm_loss:2.918,k1_loss:0.007
+[2026-02-12 04:12:03,212][    INFO] Iters:12, loss:0.284, seg_loss:0.284, gmm_loss:2.938,k1_loss:0.007
+[2026-02-12 04:12:04,411][    INFO] Iters:14, loss:0.281, seg_loss:0.281, gmm_loss:2.969,k1_loss:0.007
+[2026-02-12 04:12:05,607][    INFO] Iters:16, loss:0.290, seg_loss:0.290, gmm_loss:2.989,k1_loss:0.007
+[2026-02-12 04:12:06,796][    INFO] Iters:18, loss:0.294, seg_loss:0.294, gmm_loss:2.973,k1_loss:0.007
+[2026-02-12 04:12:07,986][    INFO] Iters:20, loss:0.284, seg_loss:0.284, gmm_loss:2.941,k1_loss:0.007
+[2026-02-12 04:15:34,171][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.51
+[2026-02-12 04:15:34,172][    INFO] ************************* ***** >>>> OA: 85.78
+[2026-02-12 04:15:34,173][    INFO] ************************* ***** >>>> PA: [0.84850967 0.926751   0.7723359  0.88418371 0.7243587 ]
+[2026-02-12 04:15:34,173][    INFO] ************************* ***** >>>> MPA: 83.12
+[2026-02-12 04:15:34,174][    INFO] ************************* ***** >>>> UA: [0.88872868 0.93506121 0.77927274 0.82389167 0.88215373]
+[2026-02-12 04:15:34,174][    INFO] ************************* ***** >>>> MUA: 86.18
+[2026-02-12 04:15:34,174][    INFO] ************************* ***** >>>> F1 score: [86.82, 93.09, 77.58, 85.3, 79.55]
+[2026-02-12 04:15:34,175][    INFO] ************************* ***** >>>> mean F1: 84.47
+[2026-02-12 04:15:34,175][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 04:15:34,176][    INFO] ===========> Epoch: 50, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:15:35,141][    INFO] Iters:0, loss:0.292, seg_loss:0.292, gmm_loss:2.885,k1_loss:0.012
+[2026-02-12 04:15:36,348][    INFO] Iters:2, loss:0.491, seg_loss:0.491, gmm_loss:2.847,k1_loss:0.009
+[2026-02-12 04:15:37,547][    INFO] Iters:4, loss:0.412, seg_loss:0.412, gmm_loss:2.890,k1_loss:0.009
+[2026-02-12 04:15:38,741][    INFO] Iters:6, loss:0.513, seg_loss:0.513, gmm_loss:2.611,k1_loss:0.008
+[2026-02-12 04:15:39,949][    INFO] Iters:8, loss:0.438, seg_loss:0.438, gmm_loss:2.587,k1_loss:0.008
+[2026-02-12 04:15:41,149][    INFO] Iters:10, loss:0.431, seg_loss:0.431, gmm_loss:2.708,k1_loss:0.008
+[2026-02-12 04:15:42,342][    INFO] Iters:12, loss:0.419, seg_loss:0.419, gmm_loss:2.746,k1_loss:0.007
+[2026-02-12 04:15:43,543][    INFO] Iters:14, loss:0.412, seg_loss:0.412, gmm_loss:2.804,k1_loss:0.007
+[2026-02-12 04:15:44,746][    INFO] Iters:16, loss:0.395, seg_loss:0.395, gmm_loss:2.827,k1_loss:0.007
+[2026-02-12 04:15:45,942][    INFO] Iters:18, loss:0.396, seg_loss:0.396, gmm_loss:2.840,k1_loss:0.007
+[2026-02-12 04:15:47,130][    INFO] Iters:20, loss:0.397, seg_loss:0.397, gmm_loss:2.836,k1_loss:0.008
+[2026-02-12 04:19:17,693][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.04
+[2026-02-12 04:19:17,694][    INFO] ************************* ***** >>>> OA: 84.87
+[2026-02-12 04:19:17,694][    INFO] ************************* ***** >>>> PA: [0.88461006 0.93028247 0.65530624 0.92523722 0.75285083]
+[2026-02-12 04:19:17,694][    INFO] ************************* ***** >>>> MPA: 82.97
+[2026-02-12 04:19:17,695][    INFO] ************************* ***** >>>> UA: [0.83710054 0.92060472 0.86259242 0.78123365 0.83930524]
+[2026-02-12 04:19:17,695][    INFO] ************************* ***** >>>> MUA: 84.82
+[2026-02-12 04:19:17,695][    INFO] ************************* ***** >>>> F1 score: [86.02, 92.54, 74.48, 84.72, 79.37]
+[2026-02-12 04:19:17,695][    INFO] ************************* ***** >>>> mean F1: 83.43
+[2026-02-12 04:19:17,695][    INFO] ************************* ***** >>>> Kappa: 0.826
+
+[2026-02-12 04:19:17,696][    INFO] ===========> Epoch: 51, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:19:18,773][    INFO] Iters:0, loss:0.399, seg_loss:0.399, gmm_loss:3.032,k1_loss:0.008
+[2026-02-12 04:19:20,005][    INFO] Iters:2, loss:0.286, seg_loss:0.286, gmm_loss:3.057,k1_loss:0.008
+[2026-02-12 04:19:21,221][    INFO] Iters:4, loss:0.280, seg_loss:0.280, gmm_loss:3.075,k1_loss:0.008
+[2026-02-12 04:19:22,429][    INFO] Iters:6, loss:0.260, seg_loss:0.260, gmm_loss:2.980,k1_loss:0.008
+[2026-02-12 04:19:23,636][    INFO] Iters:8, loss:0.280, seg_loss:0.280, gmm_loss:2.943,k1_loss:0.008
+[2026-02-12 04:19:24,841][    INFO] Iters:10, loss:0.268, seg_loss:0.268, gmm_loss:2.979,k1_loss:0.007
+[2026-02-12 04:19:26,045][    INFO] Iters:12, loss:0.336, seg_loss:0.336, gmm_loss:2.917,k1_loss:0.008
+[2026-02-12 04:19:27,252][    INFO] Iters:14, loss:0.326, seg_loss:0.326, gmm_loss:2.888,k1_loss:0.008
+[2026-02-12 04:19:28,459][    INFO] Iters:16, loss:0.336, seg_loss:0.336, gmm_loss:2.902,k1_loss:0.008
+[2026-02-12 04:19:29,659][    INFO] Iters:18, loss:0.327, seg_loss:0.327, gmm_loss:2.882,k1_loss:0.008
+[2026-02-12 04:19:30,853][    INFO] Iters:20, loss:0.315, seg_loss:0.315, gmm_loss:2.850,k1_loss:0.008
+[2026-02-12 04:22:57,746][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.32
+[2026-02-12 04:22:57,746][    INFO] ************************* ***** >>>> OA: 84.95
+[2026-02-12 04:22:57,747][    INFO] ************************* ***** >>>> PA: [0.87859936 0.91989249 0.67671604 0.9251069  0.73787454]
+[2026-02-12 04:22:57,747][    INFO] ************************* ***** >>>> MPA: 82.76
+[2026-02-12 04:22:57,748][    INFO] ************************* ***** >>>> UA: [0.85433922 0.93395876 0.84127764 0.77261135 0.86371235]
+[2026-02-12 04:22:57,748][    INFO] ************************* ***** >>>> MUA: 85.32
+[2026-02-12 04:22:57,748][    INFO] ************************* ***** >>>> F1 score: [86.63, 92.69, 75.01, 84.2, 79.58]
+[2026-02-12 04:22:57,749][    INFO] ************************* ***** >>>> mean F1: 83.62
+[2026-02-12 04:22:57,749][    INFO] ************************* ***** >>>> Kappa: 0.827
+
+[2026-02-12 04:22:57,749][    INFO] ===========> Epoch: 52, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:22:58,700][    INFO] Iters:0, loss:0.156, seg_loss:0.156, gmm_loss:3.186,k1_loss:0.008
+[2026-02-12 04:22:59,909][    INFO] Iters:2, loss:0.238, seg_loss:0.238, gmm_loss:2.960,k1_loss:0.008
+[2026-02-12 04:23:01,109][    INFO] Iters:4, loss:0.284, seg_loss:0.284, gmm_loss:2.781,k1_loss:0.008
+[2026-02-12 04:23:02,301][    INFO] Iters:6, loss:0.255, seg_loss:0.255, gmm_loss:2.679,k1_loss:0.007
+[2026-02-12 04:23:03,510][    INFO] Iters:8, loss:0.245, seg_loss:0.245, gmm_loss:2.768,k1_loss:0.007
+[2026-02-12 04:23:04,708][    INFO] Iters:10, loss:0.250, seg_loss:0.250, gmm_loss:2.817,k1_loss:0.007
+[2026-02-12 04:23:05,907][    INFO] Iters:12, loss:0.258, seg_loss:0.258, gmm_loss:2.824,k1_loss:0.007
+[2026-02-12 04:23:07,104][    INFO] Iters:14, loss:0.271, seg_loss:0.271, gmm_loss:2.832,k1_loss:0.007
+[2026-02-12 04:23:08,299][    INFO] Iters:16, loss:0.277, seg_loss:0.277, gmm_loss:2.815,k1_loss:0.007
+[2026-02-12 04:23:09,493][    INFO] Iters:18, loss:0.287, seg_loss:0.287, gmm_loss:2.826,k1_loss:0.007
+[2026-02-12 04:23:10,688][    INFO] Iters:20, loss:0.289, seg_loss:0.289, gmm_loss:2.834,k1_loss:0.008
+[2026-02-12 04:26:37,083][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.56
+[2026-02-12 04:26:37,083][    INFO] ************************* ***** >>>> OA: 85.14
+[2026-02-12 04:26:37,084][    INFO] ************************* ***** >>>> PA: [0.83928776 0.92846714 0.71123967 0.92700005 0.7308795 ]
+[2026-02-12 04:26:37,084][    INFO] ************************* ***** >>>> MPA: 82.74
+[2026-02-12 04:26:37,084][    INFO] ************************* ***** >>>> UA: [0.90131905 0.92823007 0.8061739  0.77466278 0.86430784]
+[2026-02-12 04:26:37,085][    INFO] ************************* ***** >>>> MUA: 85.49
+[2026-02-12 04:26:37,085][    INFO] ************************* ***** >>>> F1 score: [86.92, 92.83, 75.57, 84.4, 79.2]
+[2026-02-12 04:26:37,085][    INFO] ************************* ***** >>>> mean F1: 83.78
+[2026-02-12 04:26:37,085][    INFO] ************************* ***** >>>> Kappa: 0.830
+
+[2026-02-12 04:26:37,085][    INFO] ===========> Epoch: 53, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:26:38,143][    INFO] Iters:0, loss:0.266, seg_loss:0.266, gmm_loss:2.496,k1_loss:0.005
+[2026-02-12 04:26:39,356][    INFO] Iters:2, loss:0.246, seg_loss:0.246, gmm_loss:2.728,k1_loss:0.008
+[2026-02-12 04:26:40,557][    INFO] Iters:4, loss:0.285, seg_loss:0.285, gmm_loss:2.820,k1_loss:0.008
+[2026-02-12 04:26:41,756][    INFO] Iters:6, loss:0.254, seg_loss:0.254, gmm_loss:2.929,k1_loss:0.007
+[2026-02-12 04:26:42,953][    INFO] Iters:8, loss:0.256, seg_loss:0.256, gmm_loss:2.974,k1_loss:0.008
+[2026-02-12 04:26:44,155][    INFO] Iters:10, loss:0.242, seg_loss:0.242, gmm_loss:2.932,k1_loss:0.008
+[2026-02-12 04:26:45,356][    INFO] Iters:12, loss:0.244, seg_loss:0.244, gmm_loss:2.897,k1_loss:0.007
+[2026-02-12 04:26:46,554][    INFO] Iters:14, loss:0.248, seg_loss:0.248, gmm_loss:2.903,k1_loss:0.008
+[2026-02-12 04:26:47,750][    INFO] Iters:16, loss:0.250, seg_loss:0.250, gmm_loss:2.920,k1_loss:0.008
+[2026-02-12 04:26:48,948][    INFO] Iters:18, loss:0.259, seg_loss:0.259, gmm_loss:2.950,k1_loss:0.007
+[2026-02-12 04:26:50,149][    INFO] Iters:20, loss:0.279, seg_loss:0.279, gmm_loss:2.982,k1_loss:0.007
+[2026-02-12 04:30:16,418][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.23
+[2026-02-12 04:30:16,418][    INFO] ************************* ***** >>>> OA: 85.60
+[2026-02-12 04:30:16,419][    INFO] ************************* ***** >>>> PA: [0.86392918 0.93508893 0.71390592 0.91064222 0.75347058]
+[2026-02-12 04:30:16,419][    INFO] ************************* ***** >>>> MPA: 83.54
+[2026-02-12 04:30:16,419][    INFO] ************************* ***** >>>> UA: [0.87648031 0.92334731 0.82363548 0.7969772  0.85019672]
+[2026-02-12 04:30:16,419][    INFO] ************************* ***** >>>> MUA: 85.41
+[2026-02-12 04:30:16,419][    INFO] ************************* ***** >>>> F1 score: [87.02, 92.92, 76.49, 85.0, 79.89]
+[2026-02-12 04:30:16,420][    INFO] ************************* ***** >>>> mean F1: 84.26
+[2026-02-12 04:30:16,420][    INFO] ************************* ***** >>>> Kappa: 0.835
+
+[2026-02-12 04:30:16,420][    INFO] ===========> Epoch: 54, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:30:17,415][    INFO] Iters:0, loss:0.277, seg_loss:0.277, gmm_loss:2.750,k1_loss:0.009
+[2026-02-12 04:30:18,625][    INFO] Iters:2, loss:0.413, seg_loss:0.413, gmm_loss:2.924,k1_loss:0.007
+[2026-02-12 04:30:19,821][    INFO] Iters:4, loss:0.397, seg_loss:0.397, gmm_loss:2.954,k1_loss:0.008
+[2026-02-12 04:30:21,019][    INFO] Iters:6, loss:0.356, seg_loss:0.356, gmm_loss:2.922,k1_loss:0.008
+[2026-02-12 04:30:22,219][    INFO] Iters:8, loss:0.362, seg_loss:0.362, gmm_loss:2.926,k1_loss:0.007
+[2026-02-12 04:30:23,418][    INFO] Iters:10, loss:0.346, seg_loss:0.346, gmm_loss:2.926,k1_loss:0.008
+[2026-02-12 04:30:24,616][    INFO] Iters:12, loss:0.340, seg_loss:0.340, gmm_loss:2.883,k1_loss:0.008
+[2026-02-12 04:30:25,818][    INFO] Iters:14, loss:0.347, seg_loss:0.347, gmm_loss:2.811,k1_loss:0.008
+[2026-02-12 04:30:27,016][    INFO] Iters:16, loss:0.344, seg_loss:0.344, gmm_loss:2.849,k1_loss:0.008
+[2026-02-12 04:30:28,209][    INFO] Iters:18, loss:0.350, seg_loss:0.350, gmm_loss:2.829,k1_loss:0.008
+[2026-02-12 04:30:29,401][    INFO] Iters:20, loss:0.348, seg_loss:0.348, gmm_loss:2.833,k1_loss:0.008
+[2026-02-12 04:33:56,625][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.55
+[2026-02-12 04:33:56,626][    INFO] ************************* ***** >>>> OA: 85.66
+[2026-02-12 04:33:56,627][    INFO] ************************* ***** >>>> PA: [0.84233676 0.92480419 0.76421792 0.89894163 0.66431343]
+[2026-02-12 04:33:56,627][    INFO] ************************* ***** >>>> MPA: 81.89
+[2026-02-12 04:33:56,627][    INFO] ************************* ***** >>>> UA: [0.89702946 0.93940267 0.78381742 0.80480641 0.89795235]
+[2026-02-12 04:33:56,628][    INFO] ************************* ***** >>>> MUA: 86.46
+[2026-02-12 04:33:56,628][    INFO] ************************* ***** >>>> F1 score: [86.88, 93.2, 77.39, 84.93, 76.37]
+[2026-02-12 04:33:56,628][    INFO] ************************* ***** >>>> mean F1: 83.75
+[2026-02-12 04:33:56,628][    INFO] ************************* ***** >>>> Kappa: 0.836
+
+[2026-02-12 04:33:56,629][    INFO] ===========> Epoch: 55, LR: 0.0004, Previous best: 74.12
+[2026-02-12 04:33:57,660][    INFO] Iters:0, loss:0.324, seg_loss:0.324, gmm_loss:3.120,k1_loss:0.008
+[2026-02-12 04:33:58,869][    INFO] Iters:2, loss:0.309, seg_loss:0.309, gmm_loss:3.016,k1_loss:0.007
+[2026-02-12 04:34:00,071][    INFO] Iters:4, loss:0.277, seg_loss:0.277, gmm_loss:3.040,k1_loss:0.008
+[2026-02-12 04:34:01,269][    INFO] Iters:6, loss:0.268, seg_loss:0.268, gmm_loss:2.983,k1_loss:0.007
+[2026-02-12 04:34:02,466][    INFO] Iters:8, loss:0.286, seg_loss:0.286, gmm_loss:2.970,k1_loss:0.008
+[2026-02-12 04:34:03,668][    INFO] Iters:10, loss:0.272, seg_loss:0.272, gmm_loss:2.965,k1_loss:0.008
+[2026-02-12 04:34:04,870][    INFO] Iters:12, loss:0.293, seg_loss:0.293, gmm_loss:2.962,k1_loss:0.008
+[2026-02-12 04:34:06,069][    INFO] Iters:14, loss:0.299, seg_loss:0.299, gmm_loss:2.959,k1_loss:0.007
+[2026-02-12 04:34:07,272][    INFO] Iters:16, loss:0.303, seg_loss:0.303, gmm_loss:2.970,k1_loss:0.007
+[2026-02-12 04:34:08,470][    INFO] Iters:18, loss:0.289, seg_loss:0.289, gmm_loss:2.910,k1_loss:0.007
+[2026-02-12 04:34:09,662][    INFO] Iters:20, loss:0.295, seg_loss:0.295, gmm_loss:2.898,k1_loss:0.007
+[2026-02-12 04:37:36,927][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.97
+[2026-02-12 04:37:36,928][    INFO] ************************* ***** >>>> OA: 85.81
+[2026-02-12 04:37:36,929][    INFO] ************************* ***** >>>> PA: [0.84098854 0.94484015 0.74772836 0.90019164 0.68461953]
+[2026-02-12 04:37:36,929][    INFO] ************************* ***** >>>> MPA: 82.37
+[2026-02-12 04:37:36,930][    INFO] ************************* ***** >>>> UA: [0.90769379 0.91850371 0.79641183 0.80702827 0.89475352]
+[2026-02-12 04:37:36,930][    INFO] ************************* ***** >>>> MUA: 86.49
+[2026-02-12 04:37:36,930][    INFO] ************************* ***** >>>> F1 score: [87.31, 93.15, 77.13, 85.11, 77.57]
+[2026-02-12 04:37:36,930][    INFO] ************************* ***** >>>> mean F1: 84.05
+[2026-02-12 04:37:36,930][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 04:37:36,931][    INFO] ===========> Epoch: 56, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:37:37,879][    INFO] Iters:0, loss:0.266, seg_loss:0.266, gmm_loss:2.619,k1_loss:0.008
+[2026-02-12 04:37:39,090][    INFO] Iters:2, loss:0.340, seg_loss:0.340, gmm_loss:2.647,k1_loss:0.009
+[2026-02-12 04:37:40,284][    INFO] Iters:4, loss:0.314, seg_loss:0.314, gmm_loss:2.657,k1_loss:0.010
+[2026-02-12 04:37:41,480][    INFO] Iters:6, loss:0.339, seg_loss:0.339, gmm_loss:2.697,k1_loss:0.009
+[2026-02-12 04:37:42,679][    INFO] Iters:8, loss:0.335, seg_loss:0.335, gmm_loss:2.745,k1_loss:0.008
+[2026-02-12 04:37:43,880][    INFO] Iters:10, loss:0.329, seg_loss:0.329, gmm_loss:2.783,k1_loss:0.008
+[2026-02-12 04:37:45,076][    INFO] Iters:12, loss:0.336, seg_loss:0.336, gmm_loss:2.825,k1_loss:0.008
+[2026-02-12 04:37:46,273][    INFO] Iters:14, loss:0.313, seg_loss:0.313, gmm_loss:2.817,k1_loss:0.008
+[2026-02-12 04:37:47,469][    INFO] Iters:16, loss:0.320, seg_loss:0.320, gmm_loss:2.824,k1_loss:0.008
+[2026-02-12 04:37:48,665][    INFO] Iters:18, loss:0.310, seg_loss:0.310, gmm_loss:2.798,k1_loss:0.008
+[2026-02-12 04:37:49,865][    INFO] Iters:20, loss:0.310, seg_loss:0.310, gmm_loss:2.824,k1_loss:0.008
+[2026-02-12 04:41:17,115][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.30
+[2026-02-12 04:41:17,116][    INFO] ************************* ***** >>>> OA: 85.81
+[2026-02-12 04:41:17,117][    INFO] ************************* ***** >>>> PA: [0.84948437 0.9271707  0.7599194  0.8975032  0.71088597]
+[2026-02-12 04:41:17,117][    INFO] ************************* ***** >>>> MPA: 82.90
+[2026-02-12 04:41:17,117][    INFO] ************************* ***** >>>> UA: [0.89381834 0.9352982  0.79174263 0.80846282 0.88128165]
+[2026-02-12 04:41:17,118][    INFO] ************************* ***** >>>> MUA: 86.21
+[2026-02-12 04:41:17,118][    INFO] ************************* ***** >>>> F1 score: [87.11, 93.12, 77.55, 85.07, 78.7]
+[2026-02-12 04:41:17,118][    INFO] ************************* ***** >>>> mean F1: 84.31
+[2026-02-12 04:41:17,118][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 04:41:17,119][    INFO] ===========> Epoch: 57, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:41:18,079][    INFO] Iters:0, loss:0.125, seg_loss:0.125, gmm_loss:2.870,k1_loss:0.007
+[2026-02-12 04:41:19,301][    INFO] Iters:2, loss:0.141, seg_loss:0.141, gmm_loss:2.926,k1_loss:0.005
+[2026-02-12 04:41:20,506][    INFO] Iters:4, loss:0.234, seg_loss:0.234, gmm_loss:2.901,k1_loss:0.006
+[2026-02-12 04:41:21,709][    INFO] Iters:6, loss:0.224, seg_loss:0.224, gmm_loss:2.905,k1_loss:0.007
+[2026-02-12 04:41:22,905][    INFO] Iters:8, loss:0.221, seg_loss:0.221, gmm_loss:2.858,k1_loss:0.007
+[2026-02-12 04:41:24,108][    INFO] Iters:10, loss:0.242, seg_loss:0.242, gmm_loss:2.824,k1_loss:0.008
+[2026-02-12 04:41:25,308][    INFO] Iters:12, loss:0.239, seg_loss:0.239, gmm_loss:2.814,k1_loss:0.008
+[2026-02-12 04:41:26,509][    INFO] Iters:14, loss:0.252, seg_loss:0.252, gmm_loss:2.780,k1_loss:0.008
+[2026-02-12 04:41:27,710][    INFO] Iters:16, loss:0.240, seg_loss:0.240, gmm_loss:2.746,k1_loss:0.008
+[2026-02-12 04:41:28,902][    INFO] Iters:18, loss:0.237, seg_loss:0.237, gmm_loss:2.782,k1_loss:0.008
+[2026-02-12 04:41:30,094][    INFO] Iters:20, loss:0.235, seg_loss:0.235, gmm_loss:2.788,k1_loss:0.008
+[2026-02-12 04:44:56,598][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.93
+[2026-02-12 04:44:56,599][    INFO] ************************* ***** >>>> OA: 85.43
+[2026-02-12 04:44:56,599][    INFO] ************************* ***** >>>> PA: [0.88204914 0.91992101 0.70854802 0.909265   0.7317687 ]
+[2026-02-12 04:44:56,600][    INFO] ************************* ***** >>>> MPA: 83.03
+[2026-02-12 04:44:56,600][    INFO] ************************* ***** >>>> UA: [0.85220371 0.93689465 0.82928762 0.79504228 0.87109956]
+[2026-02-12 04:44:56,600][    INFO] ************************* ***** >>>> MUA: 85.69
+[2026-02-12 04:44:56,601][    INFO] ************************* ***** >>>> F1 score: [86.69, 92.83, 76.42, 84.83, 79.54]
+[2026-02-12 04:44:56,601][    INFO] ************************* ***** >>>> mean F1: 84.06
+[2026-02-12 04:44:56,601][    INFO] ************************* ***** >>>> Kappa: 0.833
+
+[2026-02-12 04:44:56,602][    INFO] ===========> Epoch: 58, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:44:57,580][    INFO] Iters:0, loss:0.129, seg_loss:0.129, gmm_loss:3.018,k1_loss:0.009
+[2026-02-12 04:44:58,788][    INFO] Iters:2, loss:0.193, seg_loss:0.193, gmm_loss:3.039,k1_loss:0.008
+[2026-02-12 04:44:59,982][    INFO] Iters:4, loss:0.199, seg_loss:0.199, gmm_loss:3.099,k1_loss:0.008
+[2026-02-12 04:45:01,183][    INFO] Iters:6, loss:0.227, seg_loss:0.227, gmm_loss:3.096,k1_loss:0.008
+[2026-02-12 04:45:02,386][    INFO] Iters:8, loss:0.251, seg_loss:0.251, gmm_loss:3.011,k1_loss:0.009
+[2026-02-12 04:45:03,585][    INFO] Iters:10, loss:0.267, seg_loss:0.267, gmm_loss:2.975,k1_loss:0.009
+[2026-02-12 04:45:04,779][    INFO] Iters:12, loss:0.307, seg_loss:0.307, gmm_loss:3.040,k1_loss:0.009
+[2026-02-12 04:45:05,974][    INFO] Iters:14, loss:0.313, seg_loss:0.313, gmm_loss:2.989,k1_loss:0.008
+[2026-02-12 04:45:07,168][    INFO] Iters:16, loss:0.308, seg_loss:0.308, gmm_loss:2.998,k1_loss:0.008
+[2026-02-12 04:45:08,368][    INFO] Iters:18, loss:0.316, seg_loss:0.316, gmm_loss:2.988,k1_loss:0.008
+[2026-02-12 04:45:09,561][    INFO] Iters:20, loss:0.313, seg_loss:0.313, gmm_loss:2.978,k1_loss:0.008
+[2026-02-12 04:48:35,903][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.17
+[2026-02-12 04:48:35,903][    INFO] ************************* ***** >>>> OA: 85.92
+[2026-02-12 04:48:35,904][    INFO] ************************* ***** >>>> PA: [0.85991668 0.93752055 0.76555104 0.87561523 0.69185169]
+[2026-02-12 04:48:35,904][    INFO] ************************* ***** >>>> MPA: 82.61
+[2026-02-12 04:48:35,904][    INFO] ************************* ***** >>>> UA: [0.88065006 0.92306782 0.79755393 0.82716237 0.89040241]
+[2026-02-12 04:48:35,904][    INFO] ************************* ***** >>>> MUA: 86.38
+[2026-02-12 04:48:35,905][    INFO] ************************* ***** >>>> F1 score: [87.02, 93.02, 78.12, 85.07, 77.87]
+[2026-02-12 04:48:35,905][    INFO] ************************* ***** >>>> mean F1: 84.22
+[2026-02-12 04:48:35,905][    INFO] ************************* ***** >>>> Kappa: 0.839
+
+[2026-02-12 04:48:35,905][    INFO] ===========> Epoch: 59, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:48:36,891][    INFO] Iters:0, loss:0.237, seg_loss:0.237, gmm_loss:2.722,k1_loss:0.006
+[2026-02-12 04:48:38,093][    INFO] Iters:2, loss:0.236, seg_loss:0.236, gmm_loss:2.843,k1_loss:0.007
+[2026-02-12 04:48:39,289][    INFO] Iters:4, loss:0.197, seg_loss:0.197, gmm_loss:2.908,k1_loss:0.007
+[2026-02-12 04:48:40,482][    INFO] Iters:6, loss:0.189, seg_loss:0.189, gmm_loss:2.966,k1_loss:0.007
+[2026-02-12 04:48:41,679][    INFO] Iters:8, loss:0.206, seg_loss:0.206, gmm_loss:2.984,k1_loss:0.007
+[2026-02-12 04:48:42,874][    INFO] Iters:10, loss:0.222, seg_loss:0.222, gmm_loss:2.968,k1_loss:0.007
+[2026-02-12 04:48:44,074][    INFO] Iters:12, loss:0.236, seg_loss:0.236, gmm_loss:2.950,k1_loss:0.007
+[2026-02-12 04:48:45,273][    INFO] Iters:14, loss:0.254, seg_loss:0.254, gmm_loss:2.971,k1_loss:0.007
+[2026-02-12 04:48:46,472][    INFO] Iters:16, loss:0.246, seg_loss:0.246, gmm_loss:3.007,k1_loss:0.007
+[2026-02-12 04:48:47,660][    INFO] Iters:18, loss:0.241, seg_loss:0.241, gmm_loss:3.006,k1_loss:0.007
+[2026-02-12 04:48:48,857][    INFO] Iters:20, loss:0.237, seg_loss:0.237, gmm_loss:2.959,k1_loss:0.007
+[2026-02-12 04:52:16,716][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.99
+[2026-02-12 04:52:16,717][    INFO] ************************* ***** >>>> OA: 85.79
+[2026-02-12 04:52:16,717][    INFO] ************************* ***** >>>> PA: [0.87851897 0.93594902 0.71614583 0.90364476 0.70092692]
+[2026-02-12 04:52:16,717][    INFO] ************************* ***** >>>> MPA: 82.70
+[2026-02-12 04:52:16,718][    INFO] ************************* ***** >>>> UA: [0.8667006  0.92574668 0.82765997 0.80444064 0.88251379]
+[2026-02-12 04:52:16,718][    INFO] ************************* ***** >>>> MUA: 86.14
+[2026-02-12 04:52:16,718][    INFO] ************************* ***** >>>> F1 score: [87.26, 93.08, 76.79, 85.12, 78.13]
+[2026-02-12 04:52:16,718][    INFO] ************************* ***** >>>> mean F1: 84.08
+[2026-02-12 04:52:16,718][    INFO] ************************* ***** >>>> Kappa: 0.837
+
+[2026-02-12 04:52:16,719][    INFO] ===========> Epoch: 60, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:52:17,699][    INFO] Iters:0, loss:0.229, seg_loss:0.229, gmm_loss:2.725,k1_loss:0.006
+[2026-02-12 04:52:18,915][    INFO] Iters:2, loss:0.308, seg_loss:0.308, gmm_loss:2.923,k1_loss:0.006
+[2026-02-12 04:52:20,121][    INFO] Iters:4, loss:0.271, seg_loss:0.271, gmm_loss:3.048,k1_loss:0.007
+[2026-02-12 04:52:21,333][    INFO] Iters:6, loss:0.275, seg_loss:0.275, gmm_loss:3.063,k1_loss:0.008
+[2026-02-12 04:52:22,539][    INFO] Iters:8, loss:0.290, seg_loss:0.290, gmm_loss:2.971,k1_loss:0.008
+[2026-02-12 04:52:23,752][    INFO] Iters:10, loss:0.307, seg_loss:0.307, gmm_loss:2.992,k1_loss:0.007
+[2026-02-12 04:52:24,965][    INFO] Iters:12, loss:0.310, seg_loss:0.310, gmm_loss:2.983,k1_loss:0.007
+[2026-02-12 04:52:26,172][    INFO] Iters:14, loss:0.296, seg_loss:0.296, gmm_loss:2.967,k1_loss:0.007
+[2026-02-12 04:52:27,376][    INFO] Iters:16, loss:0.295, seg_loss:0.295, gmm_loss:2.936,k1_loss:0.007
+[2026-02-12 04:52:28,577][    INFO] Iters:18, loss:0.289, seg_loss:0.289, gmm_loss:2.958,k1_loss:0.007
+[2026-02-12 04:52:29,777][    INFO] Iters:20, loss:0.301, seg_loss:0.301, gmm_loss:2.913,k1_loss:0.007
+[2026-02-12 04:55:58,350][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.26
+[2026-02-12 04:55:58,350][    INFO] ************************* ***** >>>> OA: 85.63
+[2026-02-12 04:55:58,351][    INFO] ************************* ***** >>>> PA: [0.87017703 0.94200675 0.69656201 0.920512   0.66140332]
+[2026-02-12 04:55:58,351][    INFO] ************************* ***** >>>> MPA: 81.81
+[2026-02-12 04:55:58,351][    INFO] ************************* ***** >>>> UA: [0.87760403 0.92404119 0.83529632 0.78622452 0.89566943]
+[2026-02-12 04:55:58,352][    INFO] ************************* ***** >>>> MUA: 86.38
+[2026-02-12 04:55:58,352][    INFO] ************************* ***** >>>> F1 score: [87.39, 93.29, 75.96, 84.81, 76.09]
+[2026-02-12 04:55:58,352][    INFO] ************************* ***** >>>> mean F1: 83.51
+[2026-02-12 04:55:58,352][    INFO] ************************* ***** >>>> Kappa: 0.835
+
+[2026-02-12 04:55:58,352][    INFO] ===========> Epoch: 61, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:55:59,314][    INFO] Iters:0, loss:0.084, seg_loss:0.084, gmm_loss:2.711,k1_loss:0.009
+[2026-02-12 04:56:00,530][    INFO] Iters:2, loss:0.311, seg_loss:0.311, gmm_loss:2.769,k1_loss:0.009
+[2026-02-12 04:56:01,732][    INFO] Iters:4, loss:0.293, seg_loss:0.293, gmm_loss:2.878,k1_loss:0.009
+[2026-02-12 04:56:02,930][    INFO] Iters:6, loss:0.290, seg_loss:0.290, gmm_loss:2.905,k1_loss:0.008
+[2026-02-12 04:56:04,128][    INFO] Iters:8, loss:0.268, seg_loss:0.268, gmm_loss:2.912,k1_loss:0.008
+[2026-02-12 04:56:05,325][    INFO] Iters:10, loss:0.289, seg_loss:0.289, gmm_loss:2.923,k1_loss:0.008
+[2026-02-12 04:56:06,527][    INFO] Iters:12, loss:0.283, seg_loss:0.283, gmm_loss:2.907,k1_loss:0.008
+[2026-02-12 04:56:07,728][    INFO] Iters:14, loss:0.275, seg_loss:0.275, gmm_loss:2.938,k1_loss:0.009
+[2026-02-12 04:56:08,932][    INFO] Iters:16, loss:0.288, seg_loss:0.288, gmm_loss:2.962,k1_loss:0.008
+[2026-02-12 04:56:10,125][    INFO] Iters:18, loss:0.289, seg_loss:0.289, gmm_loss:2.956,k1_loss:0.008
+[2026-02-12 04:56:11,318][    INFO] Iters:20, loss:0.307, seg_loss:0.307, gmm_loss:2.947,k1_loss:0.008
+[2026-02-12 04:59:37,432][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.46
+[2026-02-12 04:59:37,433][    INFO] ************************* ***** >>>> OA: 85.89
+[2026-02-12 04:59:37,434][    INFO] ************************* ***** >>>> PA: [0.86313305 0.93835112 0.74253768 0.89194558 0.72775922]
+[2026-02-12 04:59:37,434][    INFO] ************************* ***** >>>> MPA: 83.27
+[2026-02-12 04:59:37,434][    INFO] ************************* ***** >>>> UA: [0.88033037 0.92442033 0.8055847  0.81737551 0.86848283]
+[2026-02-12 04:59:37,435][    INFO] ************************* ***** >>>> MUA: 85.92
+[2026-02-12 04:59:37,435][    INFO] ************************* ***** >>>> F1 score: [87.16, 93.13, 77.28, 85.3, 79.19]
+[2026-02-12 04:59:37,435][    INFO] ************************* ***** >>>> mean F1: 84.41
+[2026-02-12 04:59:37,435][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 04:59:37,436][    INFO] ===========> Epoch: 62, LR: 0.0003, Previous best: 74.12
+[2026-02-12 04:59:38,375][    INFO] Iters:0, loss:0.148, seg_loss:0.148, gmm_loss:2.949,k1_loss:0.008
+[2026-02-12 04:59:39,571][    INFO] Iters:2, loss:0.227, seg_loss:0.227, gmm_loss:3.014,k1_loss:0.007
+[2026-02-12 04:59:40,762][    INFO] Iters:4, loss:0.218, seg_loss:0.218, gmm_loss:2.946,k1_loss:0.008
+[2026-02-12 04:59:41,953][    INFO] Iters:6, loss:0.226, seg_loss:0.226, gmm_loss:2.886,k1_loss:0.008
+[2026-02-12 04:59:43,143][    INFO] Iters:8, loss:0.208, seg_loss:0.208, gmm_loss:2.973,k1_loss:0.008
+[2026-02-12 04:59:44,339][    INFO] Iters:10, loss:0.197, seg_loss:0.197, gmm_loss:2.933,k1_loss:0.008
+[2026-02-12 04:59:45,535][    INFO] Iters:12, loss:0.240, seg_loss:0.240, gmm_loss:2.904,k1_loss:0.008
+[2026-02-12 04:59:46,730][    INFO] Iters:14, loss:0.243, seg_loss:0.243, gmm_loss:2.944,k1_loss:0.008
+[2026-02-12 04:59:47,925][    INFO] Iters:16, loss:0.232, seg_loss:0.232, gmm_loss:2.905,k1_loss:0.008
+[2026-02-12 04:59:49,116][    INFO] Iters:18, loss:0.250, seg_loss:0.250, gmm_loss:2.933,k1_loss:0.008
+[2026-02-12 04:59:50,305][    INFO] Iters:20, loss:0.253, seg_loss:0.253, gmm_loss:2.941,k1_loss:0.008
+[2026-02-12 05:03:16,491][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.08
+[2026-02-12 05:03:16,492][    INFO] ************************* ***** >>>> OA: 85.64
+[2026-02-12 05:03:16,493][    INFO] ************************* ***** >>>> PA: [0.8733377  0.92385678 0.73315501 0.89836337 0.7073615 ]
+[2026-02-12 05:03:16,493][    INFO] ************************* ***** >>>> MPA: 82.72
+[2026-02-12 05:03:16,494][    INFO] ************************* ***** >>>> UA: [0.86393961 0.93711492 0.81027274 0.80662506 0.89167414]
+[2026-02-12 05:03:16,494][    INFO] ************************* ***** >>>> MUA: 86.19
+[2026-02-12 05:03:16,494][    INFO] ************************* ***** >>>> F1 score: [86.86, 93.04, 76.98, 85.0, 78.89]
+[2026-02-12 05:03:16,495][    INFO] ************************* ***** >>>> mean F1: 84.15
+[2026-02-12 05:03:16,495][    INFO] ************************* ***** >>>> Kappa: 0.836
+
+[2026-02-12 05:03:16,495][    INFO] ===========> Epoch: 63, LR: 0.0002, Previous best: 74.12
+[2026-02-12 05:03:17,448][    INFO] Iters:0, loss:0.138, seg_loss:0.138, gmm_loss:2.900,k1_loss:0.009
+[2026-02-12 05:03:18,658][    INFO] Iters:2, loss:0.258, seg_loss:0.258, gmm_loss:2.721,k1_loss:0.007
+[2026-02-12 05:03:19,858][    INFO] Iters:4, loss:0.243, seg_loss:0.243, gmm_loss:2.809,k1_loss:0.008
+[2026-02-12 05:03:21,057][    INFO] Iters:6, loss:0.248, seg_loss:0.248, gmm_loss:2.798,k1_loss:0.008
+[2026-02-12 05:03:22,248][    INFO] Iters:8, loss:0.254, seg_loss:0.254, gmm_loss:2.778,k1_loss:0.008
+[2026-02-12 05:03:23,437][    INFO] Iters:10, loss:0.264, seg_loss:0.264, gmm_loss:2.774,k1_loss:0.008
+[2026-02-12 05:03:24,634][    INFO] Iters:12, loss:0.261, seg_loss:0.261, gmm_loss:2.804,k1_loss:0.008
+[2026-02-12 05:03:25,846][    INFO] Iters:14, loss:0.282, seg_loss:0.282, gmm_loss:2.857,k1_loss:0.007
+[2026-02-12 05:03:27,055][    INFO] Iters:16, loss:0.289, seg_loss:0.289, gmm_loss:2.897,k1_loss:0.007
+[2026-02-12 05:03:28,256][    INFO] Iters:18, loss:0.290, seg_loss:0.290, gmm_loss:2.935,k1_loss:0.007
+[2026-02-12 05:03:29,454][    INFO] Iters:20, loss:0.284, seg_loss:0.284, gmm_loss:2.911,k1_loss:0.008
+[2026-02-12 05:07:00,272][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.18
+[2026-02-12 05:07:00,273][    INFO] ************************* ***** >>>> OA: 85.39
+[2026-02-12 05:07:00,273][    INFO] ************************* ***** >>>> PA: [0.86729398 0.94157671 0.6752866  0.93045855 0.75957103]
+[2026-02-12 05:07:00,274][    INFO] ************************* ***** >>>> MPA: 83.48
+[2026-02-12 05:07:00,274][    INFO] ************************* ***** >>>> UA: [0.87803906 0.9215071  0.8429395  0.77649931 0.86570318]
+[2026-02-12 05:07:00,274][    INFO] ************************* ***** >>>> MUA: 85.69
+[2026-02-12 05:07:00,275][    INFO] ************************* ***** >>>> F1 score: [87.26, 93.14, 74.99, 84.65, 80.92]
+[2026-02-12 05:07:00,275][    INFO] ************************* ***** >>>> mean F1: 84.19
+[2026-02-12 05:07:00,275][    INFO] ************************* ***** >>>> Kappa: 0.832
+
+[2026-02-12 05:07:00,276][    INFO] ===========> Epoch: 64, LR: 0.0002, Previous best: 74.12
+[2026-02-12 05:07:01,320][    INFO] Iters:0, loss:0.326, seg_loss:0.326, gmm_loss:2.884,k1_loss:0.006
+[2026-02-12 05:07:02,533][    INFO] Iters:2, loss:0.215, seg_loss:0.215, gmm_loss:3.070,k1_loss:0.008
+[2026-02-12 05:07:03,743][    INFO] Iters:4, loss:0.204, seg_loss:0.204, gmm_loss:2.956,k1_loss:0.008
+[2026-02-12 05:07:04,946][    INFO] Iters:6, loss:0.230, seg_loss:0.230, gmm_loss:2.959,k1_loss:0.008
+[2026-02-12 05:07:06,148][    INFO] Iters:8, loss:0.223, seg_loss:0.223, gmm_loss:2.913,k1_loss:0.008
+[2026-02-12 05:07:07,349][    INFO] Iters:10, loss:0.218, seg_loss:0.218, gmm_loss:2.953,k1_loss:0.008
+[2026-02-12 05:07:08,550][    INFO] Iters:12, loss:0.206, seg_loss:0.206, gmm_loss:2.944,k1_loss:0.007
+[2026-02-12 05:07:09,748][    INFO] Iters:14, loss:0.209, seg_loss:0.209, gmm_loss:2.928,k1_loss:0.007
+[2026-02-12 05:07:10,944][    INFO] Iters:16, loss:0.209, seg_loss:0.209, gmm_loss:2.896,k1_loss:0.008
+[2026-02-12 05:07:12,148][    INFO] Iters:18, loss:0.210, seg_loss:0.210, gmm_loss:2.916,k1_loss:0.008
+[2026-02-12 05:07:13,344][    INFO] Iters:20, loss:0.223, seg_loss:0.223, gmm_loss:2.938,k1_loss:0.008
+[2026-02-12 05:10:39,763][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.01
+[2026-02-12 05:10:39,764][    INFO] ************************* ***** >>>> OA: 85.76
+[2026-02-12 05:10:39,765][    INFO] ************************* ***** >>>> PA: [0.84594846 0.93891971 0.73610274 0.91127828 0.68856973]
+[2026-02-12 05:10:39,765][    INFO] ************************* ***** >>>> MPA: 82.42
+[2026-02-12 05:10:39,766][    INFO] ************************* ***** >>>> UA: [0.89874857 0.92655343 0.80662934 0.79575942 0.90127463]
+[2026-02-12 05:10:39,766][    INFO] ************************* ***** >>>> MUA: 86.58
+[2026-02-12 05:10:39,766][    INFO] ************************* ***** >>>> F1 score: [87.15, 93.27, 76.98, 84.96, 78.07]
+[2026-02-12 05:10:39,767][    INFO] ************************* ***** >>>> mean F1: 84.09
+[2026-02-12 05:10:39,767][    INFO] ************************* ***** >>>> Kappa: 0.837
+
+[2026-02-12 05:10:39,768][    INFO] ===========> Epoch: 65, LR: 0.0002, Previous best: 74.12
+[2026-02-12 05:10:40,770][    INFO] Iters:0, loss:0.151, seg_loss:0.151, gmm_loss:2.724,k1_loss:0.007
+[2026-02-12 05:10:41,980][    INFO] Iters:2, loss:0.181, seg_loss:0.181, gmm_loss:2.825,k1_loss:0.009
+[2026-02-12 05:10:43,174][    INFO] Iters:4, loss:0.214, seg_loss:0.214, gmm_loss:2.882,k1_loss:0.008
+[2026-02-12 05:10:44,364][    INFO] Iters:6, loss:0.289, seg_loss:0.289, gmm_loss:2.821,k1_loss:0.008
+[2026-02-12 05:10:45,576][    INFO] Iters:8, loss:0.301, seg_loss:0.301, gmm_loss:2.861,k1_loss:0.008
+[2026-02-12 05:10:46,767][    INFO] Iters:10, loss:0.280, seg_loss:0.280, gmm_loss:2.884,k1_loss:0.008
+[2026-02-12 05:10:47,974][    INFO] Iters:12, loss:0.292, seg_loss:0.292, gmm_loss:2.901,k1_loss:0.008
+[2026-02-12 05:10:49,168][    INFO] Iters:14, loss:0.289, seg_loss:0.289, gmm_loss:2.896,k1_loss:0.008
+[2026-02-12 05:10:50,362][    INFO] Iters:16, loss:0.285, seg_loss:0.285, gmm_loss:2.890,k1_loss:0.008
+[2026-02-12 05:10:51,559][    INFO] Iters:18, loss:0.279, seg_loss:0.279, gmm_loss:2.886,k1_loss:0.008
+[2026-02-12 05:10:52,745][    INFO] Iters:20, loss:0.278, seg_loss:0.278, gmm_loss:2.900,k1_loss:0.008
+[2026-02-12 05:14:18,881][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.42
+[2026-02-12 05:14:18,881][    INFO] ************************* ***** >>>> OA: 85.66
+[2026-02-12 05:14:18,882][    INFO] ************************* ***** >>>> PA: [0.87880837 0.93248418 0.71029122 0.90586798 0.73914098]
+[2026-02-12 05:14:18,882][    INFO] ************************* ***** >>>> MPA: 83.33
+[2026-02-12 05:14:18,883][    INFO] ************************* ***** >>>> UA: [0.86414422 0.93123763 0.82699099 0.7981196  0.87910292]
+[2026-02-12 05:14:18,883][    INFO] ************************* ***** >>>> MUA: 85.99
+[2026-02-12 05:14:18,883][    INFO] ************************* ***** >>>> F1 score: [87.14, 93.19, 76.42, 84.86, 80.31]
+[2026-02-12 05:14:18,883][    INFO] ************************* ***** >>>> mean F1: 84.38
+[2026-02-12 05:14:18,883][    INFO] ************************* ***** >>>> Kappa: 0.835
+
+[2026-02-12 05:14:18,884][    INFO] ===========> Epoch: 66, LR: 0.0002, Previous best: 74.12
+[2026-02-12 05:14:19,890][    INFO] Iters:0, loss:0.298, seg_loss:0.298, gmm_loss:2.926,k1_loss:0.006
+[2026-02-12 05:14:21,103][    INFO] Iters:2, loss:0.256, seg_loss:0.256, gmm_loss:2.829,k1_loss:0.006
+[2026-02-12 05:14:22,301][    INFO] Iters:4, loss:0.182, seg_loss:0.182, gmm_loss:2.188,k1_loss:0.005
+[2026-02-12 05:14:23,499][    INFO] Iters:6, loss:0.184, seg_loss:0.184, gmm_loss:2.357,k1_loss:0.005
+[2026-02-12 05:14:24,688][    INFO] Iters:8, loss:0.205, seg_loss:0.205, gmm_loss:2.432,k1_loss:0.006
+[2026-02-12 05:14:25,883][    INFO] Iters:10, loss:0.222, seg_loss:0.222, gmm_loss:2.588,k1_loss:0.007
+[2026-02-12 05:14:27,081][    INFO] Iters:12, loss:0.224, seg_loss:0.224, gmm_loss:2.604,k1_loss:0.007
+[2026-02-12 05:14:28,274][    INFO] Iters:14, loss:0.234, seg_loss:0.234, gmm_loss:2.686,k1_loss:0.007
+[2026-02-12 05:14:29,466][    INFO] Iters:16, loss:0.234, seg_loss:0.234, gmm_loss:2.693,k1_loss:0.007
+[2026-02-12 05:14:30,655][    INFO] Iters:18, loss:0.235, seg_loss:0.235, gmm_loss:2.706,k1_loss:0.007
+[2026-02-12 05:14:31,840][    INFO] Iters:20, loss:0.242, seg_loss:0.242, gmm_loss:2.692,k1_loss:0.007
+[2026-02-12 05:18:01,853][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.33
+[2026-02-12 05:18:01,853][    INFO] ************************* ***** >>>> OA: 85.44
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> PA: [0.88470653 0.93403451 0.67827241 0.92049471 0.76729899]
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> MPA: 83.70
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> UA: [0.85484232 0.93189643 0.84892322 0.78326882 0.86355283]
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> MUA: 85.65
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> F1 score: [86.95, 93.3, 75.41, 84.64, 81.26]
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> mean F1: 84.31
+[2026-02-12 05:18:01,854][    INFO] ************************* ***** >>>> Kappa: 0.833
+
+[2026-02-12 05:18:01,855][    INFO] ===========> Epoch: 67, LR: 0.0002, Previous best: 74.12
+[2026-02-12 05:18:02,862][    INFO] Iters:0, loss:0.223, seg_loss:0.223, gmm_loss:2.959,k1_loss:0.009
+[2026-02-12 05:18:04,079][    INFO] Iters:2, loss:0.288, seg_loss:0.288, gmm_loss:2.829,k1_loss:0.007
+[2026-02-12 05:18:05,289][    INFO] Iters:4, loss:0.280, seg_loss:0.280, gmm_loss:2.907,k1_loss:0.007
+[2026-02-12 05:18:06,500][    INFO] Iters:6, loss:0.280, seg_loss:0.280, gmm_loss:2.916,k1_loss:0.007
+[2026-02-12 05:18:07,704][    INFO] Iters:8, loss:0.247, seg_loss:0.247, gmm_loss:2.816,k1_loss:0.007
+[2026-02-12 05:18:08,915][    INFO] Iters:10, loss:0.238, seg_loss:0.238, gmm_loss:2.845,k1_loss:0.007
+[2026-02-12 05:18:10,124][    INFO] Iters:12, loss:0.237, seg_loss:0.237, gmm_loss:2.848,k1_loss:0.007
+[2026-02-12 05:18:11,325][    INFO] Iters:14, loss:0.230, seg_loss:0.230, gmm_loss:2.862,k1_loss:0.008
+[2026-02-12 05:18:12,545][    INFO] Iters:16, loss:0.236, seg_loss:0.236, gmm_loss:2.882,k1_loss:0.008
+[2026-02-12 05:18:13,744][    INFO] Iters:18, loss:0.254, seg_loss:0.254, gmm_loss:2.857,k1_loss:0.008
+[2026-02-12 05:18:14,943][    INFO] Iters:20, loss:0.259, seg_loss:0.259, gmm_loss:2.863,k1_loss:0.008
+[2026-02-12 05:21:41,437][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 74.02
+[2026-02-12 05:21:41,438][    INFO] ************************* ***** >>>> OA: 85.95
+[2026-02-12 05:21:41,439][    INFO] ************************* ***** >>>> PA: [0.87086003 0.93407565 0.73274329 0.90009729 0.75877883]
+[2026-02-12 05:21:41,439][    INFO] ************************* ***** >>>> MPA: 83.93
+[2026-02-12 05:21:41,439][    INFO] ************************* ***** >>>> UA: [0.87623879 0.93291538 0.81692356 0.80571291 0.86932818]
+[2026-02-12 05:21:41,440][    INFO] ************************* ***** >>>> MUA: 86.02
+[2026-02-12 05:21:41,440][    INFO] ************************* ***** >>>> F1 score: [87.35, 93.35, 77.25, 85.03, 81.03]
+[2026-02-12 05:21:41,440][    INFO] ************************* ***** >>>> mean F1: 84.80
+[2026-02-12 05:21:41,440][    INFO] ************************* ***** >>>> Kappa: 0.839
+
+[2026-02-12 05:21:41,441][    INFO] ===========> Epoch: 68, LR: 0.0002, Previous best: 74.12
+[2026-02-12 05:21:42,379][    INFO] Iters:0, loss:0.494, seg_loss:0.494, gmm_loss:2.606,k1_loss:0.015
+[2026-02-12 05:21:43,591][    INFO] Iters:2, loss:0.320, seg_loss:0.320, gmm_loss:2.834,k1_loss:0.010
+[2026-02-12 05:21:44,798][    INFO] Iters:4, loss:0.287, seg_loss:0.287, gmm_loss:2.942,k1_loss:0.009
+[2026-02-12 05:21:45,996][    INFO] Iters:6, loss:0.304, seg_loss:0.304, gmm_loss:2.943,k1_loss:0.009
+[2026-02-12 05:21:47,197][    INFO] Iters:8, loss:0.279, seg_loss:0.279, gmm_loss:2.972,k1_loss:0.009
+[2026-02-12 05:21:48,394][    INFO] Iters:10, loss:0.266, seg_loss:0.266, gmm_loss:2.964,k1_loss:0.009
+[2026-02-12 05:21:49,589][    INFO] Iters:12, loss:0.250, seg_loss:0.250, gmm_loss:2.971,k1_loss:0.008
+[2026-02-12 05:21:50,784][    INFO] Iters:14, loss:0.250, seg_loss:0.250, gmm_loss:2.966,k1_loss:0.008
+[2026-02-12 05:21:51,994][    INFO] Iters:16, loss:0.253, seg_loss:0.253, gmm_loss:2.975,k1_loss:0.008
+[2026-02-12 05:21:53,187][    INFO] Iters:18, loss:0.256, seg_loss:0.256, gmm_loss:2.966,k1_loss:0.008
+[2026-02-12 05:21:54,374][    INFO] Iters:20, loss:0.252, seg_loss:0.252, gmm_loss:2.957,k1_loss:0.008
+[2026-02-12 05:25:20,483][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 74.29
+[2026-02-12 05:25:20,484][    INFO] ************************* ***** >>>> OA: 86.15
+[2026-02-12 05:25:20,484][    INFO] ************************* ***** >>>> PA: [0.86140788 0.94298142 0.74361638 0.89580979 0.7696648 ]
+[2026-02-12 05:25:20,485][    INFO] ************************* ***** >>>> MPA: 84.27
+[2026-02-12 05:25:20,485][    INFO] ************************* ***** >>>> UA: [0.89094992 0.92215325 0.81437946 0.81286373 0.85893766]
+[2026-02-12 05:25:20,485][    INFO] ************************* ***** >>>> MUA: 85.99
+[2026-02-12 05:25:20,485][    INFO] ************************* ***** >>>> F1 score: [87.59, 93.25, 77.74, 85.23, 81.19]
+[2026-02-12 05:25:20,485][    INFO] ************************* ***** >>>> mean F1: 85.00
+[2026-02-12 05:25:20,486][    INFO] ************************* ***** >>>> Kappa: 0.841
+
+[2026-02-12 05:25:21,237][    INFO] ===========> Epoch: 69, LR: 0.0002, Previous best: 74.29
+[2026-02-12 05:25:22,220][    INFO] Iters:0, loss:0.283, seg_loss:0.283, gmm_loss:3.069,k1_loss:0.007
+[2026-02-12 05:25:23,421][    INFO] Iters:2, loss:0.302, seg_loss:0.302, gmm_loss:3.043,k1_loss:0.009
+[2026-02-12 05:25:24,615][    INFO] Iters:4, loss:0.301, seg_loss:0.301, gmm_loss:3.043,k1_loss:0.008
+[2026-02-12 05:25:25,813][    INFO] Iters:6, loss:0.324, seg_loss:0.324, gmm_loss:2.954,k1_loss:0.008
+[2026-02-12 05:25:27,010][    INFO] Iters:8, loss:0.322, seg_loss:0.322, gmm_loss:2.910,k1_loss:0.008
+[2026-02-12 05:25:28,202][    INFO] Iters:10, loss:0.327, seg_loss:0.327, gmm_loss:2.938,k1_loss:0.008
+[2026-02-12 05:25:29,395][    INFO] Iters:12, loss:0.303, seg_loss:0.303, gmm_loss:2.923,k1_loss:0.008
+[2026-02-12 05:25:30,584][    INFO] Iters:14, loss:0.293, seg_loss:0.293, gmm_loss:2.940,k1_loss:0.008
+[2026-02-12 05:25:31,780][    INFO] Iters:16, loss:0.290, seg_loss:0.290, gmm_loss:2.902,k1_loss:0.008
+[2026-02-12 05:25:32,969][    INFO] Iters:18, loss:0.294, seg_loss:0.294, gmm_loss:2.911,k1_loss:0.008
+[2026-02-12 05:25:34,155][    INFO] Iters:20, loss:0.286, seg_loss:0.286, gmm_loss:2.916,k1_loss:0.008
+[2026-02-12 05:29:03,388][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.44
+[2026-02-12 05:29:03,389][    INFO] ************************* ***** >>>> OA: 85.76
+[2026-02-12 05:29:03,390][    INFO] ************************* ***** >>>> PA: [0.87181492 0.91175267 0.76436031 0.8860423  0.71785406]
+[2026-02-12 05:29:03,390][    INFO] ************************* ***** >>>> MPA: 83.04
+[2026-02-12 05:29:03,391][    INFO] ************************* ***** >>>> UA: [0.86395526 0.94648976 0.79422214 0.81970037 0.88872061]
+[2026-02-12 05:29:03,391][    INFO] ************************* ***** >>>> MUA: 86.26
+[2026-02-12 05:29:03,391][    INFO] ************************* ***** >>>> F1 score: [86.79, 92.88, 77.9, 85.16, 79.42]
+[2026-02-12 05:29:03,392][    INFO] ************************* ***** >>>> mean F1: 84.43
+[2026-02-12 05:29:03,392][    INFO] ************************* ***** >>>> Kappa: 0.837
+
+[2026-02-12 05:29:03,393][    INFO] ===========> Epoch: 70, LR: 0.0002, Previous best: 74.29
+[2026-02-12 05:29:04,380][    INFO] Iters:0, loss:0.251, seg_loss:0.251, gmm_loss:3.010,k1_loss:0.008
+[2026-02-12 05:29:05,601][    INFO] Iters:2, loss:0.247, seg_loss:0.247, gmm_loss:2.664,k1_loss:0.009
+[2026-02-12 05:29:06,819][    INFO] Iters:4, loss:0.375, seg_loss:0.375, gmm_loss:2.824,k1_loss:0.008
+[2026-02-12 05:29:08,025][    INFO] Iters:6, loss:0.306, seg_loss:0.306, gmm_loss:2.628,k1_loss:0.007
+[2026-02-12 05:29:09,240][    INFO] Iters:8, loss:0.305, seg_loss:0.305, gmm_loss:2.709,k1_loss:0.008
+[2026-02-12 05:29:10,450][    INFO] Iters:10, loss:0.299, seg_loss:0.299, gmm_loss:2.794,k1_loss:0.008
+[2026-02-12 05:29:11,661][    INFO] Iters:12, loss:0.319, seg_loss:0.319, gmm_loss:2.820,k1_loss:0.007
+[2026-02-12 05:29:12,865][    INFO] Iters:14, loss:0.300, seg_loss:0.300, gmm_loss:2.837,k1_loss:0.007
+[2026-02-12 05:29:14,076][    INFO] Iters:16, loss:0.293, seg_loss:0.293, gmm_loss:2.880,k1_loss:0.007
+[2026-02-12 05:29:15,285][    INFO] Iters:18, loss:0.293, seg_loss:0.293, gmm_loss:2.901,k1_loss:0.008
+[2026-02-12 05:29:16,485][    INFO] Iters:20, loss:0.286, seg_loss:0.286, gmm_loss:2.917,k1_loss:0.008
+[2026-02-12 05:32:43,494][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.44
+[2026-02-12 05:32:43,495][    INFO] ************************* ***** >>>> OA: 85.90
+[2026-02-12 05:32:43,496][    INFO] ************************* ***** >>>> PA: [0.8723719  0.93385987 0.73401047 0.89770918 0.71505712]
+[2026-02-12 05:32:43,496][    INFO] ************************* ***** >>>> MPA: 83.06
+[2026-02-12 05:32:43,496][    INFO] ************************* ***** >>>> UA: [0.8739916  0.92800523 0.81925024 0.80747474 0.88673105]
+[2026-02-12 05:32:43,497][    INFO] ************************* ***** >>>> MUA: 86.31
+[2026-02-12 05:32:43,497][    INFO] ************************* ***** >>>> F1 score: [87.32, 93.09, 77.43, 85.02, 79.17]
+[2026-02-12 05:32:43,497][    INFO] ************************* ***** >>>> mean F1: 84.41
+[2026-02-12 05:32:43,497][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 05:32:43,498][    INFO] ===========> Epoch: 71, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:32:44,451][    INFO] Iters:0, loss:0.221, seg_loss:0.221, gmm_loss:3.009,k1_loss:0.007
+[2026-02-12 05:32:45,660][    INFO] Iters:2, loss:0.248, seg_loss:0.248, gmm_loss:3.137,k1_loss:0.008
+[2026-02-12 05:32:46,867][    INFO] Iters:4, loss:0.221, seg_loss:0.221, gmm_loss:3.090,k1_loss:0.008
+[2026-02-12 05:32:48,068][    INFO] Iters:6, loss:0.218, seg_loss:0.218, gmm_loss:3.058,k1_loss:0.008
+[2026-02-12 05:32:49,266][    INFO] Iters:8, loss:0.215, seg_loss:0.215, gmm_loss:3.015,k1_loss:0.008
+[2026-02-12 05:32:50,467][    INFO] Iters:10, loss:0.227, seg_loss:0.227, gmm_loss:2.984,k1_loss:0.008
+[2026-02-12 05:32:51,659][    INFO] Iters:12, loss:0.244, seg_loss:0.244, gmm_loss:2.949,k1_loss:0.009
+[2026-02-12 05:32:52,852][    INFO] Iters:14, loss:0.239, seg_loss:0.239, gmm_loss:2.969,k1_loss:0.008
+[2026-02-12 05:32:54,048][    INFO] Iters:16, loss:0.235, seg_loss:0.235, gmm_loss:2.977,k1_loss:0.009
+[2026-02-12 05:32:55,240][    INFO] Iters:18, loss:0.250, seg_loss:0.250, gmm_loss:2.971,k1_loss:0.009
+[2026-02-12 05:32:56,433][    INFO] Iters:20, loss:0.251, seg_loss:0.251, gmm_loss:3.000,k1_loss:0.009
+[2026-02-12 05:36:22,748][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.13
+[2026-02-12 05:36:22,749][    INFO] ************************* ***** >>>> OA: 85.94
+[2026-02-12 05:36:22,749][    INFO] ************************* ***** >>>> PA: [0.87246951 0.92868696 0.74266104 0.89754655 0.68583208]
+[2026-02-12 05:36:22,750][    INFO] ************************* ***** >>>> MPA: 82.54
+[2026-02-12 05:36:22,750][    INFO] ************************* ***** >>>> UA: [0.87367727 0.93315731 0.81421486 0.80909739 0.89638244]
+[2026-02-12 05:36:22,750][    INFO] ************************* ***** >>>> MUA: 86.53
+[2026-02-12 05:36:22,750][    INFO] ************************* ***** >>>> F1 score: [87.31, 93.09, 77.68, 85.1, 77.71]
+[2026-02-12 05:36:22,750][    INFO] ************************* ***** >>>> mean F1: 84.18
+[2026-02-12 05:36:22,751][    INFO] ************************* ***** >>>> Kappa: 0.839
+
+[2026-02-12 05:36:22,751][    INFO] ===========> Epoch: 72, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:36:23,722][    INFO] Iters:0, loss:0.187, seg_loss:0.187, gmm_loss:3.151,k1_loss:0.008
+[2026-02-12 05:36:24,930][    INFO] Iters:2, loss:0.255, seg_loss:0.255, gmm_loss:2.751,k1_loss:0.007
+[2026-02-12 05:36:26,131][    INFO] Iters:4, loss:0.274, seg_loss:0.274, gmm_loss:2.935,k1_loss:0.007
+[2026-02-12 05:36:27,321][    INFO] Iters:6, loss:0.234, seg_loss:0.234, gmm_loss:2.982,k1_loss:0.007
+[2026-02-12 05:36:28,520][    INFO] Iters:8, loss:0.229, seg_loss:0.229, gmm_loss:3.038,k1_loss:0.007
+[2026-02-12 05:36:29,714][    INFO] Iters:10, loss:0.239, seg_loss:0.239, gmm_loss:3.061,k1_loss:0.007
+[2026-02-12 05:36:30,903][    INFO] Iters:12, loss:0.253, seg_loss:0.253, gmm_loss:3.059,k1_loss:0.007
+[2026-02-12 05:36:32,107][    INFO] Iters:14, loss:0.244, seg_loss:0.244, gmm_loss:3.055,k1_loss:0.007
+[2026-02-12 05:36:33,306][    INFO] Iters:16, loss:0.251, seg_loss:0.251, gmm_loss:3.057,k1_loss:0.008
+[2026-02-12 05:36:34,503][    INFO] Iters:18, loss:0.256, seg_loss:0.256, gmm_loss:3.088,k1_loss:0.008
+[2026-02-12 05:36:35,693][    INFO] Iters:20, loss:0.257, seg_loss:0.257, gmm_loss:3.064,k1_loss:0.008
+[2026-02-12 05:40:03,423][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.55
+[2026-02-12 05:40:03,424][    INFO] ************************* ***** >>>> OA: 85.78
+[2026-02-12 05:40:03,424][    INFO] ************************* ***** >>>> PA: [0.85445204 0.93002505 0.73636186 0.91101026 0.73389739]
+[2026-02-12 05:40:03,424][    INFO] ************************* ***** >>>> MPA: 83.31
+[2026-02-12 05:40:03,425][    INFO] ************************* ***** >>>> UA: [0.8923619  0.93473153 0.80650576 0.79530913 0.87759705]
+[2026-02-12 05:40:03,425][    INFO] ************************* ***** >>>> MUA: 86.13
+[2026-02-12 05:40:03,425][    INFO] ************************* ***** >>>> F1 score: [87.3, 93.24, 76.98, 84.92, 79.93]
+[2026-02-12 05:40:03,425][    INFO] ************************* ***** >>>> mean F1: 84.47
+[2026-02-12 05:40:03,425][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 05:40:03,426][    INFO] ===========> Epoch: 73, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:40:04,386][    INFO] Iters:0, loss:0.248, seg_loss:0.248, gmm_loss:3.279,k1_loss:0.007
+[2026-02-12 05:40:05,592][    INFO] Iters:2, loss:0.236, seg_loss:0.236, gmm_loss:2.866,k1_loss:0.006
+[2026-02-12 05:40:06,805][    INFO] Iters:4, loss:0.228, seg_loss:0.228, gmm_loss:2.925,k1_loss:0.006
+[2026-02-12 05:40:08,013][    INFO] Iters:6, loss:0.233, seg_loss:0.233, gmm_loss:2.848,k1_loss:0.006
+[2026-02-12 05:40:09,217][    INFO] Iters:8, loss:0.222, seg_loss:0.222, gmm_loss:2.748,k1_loss:0.006
+[2026-02-12 05:40:10,427][    INFO] Iters:10, loss:0.221, seg_loss:0.221, gmm_loss:2.838,k1_loss:0.006
+[2026-02-12 05:40:11,633][    INFO] Iters:12, loss:0.227, seg_loss:0.227, gmm_loss:2.886,k1_loss:0.006
+[2026-02-12 05:40:12,838][    INFO] Iters:14, loss:0.238, seg_loss:0.238, gmm_loss:2.892,k1_loss:0.006
+[2026-02-12 05:40:14,038][    INFO] Iters:16, loss:0.243, seg_loss:0.243, gmm_loss:2.898,k1_loss:0.006
+[2026-02-12 05:40:15,241][    INFO] Iters:18, loss:0.243, seg_loss:0.243, gmm_loss:2.908,k1_loss:0.006
+[2026-02-12 05:40:16,441][    INFO] Iters:20, loss:0.252, seg_loss:0.252, gmm_loss:2.936,k1_loss:0.006
+[2026-02-12 05:43:45,061][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.75
+[2026-02-12 05:43:45,062][    INFO] ************************* ***** >>>> OA: 85.88
+[2026-02-12 05:43:45,062][    INFO] ************************* ***** >>>> PA: [0.86819145 0.93096565 0.73650232 0.90048176 0.73943199]
+[2026-02-12 05:43:45,063][    INFO] ************************* ***** >>>> MPA: 83.51
+[2026-02-12 05:43:45,063][    INFO] ************************* ***** >>>> UA: [0.8770162  0.93248945 0.81311932 0.8062732  0.87881253]
+[2026-02-12 05:43:45,064][    INFO] ************************* ***** >>>> MUA: 86.15
+[2026-02-12 05:43:45,064][    INFO] ************************* ***** >>>> F1 score: [87.26, 93.17, 77.29, 85.08, 80.31]
+[2026-02-12 05:43:45,064][    INFO] ************************* ***** >>>> mean F1: 84.62
+[2026-02-12 05:43:45,064][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 05:43:45,065][    INFO] ===========> Epoch: 74, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:43:45,993][    INFO] Iters:0, loss:0.186, seg_loss:0.186, gmm_loss:3.292,k1_loss:0.006
+[2026-02-12 05:43:47,204][    INFO] Iters:2, loss:0.256, seg_loss:0.256, gmm_loss:3.041,k1_loss:0.008
+[2026-02-12 05:43:48,408][    INFO] Iters:4, loss:0.218, seg_loss:0.218, gmm_loss:3.126,k1_loss:0.007
+[2026-02-12 05:43:49,606][    INFO] Iters:6, loss:0.247, seg_loss:0.247, gmm_loss:3.011,k1_loss:0.007
+[2026-02-12 05:43:50,809][    INFO] Iters:8, loss:0.234, seg_loss:0.234, gmm_loss:2.991,k1_loss:0.008
+[2026-02-12 05:43:52,008][    INFO] Iters:10, loss:0.220, seg_loss:0.220, gmm_loss:2.959,k1_loss:0.008
+[2026-02-12 05:43:53,207][    INFO] Iters:12, loss:0.210, seg_loss:0.210, gmm_loss:3.003,k1_loss:0.008
+[2026-02-12 05:43:54,404][    INFO] Iters:14, loss:0.212, seg_loss:0.212, gmm_loss:2.976,k1_loss:0.008
+[2026-02-12 05:43:55,604][    INFO] Iters:16, loss:0.210, seg_loss:0.210, gmm_loss:2.977,k1_loss:0.008
+[2026-02-12 05:43:56,805][    INFO] Iters:18, loss:0.219, seg_loss:0.219, gmm_loss:2.958,k1_loss:0.008
+[2026-02-12 05:43:58,000][    INFO] Iters:20, loss:0.217, seg_loss:0.217, gmm_loss:2.973,k1_loss:0.008
+[2026-02-12 05:47:24,552][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 72.88
+[2026-02-12 05:47:24,553][    INFO] ************************* ***** >>>> OA: 85.90
+[2026-02-12 05:47:24,554][    INFO] ************************* ***** >>>> PA: [0.88022664 0.93608101 0.72730261 0.89668526 0.6729737 ]
+[2026-02-12 05:47:24,554][    INFO] ************************* ***** >>>> MPA: 82.27
+[2026-02-12 05:47:24,555][    INFO] ************************* ***** >>>> UA: [0.86504821 0.92727252 0.82457405 0.81038636 0.90214706]
+[2026-02-12 05:47:24,555][    INFO] ************************* ***** >>>> MUA: 86.59
+[2026-02-12 05:47:24,555][    INFO] ************************* ***** >>>> F1 score: [87.26, 93.17, 77.29, 85.14, 77.09]
+[2026-02-12 05:47:24,556][    INFO] ************************* ***** >>>> mean F1: 83.99
+[2026-02-12 05:47:24,556][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 05:47:24,557][    INFO] ===========> Epoch: 75, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:47:25,522][    INFO] Iters:0, loss:0.260, seg_loss:0.260, gmm_loss:3.024,k1_loss:0.008
+[2026-02-12 05:47:26,726][    INFO] Iters:2, loss:0.256, seg_loss:0.256, gmm_loss:3.104,k1_loss:0.007
+[2026-02-12 05:47:27,931][    INFO] Iters:4, loss:0.259, seg_loss:0.259, gmm_loss:3.143,k1_loss:0.007
+[2026-02-12 05:47:29,124][    INFO] Iters:6, loss:0.258, seg_loss:0.258, gmm_loss:3.080,k1_loss:0.007
+[2026-02-12 05:47:30,320][    INFO] Iters:8, loss:0.247, seg_loss:0.247, gmm_loss:3.085,k1_loss:0.008
+[2026-02-12 05:47:31,515][    INFO] Iters:10, loss:0.245, seg_loss:0.245, gmm_loss:3.073,k1_loss:0.008
+[2026-02-12 05:47:32,710][    INFO] Iters:12, loss:0.239, seg_loss:0.239, gmm_loss:3.025,k1_loss:0.008
+[2026-02-12 05:47:33,905][    INFO] Iters:14, loss:0.248, seg_loss:0.248, gmm_loss:3.021,k1_loss:0.008
+[2026-02-12 05:47:35,104][    INFO] Iters:16, loss:0.246, seg_loss:0.246, gmm_loss:3.038,k1_loss:0.008
+[2026-02-12 05:47:36,306][    INFO] Iters:18, loss:0.248, seg_loss:0.248, gmm_loss:3.037,k1_loss:0.008
+[2026-02-12 05:47:37,499][    INFO] Iters:20, loss:0.244, seg_loss:0.244, gmm_loss:3.041,k1_loss:0.008
+[2026-02-12 05:51:03,964][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.58
+[2026-02-12 05:51:03,965][    INFO] ************************* ***** >>>> OA: 85.84
+[2026-02-12 05:51:03,965][    INFO] ************************* ***** >>>> PA: [0.87265957 0.92682419 0.73947599 0.89658836 0.72644428]
+[2026-02-12 05:51:03,966][    INFO] ************************* ***** >>>> MPA: 83.24
+[2026-02-12 05:51:03,966][    INFO] ************************* ***** >>>> UA: [0.87039756 0.93513958 0.81209168 0.80867189 0.88653224]
+[2026-02-12 05:51:03,966][    INFO] ************************* ***** >>>> MUA: 86.26
+[2026-02-12 05:51:03,966][    INFO] ************************* ***** >>>> F1 score: [87.15, 93.1, 77.41, 85.04, 79.85]
+[2026-02-12 05:51:03,966][    INFO] ************************* ***** >>>> mean F1: 84.51
+[2026-02-12 05:51:03,967][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 05:51:03,967][    INFO] ===========> Epoch: 76, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:51:04,898][    INFO] Iters:0, loss:0.250, seg_loss:0.250, gmm_loss:3.142,k1_loss:0.006
+[2026-02-12 05:51:06,105][    INFO] Iters:2, loss:0.243, seg_loss:0.243, gmm_loss:3.094,k1_loss:0.007
+[2026-02-12 05:51:07,303][    INFO] Iters:4, loss:0.223, seg_loss:0.223, gmm_loss:3.040,k1_loss:0.007
+[2026-02-12 05:51:08,500][    INFO] Iters:6, loss:0.230, seg_loss:0.230, gmm_loss:2.947,k1_loss:0.007
+[2026-02-12 05:51:09,692][    INFO] Iters:8, loss:0.239, seg_loss:0.239, gmm_loss:2.950,k1_loss:0.007
+[2026-02-12 05:51:10,890][    INFO] Iters:10, loss:0.248, seg_loss:0.248, gmm_loss:2.954,k1_loss:0.007
+[2026-02-12 05:51:12,088][    INFO] Iters:12, loss:0.232, seg_loss:0.232, gmm_loss:2.914,k1_loss:0.007
+[2026-02-12 05:51:13,285][    INFO] Iters:14, loss:0.236, seg_loss:0.236, gmm_loss:2.887,k1_loss:0.008
+[2026-02-12 05:51:14,485][    INFO] Iters:16, loss:0.242, seg_loss:0.242, gmm_loss:2.932,k1_loss:0.008
+[2026-02-12 05:51:15,677][    INFO] Iters:18, loss:0.233, seg_loss:0.233, gmm_loss:2.957,k1_loss:0.008
+[2026-02-12 05:51:16,866][    INFO] Iters:20, loss:0.225, seg_loss:0.225, gmm_loss:2.930,k1_loss:0.008
+[2026-02-12 05:54:47,736][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.48
+[2026-02-12 05:54:47,736][    INFO] ************************* ***** >>>> OA: 85.72
+[2026-02-12 05:54:47,737][    INFO] ************************* ***** >>>> PA: [0.8650948  0.92936231 0.72693918 0.90871904 0.73200043]
+[2026-02-12 05:54:47,737][    INFO] ************************* ***** >>>> MPA: 83.24
+[2026-02-12 05:54:47,737][    INFO] ************************* ***** >>>> UA: [0.87713299 0.93360271 0.81583198 0.79744024 0.88386681]
+[2026-02-12 05:54:47,737][    INFO] ************************* ***** >>>> MUA: 86.16
+[2026-02-12 05:54:47,738][    INFO] ************************* ***** >>>> F1 score: [87.11, 93.15, 76.88, 84.95, 80.08]
+[2026-02-12 05:54:47,738][    INFO] ************************* ***** >>>> mean F1: 84.43
+[2026-02-12 05:54:47,738][    INFO] ************************* ***** >>>> Kappa: 0.837
+
+[2026-02-12 05:54:47,738][    INFO] ===========> Epoch: 77, LR: 0.0001, Previous best: 74.29
+[2026-02-12 05:54:48,730][    INFO] Iters:0, loss:0.288, seg_loss:0.288, gmm_loss:2.845,k1_loss:0.007
+[2026-02-12 05:54:49,946][    INFO] Iters:2, loss:0.166, seg_loss:0.166, gmm_loss:2.946,k1_loss:0.008
+[2026-02-12 05:54:51,149][    INFO] Iters:4, loss:0.232, seg_loss:0.232, gmm_loss:2.894,k1_loss:0.007
+[2026-02-12 05:54:52,344][    INFO] Iters:6, loss:0.252, seg_loss:0.252, gmm_loss:2.948,k1_loss:0.007
+[2026-02-12 05:54:53,547][    INFO] Iters:8, loss:0.256, seg_loss:0.256, gmm_loss:2.917,k1_loss:0.008
+[2026-02-12 05:54:54,745][    INFO] Iters:10, loss:0.250, seg_loss:0.250, gmm_loss:2.878,k1_loss:0.008
+[2026-02-12 05:54:55,944][    INFO] Iters:12, loss:0.258, seg_loss:0.258, gmm_loss:2.870,k1_loss:0.008
+[2026-02-12 05:54:57,140][    INFO] Iters:14, loss:0.232, seg_loss:0.232, gmm_loss:2.812,k1_loss:0.007
+[2026-02-12 05:54:58,346][    INFO] Iters:16, loss:0.243, seg_loss:0.243, gmm_loss:2.843,k1_loss:0.007
+[2026-02-12 05:54:59,541][    INFO] Iters:18, loss:0.241, seg_loss:0.241, gmm_loss:2.859,k1_loss:0.007
+[2026-02-12 05:55:00,740][    INFO] Iters:20, loss:0.238, seg_loss:0.238, gmm_loss:2.869,k1_loss:0.007
+[2026-02-12 05:58:26,963][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.13
+[2026-02-12 05:58:26,963][    INFO] ************************* ***** >>>> OA: 85.78
+[2026-02-12 05:58:26,964][    INFO] ************************* ***** >>>> PA: [0.86735513 0.93481914 0.72285949 0.90896354 0.69921858]
+[2026-02-12 05:58:26,964][    INFO] ************************* ***** >>>> MPA: 82.66
+[2026-02-12 05:58:26,964][    INFO] ************************* ***** >>>> UA: [0.87750899 0.92861824 0.82277495 0.7972235  0.89628422]
+[2026-02-12 05:58:26,965][    INFO] ************************* ***** >>>> MUA: 86.45
+[2026-02-12 05:58:26,965][    INFO] ************************* ***** >>>> F1 score: [87.24, 93.17, 76.96, 84.94, 78.56]
+[2026-02-12 05:58:26,965][    INFO] ************************* ***** >>>> mean F1: 84.17
+[2026-02-12 05:58:26,965][    INFO] ************************* ***** >>>> Kappa: 0.837
+
+[2026-02-12 05:58:26,965][    INFO] ===========> Epoch: 78, LR: 0.0000, Previous best: 74.29
+[2026-02-12 05:58:27,892][    INFO] Iters:0, loss:0.214, seg_loss:0.214, gmm_loss:2.975,k1_loss:0.009
+[2026-02-12 05:58:29,101][    INFO] Iters:2, loss:0.246, seg_loss:0.246, gmm_loss:2.913,k1_loss:0.008
+[2026-02-12 05:58:30,302][    INFO] Iters:4, loss:0.246, seg_loss:0.246, gmm_loss:2.971,k1_loss:0.008
+[2026-02-12 05:58:31,495][    INFO] Iters:6, loss:0.192, seg_loss:0.192, gmm_loss:2.972,k1_loss:0.006
+[2026-02-12 05:58:32,691][    INFO] Iters:8, loss:0.224, seg_loss:0.224, gmm_loss:2.940,k1_loss:0.007
+[2026-02-12 05:58:33,888][    INFO] Iters:10, loss:0.198, seg_loss:0.198, gmm_loss:2.866,k1_loss:0.007
+[2026-02-12 05:58:35,101][    INFO] Iters:12, loss:0.195, seg_loss:0.195, gmm_loss:2.896,k1_loss:0.007
+[2026-02-12 05:58:36,294][    INFO] Iters:14, loss:0.211, seg_loss:0.211, gmm_loss:2.913,k1_loss:0.007
+[2026-02-12 05:58:37,494][    INFO] Iters:16, loss:0.204, seg_loss:0.204, gmm_loss:2.929,k1_loss:0.007
+[2026-02-12 05:58:38,685][    INFO] Iters:18, loss:0.203, seg_loss:0.203, gmm_loss:2.925,k1_loss:0.007
+[2026-02-12 05:58:39,869][    INFO] Iters:20, loss:0.217, seg_loss:0.217, gmm_loss:2.871,k1_loss:0.007
+[2026-02-12 06:02:06,281][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.42
+[2026-02-12 06:02:06,282][    INFO] ************************* ***** >>>> OA: 85.82
+[2026-02-12 06:02:06,282][    INFO] ************************* ***** >>>> PA: [0.87188268 0.93053207 0.72716794 0.90524977 0.71895883]
+[2026-02-12 06:02:06,282][    INFO] ************************* ***** >>>> MPA: 83.08
+[2026-02-12 06:02:06,283][    INFO] ************************* ***** >>>> UA: [0.87256658 0.93369317 0.82056337 0.80010883 0.88734137]
+[2026-02-12 06:02:06,283][    INFO] ************************* ***** >>>> MUA: 86.29
+[2026-02-12 06:02:06,283][    INFO] ************************* ***** >>>> F1 score: [87.22, 93.21, 77.1, 84.94, 79.43]
+[2026-02-12 06:02:06,283][    INFO] ************************* ***** >>>> mean F1: 84.38
+[2026-02-12 06:02:06,283][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[2026-02-12 06:02:06,284][    INFO] ===========> Epoch: 79, LR: 0.0000, Previous best: 74.29
+[2026-02-12 06:02:07,318][    INFO] Iters:0, loss:0.365, seg_loss:0.365, gmm_loss:3.055,k1_loss:0.006
+[2026-02-12 06:02:08,526][    INFO] Iters:2, loss:0.300, seg_loss:0.300, gmm_loss:3.074,k1_loss:0.007
+[2026-02-12 06:02:09,725][    INFO] Iters:4, loss:0.295, seg_loss:0.295, gmm_loss:3.022,k1_loss:0.007
+[2026-02-12 06:02:10,921][    INFO] Iters:6, loss:0.282, seg_loss:0.282, gmm_loss:3.051,k1_loss:0.007
+[2026-02-12 06:02:12,117][    INFO] Iters:8, loss:0.250, seg_loss:0.250, gmm_loss:3.037,k1_loss:0.008
+[2026-02-12 06:02:13,311][    INFO] Iters:10, loss:0.252, seg_loss:0.252, gmm_loss:3.043,k1_loss:0.008
+[2026-02-12 06:02:14,506][    INFO] Iters:12, loss:0.254, seg_loss:0.254, gmm_loss:3.022,k1_loss:0.008
+[2026-02-12 06:02:15,698][    INFO] Iters:14, loss:0.258, seg_loss:0.258, gmm_loss:3.001,k1_loss:0.008
+[2026-02-12 06:02:16,893][    INFO] Iters:16, loss:0.251, seg_loss:0.251, gmm_loss:2.988,k1_loss:0.008
+[2026-02-12 06:02:18,086][    INFO] Iters:18, loss:0.250, seg_loss:0.250, gmm_loss:2.949,k1_loss:0.008
+[2026-02-12 06:02:19,275][    INFO] Iters:20, loss:0.239, seg_loss:0.239, gmm_loss:2.920,k1_loss:0.008
+[1;34mwandb[0m:
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /media/llog/llog-AMP-TGRS/AMP-TGRS/wandb/offline-run-20260212_011148-aubskt4s[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20260212_011148-aubskt4s/logs[0m
+[2026-02-12 06:05:46,390][    INFO] ***** Evaluation sliding_window ***** >>>> meanIOU: 73.53
+[2026-02-12 06:05:46,390][    INFO] ************************* ***** >>>> OA: 85.85
+[2026-02-12 06:05:46,391][    INFO] ************************* ***** >>>> PA: [0.86895169 0.92806663 0.73734315 0.90157991 0.72444492]
+[2026-02-12 06:05:46,391][    INFO] ************************* ***** >>>> MPA: 83.21
+[2026-02-12 06:05:46,391][    INFO] ************************* ***** >>>> UA: [0.87440227 0.93565053 0.81322308 0.804602   0.88379585]
+[2026-02-12 06:05:46,392][    INFO] ************************* ***** >>>> MUA: 86.23
+[2026-02-12 06:05:46,392][    INFO] ************************* ***** >>>> F1 score: [87.17, 93.18, 77.34, 85.03, 79.62]
+[2026-02-12 06:05:46,392][    INFO] ************************* ***** >>>> mean F1: 84.47
+[2026-02-12 06:05:46,392][    INFO] ************************* ***** >>>> Kappa: 0.838
+
+[1;34mwandb[0m:
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /media/llog/llog-AMP-TGRS/AMP-TGRS/wandb/offline-run-20260212_011148-k67akpwp[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20260212_011148-k67akpwp/logs[0m
+[rank0]:[W212 06:05:46.258093286 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

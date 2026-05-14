@@ -7,8 +7,8 @@ data_root: /media/llog/Mydata/Tree_canopy/trainval_data
 mode: 'scribble'
 
 # arguments for training
-epochs: 120
-batch_size: 1
+epochs: 80
+batch_size: 2
 lr: 0.001  # 4GPUs
 lr_multi: 10.0
 criterion:
@@ -19,7 +19,7 @@ conf_thresh: 0.95
 
 # arguments for model
 aux: False
-backbone: DINOV2b      #DINOV2(s/b/l/g) DINOV3_(vits16/vits16plus/vitb16/vitl16/vitl16plus/vith16plus/vit7b16) 
+backbone: DINOV2l      #DINOV2(s/b/l/g) DINOV3_(vits16/vits16plus/vitb16/vitl16/vitl16plus/vith16plus/vit7b16)  OR SAM3
 # attn choice: CA or CBAM or SA. (default attn1:CA, attn2:CBAM)
 attn1: CA
 attn2: CBAM

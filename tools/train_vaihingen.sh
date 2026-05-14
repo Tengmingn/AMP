@@ -2,7 +2,7 @@
 now=$(date +"%Y%m%d_%H%M%S")
 
 config=configs/vaihingen.yaml
-save_path=exp/vaihingen/dinov2b_polygon1
+save_path=exp/vaihingen/dinov2b_full_new260210
 
 mkdir -p $save_path
 

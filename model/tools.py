@@ -307,7 +307,7 @@ class OhemCrossEntropy(nn.Module):
 
 
 if __name__ == '__main__':
-    proto = torch.rand(8, 21, 256)
-    vecs = torch.rand(1, 21, 256)
-    cls_label = torch.rand(8, 21, 1)
+    proto = torch.rand(8, 2, 256)
+    vecs = torch.rand(1, 2, 256)
+    cls_label = torch.rand(8, 2, 1)
     proto_loss(proto, vecs, cls_label)

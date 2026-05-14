@@ -9,7 +9,7 @@ mode: 'scribble'
 # arguments for training
 epochs: 80
 batch_size: 2
-lr: 0.001  # 4GPUs
+lr: 0.001  # 2GPUs
 lr_multi: 10.0
 criterion:
   name: CELoss

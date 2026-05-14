@@ -1,15 +1,15 @@
 # arguments for dataset
 dataset: vaihingen
 nclass: 5
-crop_size: 322
+crop_size: 448
 aug: True
 data_root: /media/llog/Mydata/publicdata/Vaihingen/
-mode: 'polygon'   #label type(line,point,polygon,full)
+mode: 'full'   #label type(line,point,polygon,full)
 sup_id: 'an11'          #label type(an11,an22,an33,an44)
 
 # arguments for training
 epochs: 80
-batch_size: 2
+batch_size: 1
 lr: 0.001  # 4GPUs
 lr_multi: 10.0
 criterion:

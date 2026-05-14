@@ -2,7 +2,7 @@
 now=$(date +"%Y%m%d_%H%M%S")
 
 config=configs/treecanopy.yaml
-save_path=exp/treecanopy/scribble
+save_path=exp/treecanopy/scribble/gpu_test
 
 mkdir -p $save_path
 

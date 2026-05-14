@@ -24,7 +24,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='SASS Framework')
     parser.add_argument('--resume_model', type=str,
                         default='/home/lab532/llog/AGMM-SASS-difresnet/exp/treecanopy/scribble/reins_dinov2b_76.19.pth')
-    parser.add_argument('--config', type=str, default='/home/lab532/llog/ours_method/configs/TreeTest.yaml')
+    parser.add_argument('--config', type=str, default='/media/llog/llog-AMP-TGRS/AMP-TGRS/configs/TreeTest.yaml')
     parser.add_argument('--save-mask-path', type=str, default="/media/llog/AGMM-SASSdata/testdata/Dinov2_predict/reins_dinov2b_scribble_miou76.19")
     args = parser.parse_args()
     return args
@@ -43,6 +43,8 @@ def get_dataset(cfg):
     elif cfg['dataset'] == 'treetest':
         valset = TreeTestDataset(cfg['dataset'], cfg['data_root'], 'val', None)
 
+    elif cfg['dataset'] == 'treetest2':
+        valset = TreeTest2Dataset(cfg['dataset'], cfg['data_root'], 'val', None)
     else:
         valset = None
 
@@ -71,7 +73,7 @@ def main(args):
     with torch.no_grad():
         for img, mask, id in tbar:
             img = img.cuda()
-            if cfg['dataset'] == 'treetest':
+            if cfg['dataset'] == 'treetest' or cfg['dataset'] == 'treetest2':
                 pred = pre_slide(model, img, num_classes=cfg['nclass'],
                                  tile_size=(cfg['crop_size'], cfg['crop_size']), tta=False)
             else:

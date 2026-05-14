@@ -18,8 +18,8 @@ MODE = None
 
 
 def parse_args():
-    name = 'lima'
-    mode = 'scribble'
+    name = 'UTC'
+    mode = 'budget_2000'
 
     parser = argparse.ArgumentParser(description='SASS Framework')
     parser.add_argument('--resume_model', type=str,
