@@ -33,10 +33,14 @@ get our dataset at https://ieee-dataport.org/documents/utc-sparse
 cd third_party
 # dinov2
 git clone https://github.com/facebookresearch/dinov2.git
-# dinov3
+# dinov3 if you want
 git clone https://github.com/facebookresearch/dinov3.git
 ```
-### 4. Reproduce our work
+Then, insert the `user_forward_features` function into the respective model files. The corresponding function codes are provided in `./third_party/dinov2_userfunc` and `./third_party/dinov3_userfunc`.
+
+Alternatively, you can download our pre-packaged third-party folder and extract it directly into the `./third_party` directory.
+### 4. Reproduce Our Work
+Our pre-trained and fine-tuned models are available at:
 ### 5. Training on your own dataset
 ### 6. Inference
 ## Acknowledgement
