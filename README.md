@@ -1,4 +1,44 @@
+<div align="center">
+    <h1>
+    AMP: Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping
+    </h1>
+    <h3><b>Accepted by IEEE TGRS 2026</b></h3>
+    
+    <div>
+        <a href='https://github.com/Tengmingn' target='_blank'>Ming Teng<sup>1*</sup></a>,&emsp;
+        <a href='https://github.com/your_coauthor' target='_blank'>Co-author Name<sup>1</sup></a>,&emsp;
+        <a href='https://github.com/your_supervisor' target='_blank'>Supervisor Name<sup>1&#8224</sup></a>
+    </div>
+    
+    <div>
+        <sup>1</sup>Your University / Laboratory Name
+    </div>
+    
+    <div>
+        <h4 align="center">
+            <a href="https://github.com/Tengmingn/AMP" target='_blank'>
+                <img src="https://img.shields.io/badge/🌟-Project%20Page-blue" style="padding-right: 20px;">
+            </a>
+            <a href="https://arxiv.org/abs/xxxx.xxxxx" target='_blank'>
+                <img src="https://img.shields.io/badge/arXiv-2026.AMP-b31b1b.svg" style="padding-right: 20px;">
+            </a>
+            <!-- 如果有 Demo 视频、HuggingFace 空间或 Colab，可以取消下面的注释并修改链接 -->
+            <!-- 
+            <a href="你的视频链接" target='_blank'>
+                <img src="https://img.shields.io/badge/Demo%20Video-%23FF0000.svg?logo=YouTube&logoColor=white" style="padding-right: 20px;">
+            </a>
+            <a href="你的HuggingFace链接" target='_blank'>
+                <img src="https://img.shields.io/static/v1?label=Demo AMP&message=HuggingFace&color=yellow" style="padding-right: 20px;">
+            </a>
+            <a href="你的Colab链接" target='_blank'>
+                <img src="https://img.shields.io/static/v1?label=Demo AMP&message=Google Colab&color=orange">
+            </a> 
+            -->
+        </h4>
+    </div>
+</div>
 
+---
 # AMP: Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping
 
 ### **Accepted by IEEE Transactions on Geoscience and Remote Sensing (TGRS) 2026**
