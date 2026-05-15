@@ -4,19 +4,19 @@
     </h1>
     <h3><b>Accepted by IEEE Transactions on Geoscience and Remote Sensing 2026</b></h3>
     <div>
-        <a href='https://github.com/Mingnuo Teng' target='_blank'>Mingnuo Teng<sup>1*</sup></a>,&emsp;
-        <a href='https://github.com/Jianhua Guo' target='_blank'>Jianhua Guo<sup>2*</sup></a>,&emsp;
-        <a href='https://github.com/Jianhua Guo' target='_blank'>Huanjing Yue<sup>1</sup></a>,&emsp;
-        <a href='https://github.com/Jingyu Yang' target='_blank'>Jingyu Yang<sup>1&#8224</sup></a>
+        <a href='https://github.com/Tengmingn' target='_blank'>Mingnuo Teng<sup>1*</sup></a>,&emsp;
+        <a href='https://scholar.google.com/citations?user=xY0__WQAAAAJ&hl=zh-CN&oi=sra' target='_blank'>Jianhua Guo<sup>2*</sup></a>,&emsp;
+        <a href='https://scholar.google.com/citations?user=1umAObUAAAAJ&hl=zh-CN&oi=sra' target='_blank'>Huanjing Yue<sup>1</sup></a>,&emsp;
+        <a href='https://scholar.google.com/citations?user=x0jlbE4AAAAJ&hl=zh-CN&oi=sra' target='_blank'>Jingyu Yang<sup>1&#8224</sup></a>
     </div>
     <div>
         <sup>1</sup>Tianjin University,&emsp;<sup>2</sup>Aerospace Information Research Institute
     </div>
     <div>
         <h4 align="center">
-            <a href="https://github.com/Tengmingn/AMP" target='_blank'>
+            <!-- <a href="https://github.com/Tengmingn/AMP" target='_blank'>
                 <img src="https://img.shields.io/badge/🌟-Project%20Page-blue" style="padding-right: 20px;">
-            </a>
+            </a> -->
             <a href="你的论文正式链接或arXiv链接" target='_blank'>
                 <img src="https://img.shields.io/badge/IEEE_TGRS-2026-b31b1b.svg" style="padding-right: 20px;">
             </a>
