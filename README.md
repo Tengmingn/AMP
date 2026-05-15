@@ -27,7 +27,15 @@ conda activate amp
 pip install -r requirement
 ```
 ### 2. Download the UTC-Sparse dataset
+get our dataset at https://ieee-dataport.org/documents/utc-sparse
 ### 3. Prepard third party code
+```
+cd third_party
+# dinov2
+git clone https://github.com/facebookresearch/dinov2.git
+# dinov3
+git clone https://github.com/facebookresearch/dinov3.git
+```
 ### 4. Reproduce our work
 ### 5. Training on your own dataset
 ### 6. Inference
