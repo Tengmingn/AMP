@@ -39,6 +39,7 @@ git clone https://github.com/facebookresearch/dinov3.git
 Then, insert the `user_forward_features` function into the respective model files. The corresponding function codes are provided in `./third_party/dinov2_userfunc` and `./third_party/dinov3_userfunc`.
 
 Alternatively, you can download our pre-packaged third-party folder and extract it directly into the `./third_party` directory.
+`https://pan.baidu.com/s/1Y_2E5OTQpKRoBlxD-HDMdw?pwd=57kr` password: 57kr
 ### 4. Reproduce Our Work
 Our pre-trained and fine-tuned models are available at:
 ### 5. Training on your own dataset
