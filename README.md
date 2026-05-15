@@ -14,8 +14,7 @@ This repository contains the official PyTorch implementation of **AMP**, a frame
 ---
 ## 📷 Result Display
 ![Method Overview](./assets/comparison_UTC.png)
-
-*Figure 2: Qualitative results of different methods on the test set of the UTC dataset. The method marked with * indicate fully supervised approach.*
+*Figure 2: Qualitative results of different methods on the test set of the UTC dataset. Methods marked with * indicate fully supervised approaches.*
 ---
 
 ## 🛠️ Installation & Training & Inference
