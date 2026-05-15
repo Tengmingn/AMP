@@ -18,18 +18,12 @@
                 <img src="https://img.shields.io/badge/🌟-Project%20Page-blue" style="padding-right: 20px;">
             </a>
             <a href="https://arxiv.org/abs/xxxx.xxxxx" target='_blank'>
-                <img src="https://img.shields.io/badge/arXiv-2026.AMP-b31b1b.svg" style="padding-right: 20px;">
+                <img src="https://img.shields.io/badge/TGRS-2026.AMP-b31b1b.svg" style="padding-right: 20px;">
             </a>
         </h4>
     </div>
 </div>
 
----
-# AMP: Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping
-
-### **Accepted by IEEE Transactions on Geoscience and Remote Sensing (TGRS) 2026**
-
----
 
 ## 🌟 Method Overview
 This repository contains the official PyTorch implementation of **AMP**, a framework designed for high-accuracy urban tree canopy mapping using weakly supervised sparse annotations. By integrating wavelet-enhanced adaptation with foundation models (DINOv2), our method effectively captures fine-grained spatial details in complex urban environments.
