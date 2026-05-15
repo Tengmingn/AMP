@@ -41,7 +41,8 @@ Then, insert the `user_forward_features` function into the respective model file
 Alternatively, you can download our pre-packaged third-party folder and extract it directly into the `./third_party` directory.
 `https://pan.baidu.com/s/1Y_2E5OTQpKRoBlxD-HDMdw?pwd=57kr` password: 57kr
 ### 4. Reproduce
-Our pre-trained and fine-tuned models are available at:
+Our pre-trained and fine-tuned models are available at:`UTC_results
+链接: https://pan.baidu.com/s/1TzAoo50w1w1lWD5H_yIrHA?pwd=edhq` password: edhq
 ### 5. Training on your own dataset
 ### 6. Inference
 ## ❤️ Acknowledgement
