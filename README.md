@@ -5,7 +5,7 @@
     <h3><b>Accepted by IEEE Transactions on Geoscience and Remote Sensing 2026</b></h3>
     <div>
         <a href='https://github.com/Mingnuo Teng' target='_blank'>Mingnuo Teng<sup>1*</sup></a>,&emsp;
-        <a href='https://github.com/Jianhua Guo' target='_blank'>Jianhua Guo<sup>2</sup></a>,&emsp;
+        <a href='https://github.com/Jianhua Guo' target='_blank'>Jianhua Guo<sup>2*</sup></a>,&emsp;
         <a href='https://github.com/Jianhua Guo' target='_blank'>Huanjing Yue<sup>1</sup></a>,&emsp;
         <a href='https://github.com/Jingyu Yang' target='_blank'>Jingyu Yang<sup>1&#8224</sup></a>
     </div>
