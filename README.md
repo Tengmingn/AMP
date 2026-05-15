@@ -1,7 +1,7 @@
 
 # AMP: Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping
 
-### **Accepted by IEEE TGRS 2026**
+### **Accepted by IEEE Transactions on Geoscience and Remote Sensing (TGRS) 2026**
 
 ---
 
@@ -26,6 +26,11 @@ conda create -n amp python=3.10
 conda activate amp
 pip install -r requirement
 ```
+### 2. Download the UTC-Sparse dataset
+### 3. Prepard third party code
+### 4. Reproduce our work
+### 5. Training on your own dataset
+### 6. Inference
 ## Acknowledgement
 
 We sincerely acknowledge the following works for their valuable contributions and inspiration to this project:
