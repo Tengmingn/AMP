@@ -2,7 +2,7 @@
     <h1>
     AMP: Wavelet-enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping
     </h1>
-    <h3><b>Accepted by IEEE TGRS 2026</b></h3>
+    <h3><b>Accepted by IEEE IEEE Transactions on Geoscience and Remote Sensing 2026</b></h3>
     <div>
         <a href='https://github.com/Tengmingn' target='_blank'>Ming Teng<sup>1*</sup></a>,&emsp;
         <a href='https://github.com/your_coauthor' target='_blank'>Co-author Name<sup>1</sup></a>,&emsp;
