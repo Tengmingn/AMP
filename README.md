@@ -6,7 +6,7 @@
 ---
 
 ## 🌟 Method Overview
-This repository contains the official PyTorch implementation of **AMP**, a framework designed for high-accuracy urban tree canopy mapping using weakly supervised sparse point annotations. By integrating wavelet-enhanced adaptation with foundation models (DINOv2), our method effectively captures fine-grained spatial details in complex urban environments.
+This repository contains the official PyTorch implementation of **AMP**, a framework designed for high-accuracy urban tree canopy mapping using weakly supervised sparse annotations. By integrating wavelet-enhanced adaptation with foundation models (DINOv2), our method effectively captures fine-grained spatial details in complex urban environments.
 
 ![Method Overview](./assets/Method.png)
 *Figure 1: The overall architecture of the proposed AMP framework.*
