@@ -44,7 +44,7 @@ Alternatively, you can download our pre-packaged third-party folder and extract 
 Our pre-trained and fine-tuned models are available at:
 ### 5. Training on your own dataset
 ### 6. Inference
-## Acknowledgement
+## ❤️ Acknowledgement
 
 We sincerely acknowledge the following works for their valuable contributions and inspiration to this project:
 
@@ -55,3 +55,9 @@ We sincerely acknowledge the following works for their valuable contributions an
 - **DINOv2: Learning Robust Visual Features without Supervision** — for providing the pretrained visual feature backbone used in this work.(https://github.com/facebookresearch/dinov2)
 
 We deeply appreciate the authors of these works for making their research and code publicly available to the community.
+
+## 🎓 Citations
+
+## 📧 Contact
+If you have any inquiries, please reach out us via email at `tmn@tju.edu.cn`
+
