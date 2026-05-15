@@ -17,8 +17,8 @@
             <a href="https://github.com/Tengmingn/AMP" target='_blank'>
                 <img src="https://img.shields.io/badge/🌟-Project%20Page-blue" style="padding-right: 20px;">
             </a>
-            <a href="https://arxiv.org/abs/xxxx.xxxxx" target='_blank'>
-                <img src="https://img.shields.io/badge/TGRS-2026.AMP-b31b1b.svg" style="padding-right: 20px;">
+            <a href="你的论文正式链接或arXiv链接" target='_blank'>
+                <img src="https://img.shields.io/badge/IEEE_TGRS-2026-b31b1b.svg" style="padding-right: 20px;">
             </a>
         </h4>
     </div>
