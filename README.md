@@ -46,7 +46,7 @@ conda activate amp
 pip install -r requirement
 ```
 ### 2. Download the UTC-Sparse dataset
-get our dataset at https://ieee-dataport.org/documents/utc-sparse
+Get our dataset at https://ieee-dataport.org/documents/utc-sparse
 ### 3. Prepard third party code
 ```
 cd third_party
