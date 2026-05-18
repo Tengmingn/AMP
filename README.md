@@ -61,7 +61,11 @@ Alternatively, you can download our pre-packaged third-party folder and extract 
 `https://pan.baidu.com/s/1Y_2E5OTQpKRoBlxD-HDMdw?pwd=57kr` password: 57kr
 ### 4. Reproduce
 Our pre-trained and fine-tuned models are available at: `https://pan.baidu.com/s/1TzAoo50w1w1lWD5H_yIrHA?pwd=edhq` password: edhq
-### 5. Training on your own dataset
+### 5. Training
+```bash
+bash tools/train_tree.sh <num_gpu> <port>
+bash tools/train_vaihingen.sh <num_gpu> <port>
+```
 ### 6. Inference
 ## ❤️ Acknowledgement
 
