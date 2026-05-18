@@ -29,7 +29,7 @@ from datetime import datetime
 os.environ['CUDA_VISIBLE_DEVICES'] = "0, 1"
 os.environ['MASTER_ADDR'] = '127.0.0.1'
 os.environ['MASTER_PORT'] = '28890'
-os.environ["WANDB_API_KEY"] = "5235a16f2490111d213f559ba804d854f1fc6543"
+os.environ["WANDB_API_KEY"] = ""
 os.environ["WANDB_MODE"] = "offline"
 
 # sh tools/train_voc.sh 3 28890
