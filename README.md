@@ -67,6 +67,9 @@ bash tools/train_tree.sh <num_gpu> <port>
 bash tools/train_vaihingen.sh <num_gpu> <port>
 ```
 ### 6. Inference
+```bash
+bash tools/test_tree.sh
+```
 ## ❤️ Acknowledgement
 
 We sincerely acknowledge the following works for their valuable contributions and inspiration to this project:
