@@ -83,6 +83,16 @@ We sincerely acknowledge the following works for their valuable contributions an
 We deeply appreciate the authors of these works for making their research and code publicly available to the community.
 
 ## 🎓 Citations
+@ARTICLE{11520877,
+  author={Teng, Mingnuo and Guo, Jianhua and Yue, Huanjing and Yang, Jingyu},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Wavelet-Enhanced Foundation Model Adaptation for Weakly Supervised Urban Tree Canopy Mapping}, 
+  year={2026},
+  volume={64},
+  number={},
+  pages={4409814-4409814},
+  keywords={Labeling;Modeling;Vegetation;Trees (botanical);Annotations;Remote sensing;Semantic segmentation;Training;Pixel;Modules (abstract algebra);Semantic segmentation;sparse annotation;urban tree canopy (UTC);vision foundation models;weakly supervised learning},
+  doi={10.1109/TGRS.2026.3693826}}
 
 ## 📧 Contact
 If you have any inquiries, please reach out us via email at `tmn@tju.edu.cn`
